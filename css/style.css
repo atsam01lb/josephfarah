@@ -912,7 +912,8 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   .shop-grid{ grid-template-columns:repeat(2,1fr); }
   .cert-grid{ grid-template-columns:repeat(2,1fr); }
   .grid-masonry{ columns:1; }
-  .about-badge{ position:static; margin-top:18px; display:inline-block; }
+  .about-badge{ right:-8px; bottom:-20px; padding:16px 20px; min-width:104px; }
+  .about-badge strong{ font-size:28px; }
   .toggle-row{ grid-template-columns:1fr; }
   section{ padding:80px 0; }
   .page-hero{ padding:160px 0 80px; }
