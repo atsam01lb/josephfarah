@@ -1,535 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Love You Zouzou ❤️</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      overflow: hidden;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 25%),
-        radial-gradient(circle at 80% 80%, #ffd1e2 0%, transparent 30%),
-        linear-gradient(135deg, #fff0f5, #ffd6e7, #ffeaf2);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #6b1839;
-    }
-
-    /* Main Card */
-
-    .container {
-      position: relative;
-      z-index: 10;
-
-      width: 90%;
-      max-width: 680px;
-
-      text-align: center;
-
-      padding: 55px 35px;
-
-      background: rgba(255, 255, 255, 0.76);
-
-      border: 1px solid rgba(255, 255, 255, 0.9);
-
-      border-radius: 32px;
-
-      box-shadow:
-        0 25px 70px rgba(180, 60, 100, 0.18),
-        inset 0 0 30px rgba(255, 255, 255, 0.4);
-
-      backdrop-filter: blur(15px);
-
-      animation: appear 1.2s ease;
-    }
-
-    /* Kiss */
-
-    .kiss {
-      font-size: 70px;
-
-      display: inline-block;
-
-      margin-bottom: 10px;
-
-      animation: kissBounce 2s infinite ease-in-out;
-
-      filter: drop-shadow(0 8px 12px rgba(194, 24, 91, 0.15));
-    }
-
-    /* Main Title */
-
-    h1 {
-      font-size: clamp(42px, 8vw, 72px);
-
-      font-weight: 800;
-
-      color: #c2185b;
-
-      margin-bottom: 15px;
-
-      letter-spacing: -2px;
-
-      text-shadow: 0 5px 20px rgba(194, 24, 91, 0.12);
-    }
-
-    /* Subtitle */
-
-    .subtitle {
-      font-size: 21px;
-
-      font-weight: 500;
-
-      color: #7a2949;
-
-      margin-bottom: 25px;
-    }
-
-    /* Main Message */
-
-    .message {
-      font-size: 17px;
-
-      line-height: 1.75;
-
-      color: #71314b;
-
-      margin-bottom: 28px;
-    }
-
-    .message strong {
-      color: #c2185b;
-    }
-
-    /* Coming Soon */
-
-    .timer {
-      display: inline-block;
-
-      padding: 13px 27px;
-
-      border-radius: 50px;
-
-      background: #c2185b;
-
-      color: white;
-
-      font-size: 15px;
-
-      font-weight: 600;
-
-      box-shadow:
-        0 8px 25px rgba(194, 24, 91, 0.25);
-
-      animation: pulse 2s infinite;
-    }
-
-    /* Signature */
-
-    .signature {
-      margin-top: 30px;
-
-      font-family:
-        "Brush Script MT",
-        "Segoe Script",
-        cursive;
-
-      font-size: 23px;
-
-      color: #9c1749;
-
-      line-height: 1.3;
-    }
-
-    .signature strong {
-      display: inline-block;
-
-      font-size: 36px;
-
-      margin-top: 2px;
-
-      color: #c2185b;
-
-      transform: rotate(-4deg);
-    }
-
-    /* Floating Hearts */
-
-    .heart {
-      position: absolute;
-
-      color: #e91e63;
-
-      font-size: 25px;
-
-      opacity: 0.65;
-
-      animation:
-        float 8s linear infinite;
-
-      bottom: -50px;
-
-      pointer-events: none;
-    }
-
-    .heart:nth-child(1) {
-      left: 8%;
-      animation-delay: 0s;
-    }
-
-    .heart:nth-child(2) {
-      left: 20%;
-      animation-delay: 2s;
-      font-size: 18px;
-    }
-
-    .heart:nth-child(3) {
-      left: 35%;
-      animation-delay: 4s;
-      font-size: 32px;
-    }
-
-    .heart:nth-child(4) {
-      left: 55%;
-      animation-delay: 1s;
-      font-size: 20px;
-    }
-
-    .heart:nth-child(5) {
-      left: 72%;
-      animation-delay: 3s;
-      font-size: 30px;
-    }
-
-    .heart:nth-child(6) {
-      left: 88%;
-      animation-delay: 5s;
-      font-size: 22px;
-    }
-
-    /* Floating Kisses */
-
-    .kiss-float {
-      position: absolute;
-
-      font-size: 38px;
-
-      opacity: 0;
-
-      animation:
-        kissFloat 7s linear infinite;
-
-      pointer-events: none;
-    }
-
-    .kiss-float:nth-of-type(1) {
-      left: 15%;
-      animation-delay: 1s;
-    }
-
-    .kiss-float:nth-of-type(2) {
-      right: 15%;
-      animation-delay: 4s;
-    }
-
-    /* Small Sparkles */
-
-    .sparkle {
-      position: absolute;
-
-      color: white;
-
-      font-size: 20px;
-
-      opacity: 0;
-
-      animation:
-        sparkle 4s infinite ease-in-out;
-
-      pointer-events: none;
-    }
-
-    .sparkle:nth-of-type(1) {
-      top: 15%;
-      left: 12%;
-      animation-delay: 0.5s;
-    }
-
-    .sparkle:nth-of-type(2) {
-      top: 25%;
-      right: 10%;
-      animation-delay: 1.5s;
-    }
-
-    .sparkle:nth-of-type(3) {
-      bottom: 15%;
-      left: 18%;
-      animation-delay: 2.5s;
-    }
-
-    .sparkle:nth-of-type(4) {
-      bottom: 20%;
-      right: 20%;
-      animation-delay: 3s;
-    }
-
-    /* Animations */
-
-    @keyframes appear {
-
-      from {
-        opacity: 0;
-        transform:
-          translateY(30px)
-          scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform:
-          translateY(0)
-          scale(1);
-      }
-
-    }
-
-    @keyframes kissBounce {
-
-      0%, 100% {
-        transform:
-          scale(1)
-          rotate(-5deg);
-      }
-
-      50% {
-        transform:
-          scale(1.12)
-          rotate(5deg);
-      }
-
-    }
-
-    @keyframes float {
-
-      0% {
-        transform:
-          translateY(0)
-          rotate(0deg);
-
-        opacity: 0;
-      }
-
-      15% {
-        opacity: 0.65;
-      }
-
-      85% {
-        opacity: 0.65;
-      }
-
-      100% {
-        transform:
-          translateY(-110vh)
-          rotate(360deg);
-
-        opacity: 0;
-      }
-
-    }
-
-    @keyframes kissFloat {
-
-      0% {
-        transform:
-          translateY(100vh)
-          scale(0.7)
-          rotate(-15deg);
-
-        opacity: 0;
-      }
-
-      15% {
-        opacity: 0.8;
-      }
-
-      80% {
-        opacity: 0.8;
-      }
-
-      100% {
-        transform:
-          translateY(-20vh)
-          scale(1.2)
-          rotate(15deg);
-
-        opacity: 0;
-      }
-
-    }
-
-    @keyframes pulse {
-
-      0%, 100% {
-        transform: scale(1);
-
-        box-shadow:
-          0 8px 25px rgba(194, 24, 91, 0.25);
-      }
-
-      50% {
-        transform: scale(1.04);
-
-        box-shadow:
-          0 10px 32px rgba(194, 24, 91, 0.35);
-      }
-
-    }
-
-    @keyframes sparkle {
-
-      0%, 100% {
-        opacity: 0;
-        transform: scale(0.5) rotate(0deg);
-      }
-
-      50% {
-        opacity: 0.8;
-        transform: scale(1.2) rotate(180deg);
-      }
-
-    }
-
-    /* Mobile */
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: 92%;
-
-        padding:
-          45px 22px;
-
-        border-radius: 26px;
-      }
-
-      .kiss {
-        font-size: 55px;
-      }
-
-      h1 {
-        font-size: 43px;
-      }
-
-      .subtitle {
-        font-size: 18px;
-      }
-
-      .message {
-        font-size: 15px;
-      }
-
-      .signature {
-        font-size: 20px;
-      }
-
-      .signature strong {
-        font-size: 32px;
-      }
-
-    }
-
-  </style>
+<script>document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Farah | Beauty &amp; Personal Care, Zahle Lebanon</title>
+<meta name="description" content="Joseph Farah - 30 years of professional experience in beauty, personal care and specialized treatments in Zahle, Lebanon. Makeup, skincare, nail art, laser, solarium and hair styling.">
+<link rel="icon" href="assets/logo/favicon.ico">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <!-- Floating Hearts -->
+<div id="preloader"><img src="assets/logo/jf-mark-white.png" alt="Joseph Farah"></div>
 
-  <div class="heart">♥</div>
-  <div class="heart">♥</div>
-  <div class="heart">♥</div>
-  <div class="heart">♥</div>
-  <div class="heart">♥</div>
-  <div class="heart">♥</div>
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="assets/logo/jf-mark-black.png" alt="Joseph Farah monogram">
+      <span class="brand-text">Joseph Farah</span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="index.html">Home</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html">Shop</a>
+      <a href="booking.html">Booking</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn-icon" href="https://wa.me/9613293637" target="_blank" rel="noopener" aria-label="WhatsApp Joseph Farah">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.5c.3-.7.6-.7 1-.7h.6c.2 0 .4 0 .6.5s.7 1.6.7 1.8-.1.3-.2.5-.3.3-.4.5-.3.3-.1.6a6 6 0 0 0 2.6 2.3c.3.1.5.1.7-.1s.7-.8.9-1 .4-.2.6-.1l1.6.8c.2.1.4.2.4.4s0 1-.4 1.4-1.3 1-2.4.9c-1.9-.2-4.3-1.7-5.6-3.9-1-1.6-1.1-2.9-1-3.2Z"/></svg>
+      </a>
+      <a class="btn btn-sm btn-primary" href="booking.html">Book Now</a>
+      <button class="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
-  <!-- Floating Kisses -->
+<nav class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="certificates.html">Certificates</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="shop.html">Shop</a>
+  <a href="booking.html">Booking</a>
+  <div class="mn-sub">
+    <a class="btn-icon" href="tel:+9618805017" aria-label="Call"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.6 21 3 12.4 3 2a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6a1 1 0 0 1-.2 1L6.6 10.8Z"/></svg></a>
+    <a class="btn-icon" href="https://wa.me/9613293637" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"/></svg></a>
+  </div>
+</nav>
 
-  <div class="kiss-float">💋</div>
-  <div class="kiss-float">💋</div>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badges">
+      <span style="animation-delay:.1s">Makeup</span>
+      <span style="animation-delay:.2s">Skincare</span>
+      <span style="animation-delay:.3s">Nail Art</span>
+      <span style="animation-delay:.4s">Laser</span>
+      <span style="animation-delay:.5s">Hair Styling</span>
+    </div>
+    <img class="hero-mark" src="assets/logo/jf-mark-white.png" alt="JF monogram">
+    <h1><span>JOSEPH FARAH</span></h1>
+    <p class="hero-tagline">Your Beauty. Your Care. Our Expertise. Thirty years of professional beauty and personal care, based in Zahle, Lebanon.</p>
+    <div class="hero-ctas">
+      <a href="booking.html" class="btn btn-light">Book an Appointment</a>
+      <a href="#services" class="btn btn-light" style="border-color:transparent;">
+        Explore Services
+        <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><span class="line"></span></div>
+</section>
 
-  <!-- Sparkles -->
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-media" data-reveal="left">
+      <div class="about-frame">
+        <img class="ph-mono" src="assets/logo/jf-mark-black.png" alt="Joseph Farah portrait placeholder">
+        <div class="ph-caption"><span>Joseph Farah</span><span>Zahle, Lebanon</span></div>
+      </div>
+      <div class="about-badge"><strong>30</strong><span>Years Experience</span></div>
+    </div>
+    <div class="about-body">
+      <div class="eyebrow">About Joseph Farah</div>
+      <h2 class="section-title">30 Years of Experience<br>in <em>Beauty &amp; Personal Care</em></h2>
+      <div class="rule"></div>
+      <p data-reveal data-group="about">Based in <strong>Zahle, Lebanon</strong>, Joseph Farah brings over <strong>30 years of professional experience</strong> in beauty, personal care, and specialized treatments. Throughout his career, he has built his expertise around precision, quality, and personalized service, helping both men and women look and feel their best.</p>
+      <p data-reveal data-group="about">Joseph offers a complete range of professional services, including <strong>Makeup Artistry, Skincare, Tattoo Art, Permanent Makeup, Nail Art, Medical Pedicure, Laser Treatments, Solarium, and Hair Styling</strong>.</p>
+      <p data-reveal data-group="about">With decades of experience and a passion for his craft, Joseph combines professional techniques with individual attention to ensure every client receives a comfortable, personalized, and high-quality experience.</p>
+      <p class="about-quote" data-reveal data-group="about">"Your Beauty. Your Care. Our Expertise."</p>
+      <ul class="about-stats" data-reveal data-group="about">
+        <li><b>30 Years</b>of experience</li>
+        <li><b>Professional</b>care, always</li>
+        <li><b>Personalized</b>beauty services</li>
+        <li><b>Zahle</b>Lebanon</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <div class="sparkle">✦</div>
-  <div class="sparkle">✧</div>
-  <div class="sparkle">✦</div>
-  <div class="sparkle">✧</div>
-
-  <!-- Main Content -->
-
-  <main class="container">
-
-    <div class="kiss">
-      💋
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="bg-alt">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="justify-content:center;display:flex;">What We Offer</div>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-lede">A complete range of professional beauty and personal care services, tailored for women and men alike.</p>
     </div>
 
-    <h1>
-      Love You Zouzou!
-    </h1>
-
-    <div class="subtitle">
-      Your website is being created with love ❤️
+    <div class="svc-tabs" data-reveal>
+      <button class="svc-tab active" data-tab="women">For Her</button>
+      <button class="svc-tab" data-tab="men">For Him</button>
     </div>
 
-    <div class="message">
-
-      Something beautiful is on its way... ✨
-
-      <br>
-
-      Your website is currently being constructed
-      especially for you.
-
-      <br><br>
-
-      Just wait around
-      <strong>30 minutes</strong>...
-
-      <br>
-
-      and your little surprise will be ready! 💕
-
+    <div class="svc-grid active" id="svc-women" data-reveal="scale">
+      <div class="svc-card"><span class="svc-num">01</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg></div>
+        <h3>Makeup</h3><p>Professional makeup artistry for everyday elegance, special occasions and bridal looks.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">02</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M12 3c4 4.5 7 8 7 11.5A7 7 0 0 1 5 14.5C5 11 8 7.5 12 3Z"/></svg></div>
+        <h3>Skin Care</h3><p>Personalized facials and treatments to cleanse, nourish and refresh your skin.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">03</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M4 20l7-7"/><path d="M13 4l7 7-2 2-7-7 2-2Z"/><path d="M11.5 8.5l4 4"/></svg></div>
+        <h3>Tattoo</h3><p>Fine, detailed tattoo art created with precision and a steady artistic hand.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">04</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M3 21l3-1 11-11-2-2L4 18l-1 3Z"/><path d="M14 6l2-2 2 2-2 2Z"/></svg></div>
+        <h3>Permanent Makeup</h3><p>Long-lasting brows, liner and lips, designed to enhance your natural features.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">05</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg></div>
+        <h3>Nail Artist</h3><p>Manicure, nail art and finishing details for hands that feel as good as they look.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">06</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg></div>
+        <h3>Medical Pedicure</h3><p>Clinical, hygienic foot care that treats and protects for lasting comfort.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">07</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+        <h3>Laser Hair Removal</h3><p>Smooth, long-term results with safe, modern laser technology.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">08</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <h3>Solarium</h3><p>A soft, even glow all year round in a clean, controlled setting.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">09</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><line x1="20" y1="4" x2="8.5" y2="12"/><line x1="20" y1="20" x2="8.5" y2="12"/></svg></div>
+        <h3>Hair Stylist</h3><p>Cuts, styling and finishing tailored to your features and lifestyle.</p>
+      </div>
     </div>
 
-    <div class="timer">
-      💋 Coming Soon... 💋
+    <div class="svc-grid" id="svc-men" data-reveal="scale">
+      <div class="svc-card"><span class="svc-num">01</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg></div>
+        <h3>Medical Pedicure</h3><p>Clinical, hygienic foot care that treats and protects for lasting comfort.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">02</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></div>
+        <h3>Laser Hair Removal</h3><p>Smooth, long-term results with safe, modern laser technology.</p>
+      </div>
+      <div class="svc-card"><span class="svc-num">03</span>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" stroke-width="1.3"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <h3>Solarium</h3><p>A soft, even glow all year round in a clean, controlled setting.</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Signature -->
-
-    <div class="signature">
-
-      With love,
-
-      <br>
-
-      <strong>Sam ❤️</strong>
-
+<!-- ===================== WHY CHOOSE ===================== -->
+<section class="bg-ink" style="padding-bottom:0;">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="justify-content:center;display:flex;">The Difference</div>
+      <h2 class="section-title">Why Choose Joseph Farah?</h2>
     </div>
+  </div>
+  <div class="why-grid" data-reveal="fade">
+    <div class="why-card"><div class="why-num">01</div><h3>30+ Years of Experience</h3><p>Decades of expertise, refined skills, and a deep understanding of beauty and personal care.</p></div>
+    <div class="why-card"><div class="why-num">02</div><h3>Artistry &amp; Precision</h3><p>Beauty is an art. Every detail is approached with creativity, precision, and an artistic eye.</p></div>
+    <div class="why-card"><div class="why-num">03</div><h3>Professional Excellence</h3><p>High professional standards, advanced techniques, and meticulous attention to detail in every service.</p></div>
+    <div class="why-card"><div class="why-num">04</div><h3>Hygiene &amp; Care</h3><p>A clean, hygienic, and carefully maintained environment, with a strong commitment to client comfort, care and safety.</p></div>
+  </div>
+</section>
 
-  </main>
+<!-- ===================== GALLERY PREVIEW ===================== -->
+<section style="padding-bottom:60px;">
+  <div class="container">
+    <div class="section-head split" data-reveal>
+      <div>
+        <div class="eyebrow">Our Work</div>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <a href="gallery.html" class="link-underline">View Full Gallery</a>
+    </div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg><span>Make-Up</span></div><span class="tag">Make-Up</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg><span>Nails</span></div><span class="tag">Nails</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg><span>Medical Pedicure</span></div><span class="tag">Medical Pedicure</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg><span>Laser</span></div><span class="tag">Laser</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>Solarium</span></div><span class="tag">Solarium</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg><span>Make-Up</span></div><span class="tag">Make-Up</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg><span>Nails</span></div><span class="tag">Nails</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg><span>Medical Pedicure</span></div><span class="tag">Medical Pedicure</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg><span>Laser</span></div><span class="tag">Laser</span></div>
+      <div class="marquee-item"><div class="ph-media" style="width:100%;height:100%;"><svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>Solarium</span></div><span class="tag">Solarium</span></div>
+    </div>
+  </div>
+</section>
 
+<!-- ===================== REVIEWS ===================== -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <div class="eyebrow" style="justify-content:center;display:flex;">Testimonials</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+    <div class="reviews-wrap" data-reveal>
+      <div class="review-track">
+        <div class="review-slide active">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Joseph is a true artist. My bridal makeup lasted the entire wedding and looked flawless in every photo."</p>
+          <div class="review-name">Nour K.</div>
+        </div>
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The most professional skincare experience I've had in Zahle. Clean, calm, and my skin has never looked better."</p>
+          <div class="review-name">Rita S.</div>
+        </div>
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Thirty years of experience really shows. Joseph's precision with permanent makeup is unmatched."</p>
+          <div class="review-name">Layal H.</div>
+        </div>
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"I bring my father for medical pedicure and laser sessions. Always hygienic, always on time, always kind."</p>
+          <div class="review-name">Elie M.</div>
+        </div>
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"From nail art to solarium, every visit feels personal. Joseph remembers exactly what you like."</p>
+          <div class="review-name">Maya A.</div>
+        </div>
+      </div>
+      <div class="review-dots"></div>
+    </div>
+    <div class="review-cta">
+      <a class="btn" href="https://g.page/r/CVkBwT4R-0fOEBM/review" target="_blank" rel="noopener">Leave Us a Review</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOOKING CTA ===================== -->
+<section class="book-band">
+  <div class="container" data-reveal="scale">
+    <div class="eyebrow" style="justify-content:center;display:flex;">Reserve Your Visit</div>
+    <h2>Ready to Book Your Appointment?</h2>
+    <p>Choose your services, pick a time that suits you, and let Joseph take care of the rest.</p>
+    <a href="booking.html" class="btn btn-light">Book Your Appointment</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo/jf-logo-white.png" alt="Joseph Farah">
+        <p>Thirty years of professional experience in beauty, personal care and specialized treatments, based in Zahle, Lebanon. Precision, quality and a personalized experience for every client.</p>
+        <div class="footer-social">
+          <a class="btn-icon" style="border-color:var(--line-soft);color:var(--alabaster);" href="https://facebook.com/josephfarahofficial" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M13.5 9H15V6h-1.5A3.5 3.5 0 0 0 10 9.5V11H8v3h2v7h3v-7h2l.5-3H13v-1c0-.6.3-1 .5-1Z"/></svg></a>
+          <a class="btn-icon" style="border-color:var(--line-soft);color:var(--alabaster);" href="https://instagram.com/josephfarahofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg></a>
+          <a class="btn-icon" style="border-color:var(--line-soft);color:var(--alabaster);" href="https://tiktok.com/@josephfarahofficial" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M14 3v10.7a3.3 3.3 0 1 1-2.8-3.26"/><path d="M14 3c.4 2.5 2 4.1 4.5 4.4"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
+        <a href="booking.html">Booking</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="https://wa.me/9613293637" target="_blank" rel="noopener">WhatsApp: +961 3 29 36 37</a>
+        <a href="tel:+9618805017">Call: +961 8 80 50 17</a>
+        <a href="https://share.google/Zy1ZIpl92rXUN8XYk" target="_blank" rel="noopener">Zahle Boulevard, Centre Maalouf</a>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>Zahle Boulevard,<br>Centre Maalouf<br>Zahle, Lebanon</p>
+        <a href="booking.html" class="link-underline" style="margin-top:6px;display:inline-block;">Book an Appointment</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> Joseph Farah. All rights reserved.</span>
+      <span>Structured &amp; Developed by <a href="https://colartdigitalmarketingagency.com" target="_blank" rel="noopener">Colart Digital Marketing Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Services tabs (Home page)
+  document.querySelectorAll(".svc-tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      document.querySelectorAll(".svc-tab").forEach(function(t){ t.classList.remove("active"); });
+      document.querySelectorAll(".svc-grid").forEach(function(g){ g.classList.remove("active"); });
+      tab.classList.add("active");
+      document.getElementById("svc-" + tab.getAttribute("data-tab")).classList.add("active");
+    });
+  });
+</script>
 </body>
 </html>
