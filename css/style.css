@@ -300,14 +300,16 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background-image:url("../assets/logo/marble.jpg");
+  background-image:url("../assets/logo/hero-marble.jpg");
   background-size:cover; background-position:center;
-  opacity:.05; mix-blend-mode:screen; pointer-events:none;
+  pointer-events:none;
 }
 .hero::after{
   content:"";
   position:absolute; inset:0;
-  background:radial-gradient(ellipse at 50% 20%, rgba(114,108,99,.35), transparent 60%);
+  background:
+    linear-gradient(180deg, rgba(11,11,11,.72) 0%, rgba(11,11,11,.5) 45%, rgba(11,11,11,.8) 100%),
+    radial-gradient(ellipse at 50% 20%, rgba(114,108,99,.25), transparent 60%);
   pointer-events:none;
 }
 .hero-glow{
@@ -561,6 +563,31 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 }
 .review-dots button.active{ background:var(--ink); border-color:var(--ink); width:22px; border-radius:5px; }
 .review-cta{ text-align:center; margin-top:50px; }
+
+/* ---------- FAQ ---------- */
+.faq-list{ max-width:780px; margin:0 auto; }
+.faq-item{ border-bottom:1px solid var(--line); }
+.faq-q{
+  width:100%; text-align:left; background:none; border:none; padding:26px 0;
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  font-family:var(--font-display); font-size:clamp(16px,2vw,19px); color:var(--ink);
+}
+.faq-q .plus{
+  flex:none; width:30px; height:30px; border-radius:50%; border:1px solid var(--line);
+  position:relative; transition:transform .4s var(--ease-soft), border-color .4s;
+}
+.faq-q .plus::before, .faq-q .plus::after{
+  content:""; position:absolute; top:50%; left:50%; background:var(--ink);
+  transform:translate(-50%,-50%);
+}
+.faq-q .plus::before{ width:10px; height:1px; }
+.faq-q .plus::after{ width:1px; height:10px; transition:opacity .3s; }
+.faq-item.open .faq-q .plus{ transform:rotate(180deg); border-color:var(--ink); }
+.faq-item.open .faq-q .plus::after{ opacity:0; }
+.faq-a{
+  max-height:0; overflow:hidden; transition:max-height .5s var(--ease-soft);
+}
+.faq-a p{ padding:0 0 26px; max-width:640px; color:var(--ink-soft); font-size:14.5px; line-height:1.75; }
 
 /* ---------- Booking band ---------- */
 .book-band{

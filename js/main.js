@@ -42,13 +42,20 @@
     });
   }
 
-  /* ---------- Active nav link ---------- */
+  /* ---------- Active nav link ----------
+     Works with clean, extensionless URLs (/, /booking, /booking/,
+     /booking/index.html all normalize the same way). */
   (function setActive() {
-    var path = location.pathname.split("/").pop() || "index.html";
+    function normalize(p) {
+      p = p.replace(/index\.html$/, "");
+      if (p.length > 1) p = p.replace(/\/$/, "");
+      return p || "/";
+    }
+    var path = normalize(location.pathname);
     document.querySelectorAll(".nav-desktop a, .mobile-nav a").forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href) return;
-      if (href === path || (path === "" && href === "index.html")) {
+      if (normalize(href) === path) {
         a.classList.add("active");
       }
     });
@@ -171,5 +178,23 @@
     }
     input.addEventListener("change", sync);
     sync();
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll(".faq-item").forEach(function (item) {
+    var btn = item.querySelector(".faq-q");
+    var panel = item.querySelector(".faq-a");
+    if (!btn || !panel) return;
+    btn.addEventListener("click", function () {
+      var isOpen = item.classList.contains("open");
+      item.parentElement.querySelectorAll(".faq-item.open").forEach(function (other) {
+        if (other !== item) {
+          other.classList.remove("open");
+          other.querySelector(".faq-a").style.maxHeight = null;
+        }
+      });
+      item.classList.toggle("open", !isOpen);
+      panel.style.maxHeight = !isOpen ? panel.scrollHeight + "px" : null;
+    });
   });
 })();

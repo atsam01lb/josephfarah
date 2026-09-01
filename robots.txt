@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://josephfarah.colartdigitalmarketingagency.com/sitemap.xml
