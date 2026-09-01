@@ -292,8 +292,8 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   min-height:100vh;
   display:flex; align-items:center; justify-content:center;
   text-align:center;
-  background:var(--ink);
-  color:var(--alabaster);
+  background:var(--alabaster);
+  color:var(--ink);
   overflow:hidden;
   padding-top:120px;
 }
@@ -308,8 +308,8 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   content:"";
   position:absolute; inset:0;
   background:
-    linear-gradient(180deg, rgba(11,11,11,.72) 0%, rgba(11,11,11,.5) 45%, rgba(11,11,11,.8) 100%),
-    radial-gradient(ellipse at 50% 20%, rgba(114,108,99,.25), transparent 60%);
+    linear-gradient(180deg, rgba(247,246,244,.35) 0%, rgba(247,246,244,.1) 45%, rgba(247,246,244,.5) 100%),
+    radial-gradient(ellipse at 50% 20%, rgba(255,255,255,.4), transparent 60%);
   pointer-events:none;
 }
 .hero-glow{
@@ -328,12 +328,12 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   margin-bottom:34px;
 }
 .hero-badges span{
-  border:1px solid var(--line-soft);
+  border:1px solid var(--line);
   padding:8px 18px;
   font-size:10.5px;
   letter-spacing:.2em;
   text-transform:uppercase;
-  color:var(--pale-stone);
+  color:var(--stone);
   border-radius:40px;
   opacity:0; transform:translateY(10px);
   animation:badge-in .8s var(--ease-soft) forwards;
@@ -366,7 +366,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   max-width:560px;
   font-size:clamp(15px,1.6vw,18px);
   font-weight:300;
-  color:rgba(247,246,244,.72);
+  color:rgba(11,11,11,.72);
   opacity:0; animation:fade-up 1s .75s var(--ease) forwards;
 }
 @keyframes fade-up{ from{ opacity:0; transform:translateY(16px);} to{ opacity:1; transform:translateY(0);} }
@@ -380,42 +380,44 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .hero-scroll{
   position:absolute; bottom:34px; left:50%; transform:translateX(-50%);
   display:flex; flex-direction:column; align-items:center; gap:10px;
-  color:rgba(247,246,244,.5);
+  color:rgba(11,11,11,.55);
   font-size:10px; letter-spacing:.28em; text-transform:uppercase;
   opacity:0; animation:fade-up 1s 1.3s var(--ease) forwards;
 }
-.hero-scroll .line{ width:1px; height:38px; background:linear-gradient(var(--pale-stone), transparent); position:relative; overflow:hidden; }
+.hero-scroll .line{ width:1px; height:38px; background:linear-gradient(var(--stone), transparent); position:relative; overflow:hidden; }
 .hero-scroll .line::after{
   content:""; position:absolute; left:0; top:-100%; width:100%; height:100%;
-  background:var(--alabaster);
+  background:var(--ink);
   animation:scroll-drip 2.2s ease-in-out infinite;
 }
 @keyframes scroll-drip{ 0%{ top:-100%;} 60%{ top:100%;} 100%{ top:100%;} }
 
 /* Inner page hero (smaller) */
 .page-hero{
-  position:relative; background:var(--ink); color:var(--alabaster);
+  position:relative; background:var(--alabaster); color:var(--ink);
   padding:200px 0 110px; text-align:center; overflow:hidden;
 }
 .page-hero::before{
   content:""; position:absolute; inset:0;
   background-image:url("../assets/logo/marble.jpg"); background-size:cover; background-position:center;
-  opacity:.06; mix-blend-mode:screen;
+  opacity:.4;
 }
 .page-hero .eyebrow{ justify-content:center; display:flex; }
 .page-hero h1{
+  position:relative; z-index:2;
   font-size:clamp(42px,6.5vw,84px);
   margin-top:16px;
 }
 .page-hero p{
-  max-width:560px; margin:20px auto 0; color:rgba(247,246,244,.7); font-size:15px;
+  position:relative; z-index:2;
+  max-width:560px; margin:20px auto 0; color:rgba(11,11,11,.7); font-size:15px;
 }
 .breadcrumb{
   position:relative; z-index:2;
   margin-top:28px; font-size:11px; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--pale-stone); display:flex; gap:10px; justify-content:center;
+  color:var(--stone); display:flex; gap:10px; justify-content:center;
 }
-.breadcrumb a:hover{ color:var(--alabaster); }
+.breadcrumb a:hover{ color:var(--ink); }
 
 /* ---------- About ---------- */
 .about-grid{
@@ -719,9 +721,10 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .add-cart-btn.added svg{ stroke:var(--alabaster); }
 
 .shop-hero-note{
+  position:relative; z-index:2;
   display:inline-flex; align-items:center; gap:10px; margin-top:22px;
-  border:1px solid var(--line-soft); padding:10px 20px; border-radius:40px;
-  font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--pale-stone);
+  border:1px solid var(--line); padding:10px 20px; border-radius:40px;
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone);
 }
 
 /* Cart drawer */
