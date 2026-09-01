@@ -24,19 +24,28 @@
   document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- Mobile nav ---------- */
+  /* ---------- Mobile nav ----------
+     While the dark full-screen nav is open, the header sitting on top of it
+     switches to light-colored logo/icons (via .nav-open) so the brand mark,
+     WhatsApp icon and close button stay visible against the dark backdrop. */
   var burger = document.querySelector(".burger");
   var mobileNav = document.querySelector(".mobile-nav");
+  var brandMark = document.querySelector(".brand-mark");
   if (burger && mobileNav) {
     burger.addEventListener("click", function () {
       burger.classList.toggle("active");
       mobileNav.classList.toggle("open");
-      document.body.style.overflow = mobileNav.classList.contains("open") ? "hidden" : "";
+      var isOpen = mobileNav.classList.contains("open");
+      if (header) header.classList.toggle("nav-open", isOpen);
+      if (brandMark) brandMark.src = isOpen ? "/assets/logo/jf-mark-white.png" : "/assets/logo/jf-mark-black.png";
+      document.body.style.overflow = isOpen ? "hidden" : "";
     });
     mobileNav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         burger.classList.remove("active");
         mobileNav.classList.remove("open");
+        if (header) header.classList.remove("nav-open");
+        if (brandMark) brandMark.src = "/assets/logo/jf-mark-black.png";
         document.body.style.overflow = "";
       });
     });
