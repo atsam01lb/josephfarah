@@ -440,16 +440,26 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   aspect-ratio:4/5;
   background:linear-gradient(155deg,#EDEAE4,#F7F6F4 55%,#E8E4DC);
   border-radius:2px;
-  display:flex; align-items:center; justify-content:center;
   overflow:hidden;
 }
-.about-frame .ph-mono{
-  width:38%; opacity:.9;
+.about-frame .about-photo{
+  width:100%; height:100%;
+  object-fit:cover; object-position:center 15%;
+  display:block;
+  transform:scale(1.04);
+  transition:transform 1.2s var(--ease);
+}
+.about-media:hover .about-photo{ transform:scale(1); }
+.about-frame::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:38%;
+  background:linear-gradient(180deg, transparent, rgba(11,11,11,.6));
+  pointer-events:none;
 }
 .about-frame .ph-caption{
-  position:absolute; bottom:22px; left:22px; right:22px;
-  font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--stone);
-  display:flex; justify-content:space-between; border-top:1px solid var(--line); padding-top:14px;
+  position:absolute; z-index:2; bottom:22px; left:22px; right:22px;
+  font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--alabaster);
+  display:flex; justify-content:space-between; border-top:1px solid var(--line-soft); padding-top:14px;
 }
 .about-media::before{
   content:""; position:absolute; top:-18px; left:-18px; right:18px; bottom:18px;
