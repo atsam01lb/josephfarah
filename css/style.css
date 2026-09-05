@@ -794,7 +794,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 
 /* ---------- Shop ---------- */
 .shop-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:26px; }
-.product-card{ background:var(--white); border:1px solid var(--line); position:relative; }
+.product-card{ background:var(--white); border:1px solid var(--line); position:relative; cursor:pointer; }
 .product-card .ph-media{ aspect-ratio:1/1; }
 .product-body{ padding:22px 20px 24px; }
 .product-cat{ font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--stone); }
