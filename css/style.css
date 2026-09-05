@@ -550,6 +550,14 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   background:linear-gradient(180deg, rgba(11,11,11,.05) 0%, rgba(11,11,11,.2) 35%, rgba(11,11,11,.88) 100%);
 }
 .svc-card .svc-icon{ display:none; }
+
+/* Icon badge reused for contact-strip cards (e.g. Booking page) */
+.svc-icon{
+  width:56px; height:56px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid var(--line); flex:none;
+}
+.svc-icon svg{ width:22px; height:22px; }
 .svc-num{
   position:absolute; top:14px; right:16px; z-index:1;
   font-family:var(--font-display); font-size:11px; color:rgba(247,246,244,.7);
