@@ -27,6 +27,7 @@
   --dur: .8s;
 
   --radius: 2px;
+  --radius-md: 22px;
   --radius-lg: 32px;
   --shadow-soft: 0 20px 60px rgba(11,11,11,.08);
   --shadow-card: 0 14px 40px -14px rgba(114,108,99,.28);
@@ -850,6 +851,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .modal-overlay.open{ opacity:1; visibility:visible; }
 .modal-box{
   background:var(--alabaster); max-width:520px; width:100%; padding:44px 40px; position:relative;
+  border-radius:var(--radius-md);
   transform:translateY(20px) scale(.97); transition:transform .5s var(--ease-soft); max-height:88vh; overflow-y:auto;
 }
 .modal-overlay.open .modal-box{ transform:translateY(0) scale(1); }
