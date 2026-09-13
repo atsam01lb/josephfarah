@@ -816,6 +816,28 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .add-cart-btn.added{ background:var(--stone); border-color:var(--stone); }
 .add-cart-btn.added svg{ stroke:var(--alabaster); }
 
+.shop-grid .product-featured{
+  grid-column:1 / -1; display:flex; cursor:default; overflow:hidden;
+}
+.product-featured .ph-media{ width:38%; flex:none; aspect-ratio:auto; }
+.product-featured .product-body{ flex:1; padding:30px 34px; display:flex; flex-direction:column; justify-content:center; }
+.product-featured h3{ font-size:21px; }
+.product-featured .product-desc{ font-size:13px; line-height:1.7; color:var(--stone); margin:2px 0 4px; max-width:46ch; }
+.shade-picker{ margin:14px 0 4px; }
+.shade-picker-label{ font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone); margin-bottom:10px; display:flex; justify-content:space-between; gap:10px; }
+.shade-picker-label b{ font-family:var(--font-body); font-weight:600; letter-spacing:.02em; text-transform:none; color:var(--ink); font-size:12px; }
+.shade-swatches{ display:flex; flex-wrap:wrap; gap:8px; max-width:420px; }
+.shade-dot{
+  width:22px; height:22px; border-radius:50%; border:2px solid transparent; box-shadow:0 0 0 1px var(--line-soft);
+  cursor:pointer; padding:0; transition:transform .25s var(--ease-soft), box-shadow .25s;
+}
+.shade-dot:hover{ transform:scale(1.15); }
+.shade-dot.active{ border-color:var(--white); box-shadow:0 0 0 2px var(--ink); transform:scale(1.12); }
+@media (max-width:900px){
+  .shop-grid .product-featured{ flex-direction:column; }
+  .product-featured .ph-media{ width:100%; aspect-ratio:1/1; }
+}
+
 .shop-hero-note{
   position:relative; z-index:2;
   display:inline-flex; align-items:center; gap:10px; margin-top:22px;
