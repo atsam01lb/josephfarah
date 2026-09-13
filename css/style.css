@@ -763,16 +763,18 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 }
 .cert-card:hover{ transform:translateY(-8px); box-shadow:var(--shadow-soft); }
 .cert-inner{
-  border:1px solid var(--pale-stone); padding:26px 18px; aspect-ratio:3/4;
-  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:14px;
+  border:1px solid var(--pale-stone); padding:12px; aspect-ratio:3/4;
+  display:flex; align-items:center; justify-content:center;
   background:
     radial-gradient(circle at 50% 18%, rgba(114,108,99,.08), transparent 40%),
     linear-gradient(150deg,#F7F6F4,#EDEAE4);
 }
 .cert-inner svg{ width:34px; stroke:var(--stone); fill:none; }
-.cert-inner .cert-no{ font-family:var(--font-display); font-size:13px; color:var(--stone); letter-spacing:.1em; }
-.cert-inner h4{ font-size:14px; letter-spacing:.02em; }
-.cert-inner p{ font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--stone); opacity:.7; }
+.cert-inner img{ width:100%; height:100%; object-fit:contain; }
+.cert-caption{ padding-top:16px; text-align:center; display:flex; flex-direction:column; align-items:center; gap:6px; }
+.cert-caption .cert-no{ font-family:var(--font-display); font-size:13px; color:var(--stone); letter-spacing:.1em; }
+.cert-caption h4{ font-size:14px; letter-spacing:.02em; }
+.cert-caption p{ font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--stone); opacity:.7; }
 
 /* Lightbox */
 .lightbox{
@@ -784,6 +786,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .lightbox-inner{ max-width:min(760px,88vw); width:100%; transform:scale(.94); transition:transform .5s var(--ease-soft); }
 .lightbox.open .lightbox-inner{ transform:scale(1); }
 .lightbox .ph-media{ aspect-ratio:4/5; width:100%; }
+.lightbox .ph-media img{ width:100%; height:100%; object-fit:contain; }
 .lightbox-close{
   position:absolute; top:28px; right:28px; width:46px; height:46px; border-radius:50%;
   border:1px solid var(--line-soft); background:transparent; color:var(--alabaster);
