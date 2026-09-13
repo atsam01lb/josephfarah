@@ -824,6 +824,9 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 
 /* Eyeshadow shade picker modal */
 .modal-eyeshadow{ max-width:600px; }
+.modal-eyeshadow .modal-service-media{
+  height:320px; background-size:contain; background-repeat:no-repeat; background-color:var(--alabaster);
+}
 .eyeshadow-shade-label{
   font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone);
   margin:-2px 0 14px; display:flex; align-items:center; gap:6px;
