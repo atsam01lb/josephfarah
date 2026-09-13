@@ -96,7 +96,7 @@
           <h3>K Stars Eyeshadow <span class="product-code">K1</span></h3>
           <div class="product-row">
             <div class="product-price">$14.00<br><small>per unit &middot; 43 shades</small></div>
-            <button class="add-cart-btn" data-id="p01-K1" data-name="K Stars Eyeshadow — K1" data-cat="Makeup" data-price="14.00" data-icon="makeup" aria-label="Add K Stars Eyeshadow to basket">
+            <button class="add-cart-btn" data-id="p01-K1" data-name="K Stars Eyeshadow — K1" data-cat="Makeup" data-price="14.00" data-icon="makeup" data-img="/assets/img/shop/shades/k-K1.jpg" aria-label="Add K Stars Eyeshadow to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -408,10 +408,12 @@
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p01-" + currentCode);
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
+        cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p01-K1");
         cardBtn.setAttribute("data-name", baseName + " — K1");
+        cardBtn.setAttribute("data-img", "/assets/img/shop/shades/k-K1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
       closeEyeshadowModal();
