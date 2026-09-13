@@ -33,6 +33,7 @@
           cat: btn.getAttribute("data-cat"),
           price: parseFloat(btn.getAttribute("data-price")),
           icon: btn.getAttribute("data-icon") || "",
+          img: btn.getAttribute("data-img") || "",
           qty: 1,
         });
       }
@@ -86,8 +87,11 @@
       cart.forEach(function (item) {
         var row = document.createElement("div");
         row.className = "cart-item";
+        var media = item.img
+          ? '<div class="ph-media" style="background-image:url(\'' + item.img + '\');background-size:cover;background-position:center;"></div>'
+          : '<div class="ph-media"><svg viewBox="0 0 24 24" stroke-width="1.3">' + iconSvg(item.icon) + "</svg></div>";
         row.innerHTML =
-          '<div class="ph-media"><svg viewBox="0 0 24 24" stroke-width="1.3">' + iconSvg(item.icon) + "</svg></div>" +
+          media +
           '<div class="cart-item-info">' +
           "<h5>" + item.name + "</h5>" +
           '<div class="cat">' + item.cat + "</div>" +
