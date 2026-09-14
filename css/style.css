@@ -825,8 +825,11 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 /* Eyeshadow shade picker modal */
 .modal-eyeshadow{ max-width:600px; }
 .modal-eyeshadow .modal-service-media{
-  height:320px; background-size:contain; background-repeat:no-repeat; background-color:var(--alabaster);
+  height:clamp(150px,30vh,300px); background-size:contain; background-repeat:no-repeat; background-color:var(--alabaster);
 }
+.modal-eyeshadow .modal-service-body{ padding:22px 34px 26px; }
+.modal-eyeshadow .modal-service-body h3{ font-size:21px; margin-bottom:8px; }
+.modal-eyeshadow .modal-service-actions{ margin-top:16px; }
 .eyeshadow-shade-label{
   font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone);
   margin:-2px 0 14px; display:flex; align-items:center; gap:6px;
@@ -834,7 +837,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .eyeshadow-shade-label b{ font-family:var(--font-body); font-weight:600; letter-spacing:.02em; text-transform:none; color:var(--ink); font-size:13px; }
 .eyeshadow-shades{
   display:grid; grid-template-columns:repeat(9,1fr); gap:10px;
-  max-height:230px; overflow-y:auto; padding:4px 4px 6px; margin-bottom:6px;
+  max-height:clamp(120px,20vh,220px); overflow-y:auto; padding:4px 4px 6px; margin-bottom:6px;
 }
 .eyeshadow-shade-btn{
   width:100%; aspect-ratio:1/1; border-radius:50%; border:2px solid var(--alabaster); box-shadow:0 0 0 1px var(--line-soft);
