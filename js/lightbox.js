@@ -41,21 +41,4 @@
       openLightbox(media ? media.innerHTML : "", caption);
     });
   });
-
-  /* ---------- Gallery filter ---------- */
-  var filterBtns = document.querySelectorAll(".filter-btn");
-  var items = document.querySelectorAll("[data-cat]");
-  if (filterBtns.length) {
-    filterBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        filterBtns.forEach(function (b) { b.classList.remove("active"); });
-        btn.classList.add("active");
-        var cat = btn.getAttribute("data-filter");
-        items.forEach(function (item) {
-          var show = cat === "all" || item.getAttribute("data-cat") === cat;
-          item.style.display = show ? "" : "none";
-        });
-      });
-    });
-  }
 })();
