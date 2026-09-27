@@ -754,6 +754,13 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 }
 .g-item:hover .g-overlay{ opacity:1; }
 .g-overlay span{ color:var(--alabaster); font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+.g-item img, .g-item video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.g-play-badge{
+  position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%;
+  background:rgba(11,11,11,.55); backdrop-filter:blur(2px);
+  display:flex; align-items:center; justify-content:center; pointer-events:none;
+}
+.g-play-badge svg{ width:14px; fill:var(--alabaster); }
 
 /* Certificates */
 .cert-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
@@ -786,7 +793,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .lightbox-inner{ max-width:min(760px,88vw); width:100%; transform:scale(.94); transition:transform .5s var(--ease-soft); }
 .lightbox.open .lightbox-inner{ transform:scale(1); }
 .lightbox .ph-media{ aspect-ratio:4/5; width:100%; }
-.lightbox .ph-media img{ width:100%; height:100%; object-fit:contain; }
+.lightbox .ph-media img, .lightbox .ph-media video{ width:100%; height:100%; object-fit:contain; }
 .lightbox-close{
   position:absolute; top:28px; right:28px; width:46px; height:46px; border-radius:50%;
   border:1px solid var(--line-soft); background:transparent; color:var(--alabaster);
