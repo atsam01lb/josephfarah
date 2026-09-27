@@ -79,224 +79,107 @@
 
 <section class="section-tight">
   <div class="container">
-    <div class="filter-bar" data-reveal>
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="makeup">Make-Up</button>
-      <button class="filter-btn" data-filter="nails">Nails</button>
-      <button class="filter-btn" data-filter="pedicure">Medical Pedicure</button>
-      <button class="filter-btn" data-filter="laser">Laser</button>
-      <button class="filter-btn" data-filter="solarium">Solarium</button>
-    </div>
+    <!--
+      GALLERY MEDIA — no categories/filters anymore, just one grid.
+      To swap a placeholder for the real thing, replace its .ph-media
+      contents with the actual file:
+
+        Photo:  <img src="/assets/img/gallery/gallery-01.jpg" alt="...">
+        Video:  <video src="/assets/video/gallery/gallery-01.mp4" muted loop playsinline controls></video>
+
+      Photos go in  /assets/img/gallery/    (gallery-01.jpg, gallery-02.jpg, ...)
+      Videos go in  /assets/video/gallery/  (gallery-01.mp4, gallery-02.mp4, ...)
+      Numbering is independent per type — gallery-01.jpg and gallery-01.mp4 can
+      both exist. Add or remove <div class="g-item">...</div> blocks freely;
+      the grid and lightbox both adapt automatically.
+    -->
     <div class="grid-masonry" data-group="gal">
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="makeup" data-lightbox data-caption="Make-Up 01">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 01">
         <div class="ph-media" style="aspect-ratio:1/1;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Make-Up</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Make-Up 01</span></div>
+        <div class="g-overlay"><span>Photo 01</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="nails" data-lightbox data-caption="Nails 01">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Video 01">
         <div class="ph-media" style="aspect-ratio:3/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg>
-          <span>Nails</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>
+          <span>Video</span>
         </div>
-        <div class="g-overlay"><span>Nails 01</span></div>
+        <div class="g-overlay"><span>Video 01</span></div>
+        <span class="g-play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></svg></span>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="pedicure" data-lightbox data-caption="Medical Pedicure 01">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 02">
         <div class="ph-media" style="aspect-ratio:4/5;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg>
-          <span>Medical Pedicure</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Medical Pedicure 01</span></div>
+        <div class="g-overlay"><span>Photo 02</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="laser" data-lightbox data-caption="Laser 01">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 03">
         <div class="ph-media" style="aspect-ratio:2/3;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <span>Laser</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Laser 01</span></div>
+        <div class="g-overlay"><span>Photo 03</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="solarium" data-lightbox data-caption="Solarium 01">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 04">
         <div class="ph-media" style="aspect-ratio:5/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <span>Solarium</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Solarium 01</span></div>
+        <div class="g-overlay"><span>Photo 04</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="makeup" data-lightbox data-caption="Make-Up 02">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Video 02">
         <div class="ph-media" style="aspect-ratio:1/1;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Make-Up</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>
+          <span>Video</span>
         </div>
-        <div class="g-overlay"><span>Make-Up 02</span></div>
+        <div class="g-overlay"><span>Video 02</span></div>
+        <span class="g-play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></svg></span>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="nails" data-lightbox data-caption="Nails 02">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 05">
         <div class="ph-media" style="aspect-ratio:3/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg>
-          <span>Nails</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Nails 02</span></div>
+        <div class="g-overlay"><span>Photo 05</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="pedicure" data-lightbox data-caption="Medical Pedicure 02">
-        <div class="ph-media" style="aspect-ratio:4/5;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg>
-          <span>Medical Pedicure</span>
-        </div>
-        <div class="g-overlay"><span>Medical Pedicure 02</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="laser" data-lightbox data-caption="Laser 02">
-        <div class="ph-media" style="aspect-ratio:2/3;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <span>Laser</span>
-        </div>
-        <div class="g-overlay"><span>Laser 02</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="solarium" data-lightbox data-caption="Solarium 02">
-        <div class="ph-media" style="aspect-ratio:5/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <span>Solarium</span>
-        </div>
-        <div class="g-overlay"><span>Solarium 02</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="makeup" data-lightbox data-caption="Make-Up 03">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 06">
         <div class="ph-media" style="aspect-ratio:1/1;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Make-Up</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Make-Up 03</span></div>
+        <div class="g-overlay"><span>Photo 06</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="nails" data-lightbox data-caption="Nails 03">
-        <div class="ph-media" style="aspect-ratio:3/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg>
-          <span>Nails</span>
-        </div>
-        <div class="g-overlay"><span>Nails 03</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="pedicure" data-lightbox data-caption="Medical Pedicure 03">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 07">
         <div class="ph-media" style="aspect-ratio:4/5;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg>
-          <span>Medical Pedicure</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Medical Pedicure 03</span></div>
+        <div class="g-overlay"><span>Photo 07</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="laser" data-lightbox data-caption="Laser 03">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Video 03">
         <div class="ph-media" style="aspect-ratio:2/3;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <span>Laser</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>
+          <span>Video</span>
         </div>
-        <div class="g-overlay"><span>Laser 03</span></div>
+        <div class="g-overlay"><span>Video 03</span></div>
+        <span class="g-play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></svg></span>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="solarium" data-lightbox data-caption="Solarium 03">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 08">
         <div class="ph-media" style="aspect-ratio:5/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <span>Solarium</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Solarium 03</span></div>
+        <div class="g-overlay"><span>Photo 08</span></div>
       </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="makeup" data-lightbox data-caption="Make-Up 04">
+      <div class="g-item card-anim" data-reveal data-group="gal" data-lightbox data-caption="Photo 09">
         <div class="ph-media" style="aspect-ratio:1/1;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Make-Up</span>
+          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M4 8h3l2-3h6l2 3h3v11H4V8Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <span>Photo</span>
         </div>
-        <div class="g-overlay"><span>Make-Up 04</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="nails" data-lightbox data-caption="Nails 04">
-        <div class="ph-media" style="aspect-ratio:3/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg>
-          <span>Nails</span>
-        </div>
-        <div class="g-overlay"><span>Nails 04</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="pedicure" data-lightbox data-caption="Medical Pedicure 04">
-        <div class="ph-media" style="aspect-ratio:4/5;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg>
-          <span>Medical Pedicure</span>
-        </div>
-        <div class="g-overlay"><span>Medical Pedicure 04</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="laser" data-lightbox data-caption="Laser 04">
-        <div class="ph-media" style="aspect-ratio:2/3;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <span>Laser</span>
-        </div>
-        <div class="g-overlay"><span>Laser 04</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="solarium" data-lightbox data-caption="Solarium 04">
-        <div class="ph-media" style="aspect-ratio:5/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <span>Solarium</span>
-        </div>
-        <div class="g-overlay"><span>Solarium 04</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="makeup" data-lightbox data-caption="Make-Up 05">
-        <div class="ph-media" style="aspect-ratio:1/1;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Make-Up</span>
-        </div>
-        <div class="g-overlay"><span>Make-Up 05</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="nails" data-lightbox data-caption="Nails 05">
-        <div class="ph-media" style="aspect-ratio:3/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg>
-          <span>Nails</span>
-        </div>
-        <div class="g-overlay"><span>Nails 05</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="pedicure" data-lightbox data-caption="Medical Pedicure 05">
-        <div class="ph-media" style="aspect-ratio:4/5;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg>
-          <span>Medical Pedicure</span>
-        </div>
-        <div class="g-overlay"><span>Medical Pedicure 05</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="laser" data-lightbox data-caption="Laser 05">
-        <div class="ph-media" style="aspect-ratio:2/3;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <span>Laser</span>
-        </div>
-        <div class="g-overlay"><span>Laser 05</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="solarium" data-lightbox data-caption="Solarium 05">
-        <div class="ph-media" style="aspect-ratio:5/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <span>Solarium</span>
-        </div>
-        <div class="g-overlay"><span>Solarium 05</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="makeup" data-lightbox data-caption="Make-Up 06">
-        <div class="ph-media" style="aspect-ratio:1/1;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Make-Up</span>
-        </div>
-        <div class="g-overlay"><span>Make-Up 06</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="nails" data-lightbox data-caption="Nails 06">
-        <div class="ph-media" style="aspect-ratio:3/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M10 3h4v3h-4z"/><path d="M9 6h6l1 3v9a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3V9l1-3Z"/></svg>
-          <span>Nails</span>
-        </div>
-        <div class="g-overlay"><span>Nails 06</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="pedicure" data-lightbox data-caption="Medical Pedicure 06">
-        <div class="ph-media" style="aspect-ratio:4/5;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M7 21c-2 0-3-1.5-3-4 0-2 1-3 1-6 0-3-1-5-1-6a3 3 0 0 1 6 0c0 2-1 3-1 5 0 1 .5 2 2 2s2-2 2-4a3 3 0 0 1 6 0c0 5-3 6-3 9 0 2-1 4-4 4H7Z"/></svg>
-          <span>Medical Pedicure</span>
-        </div>
-        <div class="g-overlay"><span>Medical Pedicure 06</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="laser" data-lightbox data-caption="Laser 06">
-        <div class="ph-media" style="aspect-ratio:2/3;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
-          <span>Laser</span>
-        </div>
-        <div class="g-overlay"><span>Laser 06</span></div>
-      </div>
-      <div class="g-item card-anim" data-reveal data-group="gal" data-cat="solarium" data-lightbox data-caption="Solarium 06">
-        <div class="ph-media" style="aspect-ratio:5/4;">
-          <svg viewBox="0 0 24 24" stroke-width="1.1"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <span>Solarium</span>
-        </div>
-        <div class="g-overlay"><span>Solarium 06</span></div>
+        <div class="g-overlay"><span>Photo 09</span></div>
       </div>
     </div>
   </div>
