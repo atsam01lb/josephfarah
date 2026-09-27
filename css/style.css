@@ -845,7 +845,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 }
 .modal-eyeshadow .modal-service-media{
   flex:0 0 42%; height:auto; align-self:stretch;
-  background-size:195% 172%; background-position:center; background-color:#fff;
+  background-size:contain; background-repeat:no-repeat; background-position:center; background-color:#fff;
 }
 .modal-eyeshadow .modal-service-body{
   flex:1; min-width:0;
@@ -874,7 +874,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   }
   .modal-eyeshadow .modal-service-media{
     flex:0 0 auto; height:clamp(70px,14vh,200px);
-    background-size:cover;
+    background-size:contain;
   }
 }
 .modal-eyeshadow .eyeshadow-desc{
