@@ -102,6 +102,19 @@
           </div>
         </div>
       </div>
+      <div class="product-card card-anim" data-reveal data-group="pm" data-terracotta-trigger>
+        <div class="ph-media" style="background-image:url('/assets/img/shop/shades/bts-B1.jpg');background-size:cover;background-position:center;"></div>
+        <div class="product-body">
+          <div class="product-cat">Makeup &middot; Baked Terracotta Shadow</div>
+          <h3>Baked Terracotta Shadow <span class="product-code">B1</span></h3>
+          <div class="product-row">
+            <div class="product-price">$16.00<br><small>per unit &middot; 70 shades</small></div>
+            <button class="add-cart-btn" data-id="p02-B1" data-name="Baked Terracotta Shadow — B1" data-cat="Makeup" data-price="16.00" data-icon="makeup" data-img="/assets/img/shop/shades/bts-B1.jpg" aria-label="Add Baked Terracotta Shadow to basket">
+              <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -460,6 +473,89 @@
   </div>
 </div>
 
+<!-- ===================== BAKED TERRACOTTA SHADOW SHADE PICKER MODAL ===================== -->
+<div class="modal-overlay" id="terracottaModal">
+  <div class="modal-box modal-service modal-terracotta">
+    <button class="btn-icon modal-close" id="terracottaModalClose" aria-label="Close">&times;</button>
+    <div class="modal-service-media" id="terracottaPreview" style="background-image:url('/assets/img/shop/shades/bts-B1.jpg');"></div>
+    <div class="modal-service-body">
+      <h3>Baked Terracotta Shadow</h3>
+      <p class="terracotta-desc">Luminous, expressive, and offering 70 shades and color combinations, its textures range from Pearled, to Medium Pearled, and Matte. It can be applied wet for intensive coverage, or dry for subtle demeanor.</p>
+      <div class="terracotta-shade-label">Shade <b id="terracottaShadeCode">B1</b></div>
+      <div class="terracotta-pager">
+        <button type="button" class="terracotta-page-btn" id="terracottaPagePrev" aria-label="Previous shades">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="terracotta-page-label" id="terracottaPageLabel">B1 – ECH14</span>
+        <button type="button" class="terracotta-page-btn" id="terracottaPageNext" aria-label="Next shades">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="terracotta-shades" id="terracottaShades">
+              <button type="button" class="terracotta-shade-btn active" data-code="B1" data-hex="#BD9989" data-img="/assets/img/shop/shades/bts-B1.jpg" data-page="1" style="background-color:#BD9989;" aria-label="Select shade B1"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B2" data-hex="#C6A59A" data-img="/assets/img/shop/shades/bts-B2.jpg" data-page="1" style="background-color:#C6A59A;" aria-label="Select shade B2"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B3" data-hex="#B79886" data-img="/assets/img/shop/shades/bts-B3.jpg" data-page="1" style="background-color:#B79886;" aria-label="Select shade B3"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B6" data-hex="#BFA3B2" data-img="/assets/img/shop/shades/bts-B6.jpg" data-page="1" style="background-color:#BFA3B2;" aria-label="Select shade B6"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B7" data-hex="#6CAEB9" data-img="/assets/img/shop/shades/bts-B7.jpg" data-page="1" style="background-color:#6CAEB9;" aria-label="Select shade B7"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B8" data-hex="#E8D8E5" data-img="/assets/img/shop/shades/bts-B8.jpg" data-page="1" style="background-color:#E8D8E5;" aria-label="Select shade B8"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B9" data-hex="#BD8A99" data-img="/assets/img/shop/shades/bts-B9.jpg" data-page="1" style="background-color:#BD8A99;" aria-label="Select shade B9"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B10" data-hex="#EAD1CC" data-img="/assets/img/shop/shades/bts-B10.jpg" data-page="1" style="background-color:#EAD1CC;" aria-label="Select shade B10"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B13" data-hex="#A59EC4" data-img="/assets/img/shop/shades/bts-B13.jpg" data-page="1" style="background-color:#A59EC4;" aria-label="Select shade B13"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B14" data-hex="#6195CE" data-img="/assets/img/shop/shades/bts-B14.jpg" data-page="1" style="background-color:#6195CE;" aria-label="Select shade B14"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B15" data-hex="#B3A0B1" data-img="/assets/img/shop/shades/bts-B15.jpg" data-page="1" style="background-color:#B3A0B1;" aria-label="Select shade B15"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B16" data-hex="#F5DAC5" data-img="/assets/img/shop/shades/bts-B16.jpg" data-page="1" style="background-color:#F5DAC5;" aria-label="Select shade B16"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B17" data-hex="#F9AF9B" data-img="/assets/img/shop/shades/bts-B17.jpg" data-page="1" style="background-color:#F9AF9B;" aria-label="Select shade B17"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B19" data-hex="#F59FBF" data-img="/assets/img/shop/shades/bts-B19.jpg" data-page="1" style="background-color:#F59FBF;" aria-label="Select shade B19"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B20" data-hex="#E8E1C7" data-img="/assets/img/shop/shades/bts-B20.jpg" data-page="1" style="background-color:#E8E1C7;" aria-label="Select shade B20"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B21" data-hex="#E0B6A5" data-img="/assets/img/shop/shades/bts-B21.jpg" data-page="1" style="background-color:#E0B6A5;" aria-label="Select shade B21"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B22" data-hex="#EBA896" data-img="/assets/img/shop/shades/bts-B22.jpg" data-page="1" style="background-color:#EBA896;" aria-label="Select shade B22"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B24" data-hex="#CB9377" data-img="/assets/img/shop/shades/bts-B24.jpg" data-page="1" style="background-color:#CB9377;" aria-label="Select shade B24"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B25" data-hex="#F1AB91" data-img="/assets/img/shop/shades/bts-B25.jpg" data-page="1" style="background-color:#F1AB91;" aria-label="Select shade B25"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B26" data-hex="#FFFEF4" data-img="/assets/img/shop/shades/bts-B26.jpg" data-page="1" style="background-color:#FFFEF4;" aria-label="Select shade B26"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B27" data-hex="#D29A7F" data-img="/assets/img/shop/shades/bts-B27.jpg" data-page="1" style="background-color:#D29A7F;" aria-label="Select shade B27"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B29" data-hex="#EBE6E3" data-img="/assets/img/shop/shades/bts-B29.jpg" data-page="1" style="background-color:#EBE6E3;" aria-label="Select shade B29"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B30" data-hex="#B58070" data-img="/assets/img/shop/shades/bts-B30.jpg" data-page="1" style="background-color:#B58070;" aria-label="Select shade B30"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B37" data-hex="#8D6858" data-img="/assets/img/shop/shades/bts-B37.jpg" data-page="1" style="background-color:#8D6858;" aria-label="Select shade B37"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B38" data-hex="#C7B199" data-img="/assets/img/shop/shades/bts-B38.jpg" data-page="1" style="background-color:#C7B199;" aria-label="Select shade B38"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B40" data-hex="#D75A99" data-img="/assets/img/shop/shades/bts-B40.jpg" data-page="1" style="background-color:#D75A99;" aria-label="Select shade B40"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B41" data-hex="#E5988A" data-img="/assets/img/shop/shades/bts-B41.jpg" data-page="1" style="background-color:#E5988A;" aria-label="Select shade B41"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B42" data-hex="#96CEB1" data-img="/assets/img/shop/shades/bts-B42.jpg" data-page="1" style="background-color:#96CEB1;" aria-label="Select shade B42"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B43" data-hex="#9D858F" data-img="/assets/img/shop/shades/bts-B43.jpg" data-page="1" style="background-color:#9D858F;" aria-label="Select shade B43"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B44" data-hex="#4A686A" data-img="/assets/img/shop/shades/bts-B44.jpg" data-page="1" style="background-color:#4A686A;" aria-label="Select shade B44"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B47" data-hex="#AF6F8F" data-img="/assets/img/shop/shades/bts-B47.jpg" data-page="1" style="background-color:#AF6F8F;" aria-label="Select shade B47"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="B48" data-hex="#D3D0AD" data-img="/assets/img/shop/shades/bts-B48.jpg" data-page="1" style="background-color:#D3D0AD;" aria-label="Select shade B48"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH1" data-hex="#EDACB0" data-img="/assets/img/shop/shades/bts-ECH1.jpg" data-page="1" style="background-color:#EDACB0;" aria-label="Select shade ECH1"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH2" data-hex="#4F4B46" data-img="/assets/img/shop/shades/bts-ECH2.jpg" data-page="1" style="background-color:#4F4B46;" aria-label="Select shade ECH2"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH3" data-hex="#3C739C" data-img="/assets/img/shop/shades/bts-ECH3.jpg" data-page="1" style="background-color:#3C739C;" aria-label="Select shade ECH3"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH4" data-hex="#EFD5B8" data-img="/assets/img/shop/shades/bts-ECH4.jpg" data-page="1" style="background-color:#EFD5B8;" aria-label="Select shade ECH4"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH5" data-hex="#EE897B" data-img="/assets/img/shop/shades/bts-ECH5.jpg" data-page="1" style="background-color:#EE897B;" aria-label="Select shade ECH5"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH6" data-hex="#416292" data-img="/assets/img/shop/shades/bts-ECH6.jpg" data-page="1" style="background-color:#416292;" aria-label="Select shade ECH6"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH7" data-hex="#837E83" data-img="/assets/img/shop/shades/bts-ECH7.jpg" data-page="1" style="background-color:#837E83;" aria-label="Select shade ECH7"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH8" data-hex="#59514F" data-img="/assets/img/shop/shades/bts-ECH8.jpg" data-page="1" style="background-color:#59514F;" aria-label="Select shade ECH8"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH9" data-hex="#3F4346" data-img="/assets/img/shop/shades/bts-ECH9.jpg" data-page="1" style="background-color:#3F4346;" aria-label="Select shade ECH9"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH10" data-hex="#2B656E" data-img="/assets/img/shop/shades/bts-ECH10.jpg" data-page="1" style="background-color:#2B656E;" aria-label="Select shade ECH10"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH11" data-hex="#979D93" data-img="/assets/img/shop/shades/bts-ECH11.jpg" data-page="1" style="background-color:#979D93;" aria-label="Select shade ECH11"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH12" data-hex="#323039" data-img="/assets/img/shop/shades/bts-ECH12.jpg" data-page="1" style="background-color:#323039;" aria-label="Select shade ECH12"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH14" data-hex="#726B60" data-img="/assets/img/shop/shades/bts-ECH14.jpg" data-page="1" style="background-color:#726B60;" aria-label="Select shade ECH14"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH15" data-hex="#945544" data-img="/assets/img/shop/shades/bts-ECH15.jpg" data-page="2" style="background-color:#945544;display:none;" aria-label="Select shade ECH15"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH16" data-hex="#F7D1D2" data-img="/assets/img/shop/shades/bts-ECH16.jpg" data-page="2" style="background-color:#F7D1D2;display:none;" aria-label="Select shade ECH16"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH17" data-hex="#EEE2A8" data-img="/assets/img/shop/shades/bts-ECH17.jpg" data-page="2" style="background-color:#EEE2A8;display:none;" aria-label="Select shade ECH17"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH18" data-hex="#282827" data-img="/assets/img/shop/shades/bts-ECH18.jpg" data-page="2" style="background-color:#282827;display:none;" aria-label="Select shade ECH18"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH19" data-hex="#5A2F28" data-img="/assets/img/shop/shades/bts-ECH19.jpg" data-page="2" style="background-color:#5A2F28;display:none;" aria-label="Select shade ECH19"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH20" data-hex="#C56F71" data-img="/assets/img/shop/shades/bts-ECH20.jpg" data-page="2" style="background-color:#C56F71;display:none;" aria-label="Select shade ECH20"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH21" data-hex="#A3A1AE" data-img="/assets/img/shop/shades/bts-ECH21.jpg" data-page="2" style="background-color:#A3A1AE;display:none;" aria-label="Select shade ECH21"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH22" data-hex="#9371A6" data-img="/assets/img/shop/shades/bts-ECH22.jpg" data-page="2" style="background-color:#9371A6;display:none;" aria-label="Select shade ECH22"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="ECH23" data-hex="#DEC5A7" data-img="/assets/img/shop/shades/bts-ECH23.jpg" data-page="2" style="background-color:#DEC5A7;display:none;" aria-label="Select shade ECH23"></button>
+              <button type="button" class="terracotta-shade-btn" data-code="KB1 GOLD" data-hex="#BBA48C" data-img="/assets/img/shop/shades/bts-KB1GOLD.jpg" data-page="2" style="background-color:#BBA48C;display:none;" aria-label="Select shade KB1 GOLD"></button>
+      </div>
+      <div class="product-price" style="margin:4px 0 10px;">$16.00<br><small>per unit</small></div>
+      <div class="modal-service-actions">
+        <button class="btn btn-primary" id="terracottaAdd" type="button">Add to Basket</button>
+        <a class="btn" id="terracottaWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
 <section class="book-band">
   <div class="container" data-reveal="scale">
     <div class="eyebrow" style="justify-content:center;display:flex;">Reserve Your Visit</div>
@@ -627,6 +723,114 @@
     shadeBtns.forEach(function(btn){ btn.addEventListener("click", updateWa); });
   })();
 
+  /* ---------- Baked Terracotta Shadow shade picker modal ---------- */
+  (function(){
+    var modal = document.getElementById("terracottaModal");
+    if(!modal) return;
+    var trigger = document.querySelector('[data-terracotta-trigger]');
+    var closeBtn = document.getElementById("terracottaModalClose");
+    var preview = document.getElementById("terracottaPreview");
+    var codeLabel = document.getElementById("terracottaShadeCode");
+    var addBtn = document.getElementById("terracottaAdd");
+    var waBtn = document.getElementById("terracottaWa");
+    var shadeBtns = document.querySelectorAll(".terracotta-shade-btn");
+    var cardBtn = trigger ? trigger.querySelector(".add-cart-btn") : null;
+    var baseName = "Baked Terracotta Shadow";
+    var price = "16.00";
+    var currentCode = "B1";
+    var currentImg = "/assets/img/shop/shades/bts-B1.jpg";
+
+    function selectShade(code, img){
+      currentCode = code;
+      currentImg = img;
+      preview.style.backgroundImage = "url('" + img + "')";
+      codeLabel.textContent = code;
+      shadeBtns.forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-code") === code); });
+    }
+
+    shadeBtns.forEach(function(btn){
+      btn.addEventListener("click", function(){
+        selectShade(btn.getAttribute("data-code"), btn.getAttribute("data-img"));
+      });
+    });
+
+    /* ---------- shade page navigation ---------- */
+    var shadesWrap = document.getElementById("terracottaShades");
+    var pagePrev = document.getElementById("terracottaPagePrev");
+    var pageNext = document.getElementById("terracottaPageNext");
+    var pageLabel = document.getElementById("terracottaPageLabel");
+    var totalPages = 1;
+    shadeBtns.forEach(function(b){
+      var p = parseInt(b.getAttribute("data-page"), 10) || 1;
+      if(p > totalPages) totalPages = p;
+    });
+    var currentPage = 1;
+
+    function pageRangeLabel(page){
+      var first = null, last = null;
+      shadeBtns.forEach(function(b){
+        if(b.getAttribute("data-page") === String(page)){
+          if(!first) first = b.getAttribute("data-code");
+          last = b.getAttribute("data-code");
+        }
+      });
+      return first ? (first + " – " + last) : "";
+    }
+
+    function showPage(page){
+      currentPage = page;
+      shadeBtns.forEach(function(b){
+        b.style.display = (b.getAttribute("data-page") === String(page)) ? "" : "none";
+      });
+      if(pageLabel) pageLabel.textContent = pageRangeLabel(page);
+      if(pagePrev) pagePrev.disabled = page === 1;
+      if(pageNext) pageNext.disabled = page === totalPages;
+      if(shadesWrap) shadesWrap.scrollTop = 0;
+    }
+    if(pagePrev) pagePrev.addEventListener("click", function(){ if(currentPage > 1) showPage(currentPage - 1); });
+    if(pageNext) pageNext.addEventListener("click", function(){ if(currentPage < totalPages) showPage(currentPage + 1); });
+    showPage(1);
+
+    function openTerracottaModal(){
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeTerracottaModal(){
+      modal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    if(trigger){
+      trigger.addEventListener("click", function(e){
+        if(e.target.closest(".add-cart-btn")) return;
+        openTerracottaModal();
+      });
+    }
+    closeBtn.addEventListener("click", closeTerracottaModal);
+    modal.addEventListener("click", function(e){ if(e.target === modal) closeTerracottaModal(); });
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && modal.classList.contains("open")) closeTerracottaModal(); });
+
+    addBtn.addEventListener("click", function(){
+      if(cardBtn){
+        cardBtn.setAttribute("data-id", "p02-" + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
+        cardBtn.setAttribute("data-img", currentImg);
+        cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.click();
+        cardBtn.setAttribute("data-id", "p02-B1");
+        cardBtn.setAttribute("data-name", baseName + " — B1");
+        cardBtn.setAttribute("data-img", "/assets/img/shop/shades/bts-B1.jpg");
+        cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
+      }
+      closeTerracottaModal();
+    });
+
+    function updateWa(){
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
+      waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
+    }
+    updateWa();
+    shadeBtns.forEach(function(btn){ btn.addEventListener("click", updateWa); });
+  })();
   (function(){
     var modal = document.getElementById("productModal");
     if(!modal) return;
@@ -666,7 +870,7 @@
       document.body.style.overflow = "";
     }
     document.querySelectorAll(".product-card").forEach(function(card){
-      if(card.hasAttribute("data-eyeshadow-trigger")) return;
+      if(card.hasAttribute("data-eyeshadow-trigger") || card.hasAttribute("data-terracotta-trigger")) return;
       card.addEventListener("click", function(e){
         if(e.target.closest(".add-cart-btn")) return;
         var btn = card.querySelector(".add-cart-btn");
@@ -687,6 +891,6 @@
 </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BeautySalon", "@id": "https://josephfarah.colartdigitalmarketingagency.com/#business", "name": "Joseph Farah", "image": ["https://josephfarah.colartdigitalmarketingagency.com/assets/logo/og-image.jpg"], "url": "https://josephfarah.colartdigitalmarketingagency.com/", "telephone": "+961 3 29 36 37", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "Zahle Boulevard, Centre Maalouf", "addressLocality": "Zahle", "addressCountry": "LB"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "13:00"}], "sameAs": ["https://facebook.com/josephfarahofficial", "https://instagram.com/josephfarahofficial", "https://tiktok.com/@josephfarahofficial"], "founder": {"@type": "Person", "name": "Joseph Farah", "jobTitle": "Beauty & Personal Care Specialist", "knowsAbout": ["Makeup", "Skin Care", "Permanent Makeup", "Nail Art", "Medical Pedicure", "Laser Hair Removal", "Solarium", "Hair Styling"]}, "areaServed": {"@type": "City", "name": "Zahle"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Beauty & Personal Care Services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Makeup"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Skin Care"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Makeup"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nail Art"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medical Pedicure"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laser Hair Removal"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solarium"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hair Styling"}}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://josephfarah.colartdigitalmarketingagency.com/"}, {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://josephfarah.colartdigitalmarketingagency.com/shop"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Joseph Farah Professional Beauty Products", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#kstars-eyeshadow", "name": "K Stars Eyeshadow", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p05", "name": "Gentle Facial Cleanser", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "18.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p06", "name": "Hydrating Serum", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "30.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p07", "name": "Nourishing Night Cream", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "34.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p08", "name": "Exfoliating Face Scrub", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Joseph Farah Professional Beauty Products", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#kstars-eyeshadow", "name": "K Stars Eyeshadow", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#baked-terracotta-shadow", "name": "Baked Terracotta Shadow", "category": "Makeup", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p05", "name": "Gentle Facial Cleanser", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "18.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p06", "name": "Hydrating Serum", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "30.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p07", "name": "Nourishing Night Cream", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "34.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Product", "@id": "https://josephfarah.colartdigitalmarketingagency.com/shop#p08", "name": "Exfoliating Face Scrub", "category": "Skin Care", "brand": {"@type": "Brand", "name": "Joseph Farah"}, "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarah.colartdigitalmarketingagency.com/shop"}}}]}</script>
 </body>
 </html>
