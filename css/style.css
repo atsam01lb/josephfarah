@@ -829,59 +829,66 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   padding:2px 10px; margin-left:8px; vertical-align:middle; text-transform:none;
 }
 
-/* Eyeshadow shade picker modal — image fixed full-height on the left,
-   description + shade picker scroll independently on the right. */
+/* Eyeshadow shade picker modal — image fills the entire left column
+   edge-to-edge; description + shade picker + price + buttons sit on the
+   right in plain document flow. Nothing here scrolls: sizes are kept
+   compact and the shade grid's column width is viewport-height-aware
+   (via clamp()) so the full grid always fits without ever overflowing. */
 .modal-service.modal-eyeshadow{
-  max-width:920px; width:100%;
+  max-width:960px; width:100%;
   display:flex; align-items:stretch;
-  height:min(680px,85vh); max-height:85vh;
-  overflow:hidden;
+  height:auto; max-height:none;
+  overflow:visible;
 }
 .modal-service.modal-eyeshadow .modal-close{
   background:rgba(255,255,255,.85); border:1px solid var(--line); color:var(--ink);
 }
 .modal-eyeshadow .modal-service-media{
-  flex:0 0 44%; height:100%;
-  background-size:contain; background-repeat:no-repeat; background-color:#fff;
+  flex:0 0 42%;
+  background-size:cover; background-position:center; background-color:#fff;
 }
 .modal-eyeshadow .modal-service-body{
-  flex:1; min-width:0; height:100%;
-  overflow-y:auto;
-  padding:28px 32px 30px;
+  flex:1; min-width:0;
+  padding:clamp(14px,3.6vh,26px) clamp(20px,3.2vw,30px);
   display:flex; flex-direction:column;
 }
-.modal-eyeshadow .modal-service-body h3{ font-size:20px; margin-bottom:5px; }
+.modal-eyeshadow .modal-service-body h3{ font-size:clamp(15px,2.4vh,19px); margin-bottom:clamp(2px,.6vh,4px); }
+.modal-eyeshadow .modal-service-body .product-price{
+  font-size:clamp(14px,2.4vh,19px) !important;
+  margin:clamp(2px,.6vh,4px) 0 clamp(4px,1.2vh,10px) !important;
+}
 .modal-eyeshadow .modal-service-actions{
-  margin-top:14px; padding-top:14px; position:sticky; bottom:-1px;
-  background:var(--alabaster); border-top:1px solid var(--line);
+  margin-top:clamp(6px,1.6vh,12px); padding-top:clamp(6px,1.6vh,12px); border-top:1px solid var(--line);
+}
+.modal-eyeshadow .modal-service-actions .btn{
+  padding:clamp(9px,1.8vh,16px) clamp(16px,3.6vw,34px);
+  font-size:clamp(10px,1.5vh,12px);
 }
 @media (max-width:720px){
-  /* Side-by-side doesn't work at phone widths — stack instead, and let
-     the whole box scroll as ONE unit (no nested/cramped scroll areas). */
+  /* Side-by-side doesn't work at phone widths — stack instead. Still no
+     scroll: every size below is viewport-height-aware via clamp(), so on
+     a short phone screen everything shrinks together to keep fitting —
+     nothing ever needs to scroll or gets clipped off-screen. */
   .modal-service.modal-eyeshadow{
     flex-direction:column;
-    height:auto; max-height:92vh;
-    overflow-x:hidden; overflow-y:auto;
   }
   .modal-eyeshadow .modal-service-media{
-    flex:0 0 auto; height:clamp(130px,24vh,220px);
+    flex:0 0 auto; height:clamp(70px,14vh,200px);
   }
-  .modal-eyeshadow .modal-service-body{
-    flex:0 0 auto; height:auto; min-height:0; overflow-y:visible;
-  }
-  .modal-eyeshadow .modal-service-actions{ position:static; }
 }
-.eyeshadow-desc{
-  font-size:12.5px; line-height:1.5; color:var(--stone); margin:0 0 10px; max-width:50ch;
+.modal-eyeshadow .eyeshadow-desc{
+  font-size:clamp(11px,1.8vh,12.5px); line-height:1.4; color:var(--stone);
+  margin:0 0 clamp(4px,1.2vh,9px); max-width:52ch;
 }
 .eyeshadow-pager{
-  display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 0 6px;
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  margin:0 0 clamp(3px,.8vh,6px);
 }
 .eyeshadow-page-btn{
-  width:26px; height:26px; border-radius:50%; border:1px solid var(--line); background:none;
+  width:clamp(20px,3vh,24px); height:clamp(20px,3vh,24px); border-radius:50%; border:1px solid var(--line); background:none;
   display:flex; align-items:center; justify-content:center; flex:none; transition:all .3s var(--ease-soft);
 }
-.eyeshadow-page-btn svg{ width:14px; height:14px; stroke:var(--ink); }
+.eyeshadow-page-btn svg{ width:13px; height:13px; stroke:var(--ink); }
 .eyeshadow-page-btn:hover:not(:disabled){ background:var(--ink); }
 .eyeshadow-page-btn:hover:not(:disabled) svg{ stroke:var(--alabaster); }
 .eyeshadow-page-btn:disabled{ opacity:.3; cursor:default; }
@@ -890,12 +897,14 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 }
 .eyeshadow-shade-label{
   font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone);
-  margin:-2px 0 8px; display:flex; align-items:center; gap:6px;
+  margin:-2px 0 clamp(3px,1vh,7px); display:flex; align-items:center; gap:6px;
 }
 .eyeshadow-shade-label b{ font-family:var(--font-body); font-weight:600; letter-spacing:.02em; text-transform:none; color:var(--ink); font-size:13px; }
 .eyeshadow-shades{
-  display:grid; grid-template-columns:repeat(9,1fr); gap:8px;
-  padding:4px 4px 6px; margin-bottom:4px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(clamp(16px,2.7vh,40px), 1fr));
+  gap:clamp(4px,1vh,6px);
+  padding:2px 2px 4px; margin-bottom:4px;
 }
 .eyeshadow-shade-btn{
   width:100%; aspect-ratio:1/1; border-radius:50%; border:2px solid var(--alabaster); box-shadow:0 0 0 1px var(--line-soft);
@@ -903,9 +912,6 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 }
 .eyeshadow-shade-btn:hover{ transform:scale(1.15); }
 .eyeshadow-shade-btn.active{ border-color:var(--white); box-shadow:0 0 0 2px var(--ink); transform:scale(1.12); }
-@media (max-width:520px){
-  .eyeshadow-shades{ grid-template-columns:repeat(6,1fr); }
-}
 
 .shop-hero-note{
   position:relative; z-index:2;
