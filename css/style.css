@@ -926,6 +926,57 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone);
 }
 
+/* Shop hero: jump-to-section nav + search bar */
+.shop-section-nav{
+  position:relative; z-index:2;
+  display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;
+  margin-top:26px;
+}
+.shop-section-link{
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:500;
+  color:var(--stone); border:1px solid var(--line); border-radius:40px;
+  padding:9px 20px; transition:color .35s var(--ease-soft), background .35s var(--ease-soft), border-color .35s var(--ease-soft);
+}
+.shop-section-link:hover, .shop-section-link:focus-visible{
+  color:var(--alabaster); background:var(--ink); border-color:var(--ink);
+}
+.shop-search{
+  position:relative; z-index:2;
+  display:flex; align-items:center; gap:10px;
+  max-width:420px; margin:20px auto 0;
+  border:1px solid var(--line); border-radius:40px;
+  padding:11px 20px; background:rgba(255,255,255,.5);
+  transition:border-color .35s var(--ease-soft), background .35s var(--ease-soft);
+}
+.shop-search:focus-within{ border-color:var(--ink); background:var(--white); }
+.shop-search-icon{ width:15px; height:15px; stroke:var(--stone); flex:none; }
+.shop-search input{
+  flex:1; min-width:0; border:none; background:none; outline:none;
+  font-family:var(--font-body); font-size:13px; color:var(--ink);
+}
+.shop-search input::placeholder{ color:var(--stone); }
+.shop-search-clear{
+  flex:none; width:20px; height:20px; border-radius:50%; border:none; background:var(--line);
+  color:var(--ink); font-size:14px; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:background .3s;
+}
+.shop-search-clear:hover{ background:rgba(11,11,11,.2); }
+.shop-search-empty{
+  position:relative; z-index:2;
+  margin-top:14px; font-size:12.5px; color:var(--stone);
+}
+
+/* Sections jumped to from the hero nav: keep the section title clear of the fixed header */
+[data-shop-section]{ scroll-margin-top:110px; }
+
+/* Empty "coming soon" section placeholder (Face / Lips / Accessories, before products are added) */
+.shop-empty-note{
+  display:flex; align-items:center; gap:12px;
+  border:1px dashed var(--line); border-radius:var(--radius-md);
+  padding:32px 34px; color:var(--stone); font-size:13.5px;
+}
+.shop-empty-note svg{ width:20px; height:20px; stroke:var(--stone); flex:none; }
+
 /* Cart drawer */
 .cart-overlay{
   position:fixed; inset:0; background:rgba(11,11,11,.5); z-index:1998;
