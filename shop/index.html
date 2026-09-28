@@ -78,11 +78,23 @@
       <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
       Orders are confirmed directly over WhatsApp
     </div>
+    <nav class="shop-section-nav" aria-label="Shop sections" data-reveal>
+      <a href="#section-eye" class="shop-section-link">Eye</a>
+      <a href="#section-face" class="shop-section-link">Face</a>
+      <a href="#section-lips" class="shop-section-link">Lips</a>
+      <a href="#section-accessories" class="shop-section-link">Accessories</a>
+    </nav>
+    <div class="shop-search" data-reveal>
+      <svg class="shop-search-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" id="shopSearchInput" placeholder="Search products&hellip;" aria-label="Search shop products" autocomplete="off">
+      <button type="button" class="shop-search-clear" id="shopSearchClear" aria-label="Clear search" style="display:none;">&times;</button>
+    </div>
+    <div class="shop-search-empty" id="shopSearchEmpty" style="display:none;">No products match &ldquo;<span id="shopSearchEmptyQuery"></span>&rdquo;.</div>
     <div class="breadcrumb"><a href="/">Home</a><span>/</span><span>Shop</span></div>
   </div>
 </header>
 
-<section class=" section-tight">
+<section class=" section-tight" id="section-eye" data-shop-section>
   <div class="container">
     <div class="section-head" data-reveal>
       <div class="eyebrow">Section 01</div>
@@ -171,6 +183,44 @@
   </div>
 </section>
 
+<section class="bg-alt section-tight" id="section-face" data-shop-section>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Section 02</div>
+      <h2 class="section-title">Face</h2>
+    </div>
+    <div class="shop-empty-note" data-reveal>
+      <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v4.8l3.2 2"/></svg>
+      New products coming soon.
+    </div>
+  </div>
+</section>
+
+<section class=" section-tight" id="section-lips" data-shop-section>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Section 03</div>
+      <h2 class="section-title">Lips</h2>
+    </div>
+    <div class="shop-empty-note" data-reveal>
+      <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v4.8l3.2 2"/></svg>
+      New products coming soon.
+    </div>
+  </div>
+</section>
+
+<section class="bg-alt section-tight" id="section-accessories" data-shop-section>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow">Section 04</div>
+      <h2 class="section-title">Accessories</h2>
+    </div>
+    <div class="shop-empty-note" data-reveal>
+      <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v4.8l3.2 2"/></svg>
+      New products coming soon.
+    </div>
+  </div>
+</section>
 
 <!-- ===================== CART DRAWER ===================== -->
 <div class="cart-overlay"></div>
@@ -1169,6 +1219,75 @@
     modalClose.addEventListener("click", closeProductModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeProductModal(); });
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeProductModal(); });
+  })();
+
+  /* ---------- Shop search: filters product cards across all sections ---------- */
+  (function(){
+    var input = document.getElementById("shopSearchInput");
+    if(!input) return;
+    var clearBtn = document.getElementById("shopSearchClear");
+    var emptyMsg = document.getElementById("shopSearchEmpty");
+    var emptyQuerySpan = document.getElementById("shopSearchEmptyQuery");
+    var sections = Array.prototype.slice.call(document.querySelectorAll("[data-shop-section]"));
+
+    function normalize(s){ return (s || "").toLowerCase(); }
+
+    function cardSearchText(card){
+      if(card.dataset.searchText) return card.dataset.searchText;
+      var title = card.querySelector("h3");
+      var cat = card.querySelector(".product-cat");
+      var text = normalize((title ? title.textContent : "") + " " + (cat ? cat.textContent : ""));
+      card.dataset.searchText = text;
+      return text;
+    }
+
+    function runSearch(){
+      var raw = input.value.trim();
+      var q = normalize(raw);
+      if(clearBtn) clearBtn.style.display = q ? "" : "none";
+
+      var anyMatch = false;
+
+      sections.forEach(function(section){
+        var cards = Array.prototype.slice.call(section.querySelectorAll(".product-card"));
+
+        if(!q){
+          cards.forEach(function(c){ c.style.display = ""; });
+          section.style.display = "";
+          return;
+        }
+
+        if(cards.length === 0){
+          /* "coming soon" section with no products yet: nothing to match, hide while searching */
+          section.style.display = "none";
+          return;
+        }
+
+        var visibleCount = 0;
+        cards.forEach(function(c){
+          var isMatch = cardSearchText(c).indexOf(q) !== -1;
+          c.style.display = isMatch ? "" : "none";
+          if(isMatch){ visibleCount++; anyMatch = true; }
+        });
+        section.style.display = visibleCount > 0 ? "" : "none";
+      });
+
+      if(q && !anyMatch){
+        if(emptyQuerySpan) emptyQuerySpan.textContent = raw;
+        if(emptyMsg) emptyMsg.style.display = "";
+      } else if(emptyMsg){
+        emptyMsg.style.display = "none";
+      }
+    }
+
+    input.addEventListener("input", runSearch);
+    if(clearBtn){
+      clearBtn.addEventListener("click", function(){
+        input.value = "";
+        runSearch();
+        input.focus();
+      });
+    }
   })();
 </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BeautySalon", "@id": "https://josephfarah.colartdigitalmarketingagency.com/#business", "name": "Joseph Farah", "image": ["https://josephfarah.colartdigitalmarketingagency.com/assets/logo/og-image.jpg"], "url": "https://josephfarah.colartdigitalmarketingagency.com/", "telephone": "+961 3 29 36 37", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "Zahle Boulevard, Centre Maalouf", "addressLocality": "Zahle", "addressCountry": "LB"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "13:00"}], "sameAs": ["https://facebook.com/josephfarahofficial", "https://instagram.com/josephfarahofficial", "https://tiktok.com/@josephfarahofficial"], "founder": {"@type": "Person", "name": "Joseph Farah", "jobTitle": "Beauty & Personal Care Specialist", "knowsAbout": ["Makeup", "Skin Care", "Permanent Makeup", "Nail Art", "Medical Pedicure", "Laser Hair Removal", "Solarium", "Hair Styling"]}, "areaServed": {"@type": "City", "name": "Zahle"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Beauty & Personal Care Services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Makeup"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Skin Care"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Makeup"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nail Art"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medical Pedicure"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laser Hair Removal"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solarium"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hair Styling"}}]}}</script>
