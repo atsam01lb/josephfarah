@@ -829,42 +829,43 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   padding:2px 10px; margin-left:8px; vertical-align:middle; text-transform:none;
 }
 
-/* Shade picker modal (shared by K Stars Eyeshadow and Baked Terracotta
-   Shadow) — image fills the entire left column edge-to-edge, scaled to
-   show the full photo with no cropping; description + shade picker sit
-   on the right in plain document flow. Nothing here scrolls: sizes are
-   kept compact and the shade grid's column width is viewport-height-aware
-   (via clamp()) so the full grid always fits without ever overflowing.
-   .modal-eyeshadow and .modal-terracotta share this layout; each product's
-   own interactive classes (eyeshadow-* / terracotta-*) are kept distinct
-   so their JS event listeners never cross-wire between modals. */
-.modal-service.modal-eyeshadow, .modal-service.modal-terracotta{
+/* Shade picker modal (shared by K Stars Eyeshadow, Baked Terracotta
+   Shadow, Gel Eye Liner and Cake Eye Liner) — image fills the entire left
+   column edge-to-edge, scaled to show the full photo with no cropping;
+   description + shade picker sit on the right in plain document flow.
+   Nothing here scrolls: sizes are kept compact and the shade grid's
+   column width is viewport-height-aware (via clamp()) so the full grid
+   always fits without ever overflowing. Each product keeps its own
+   interactive classes (eyeshadow-* / terracotta-* / gelliner-* /
+   cakeliner-*) distinct so their JS event listeners never cross-wire
+   between modals. */
+.modal-service.modal-eyeshadow, .modal-service.modal-terracotta, .modal-service.modal-gelliner, .modal-service.modal-cakeliner{
   max-width:960px; width:100%;
   display:flex; align-items:stretch;
   height:auto; max-height:none;
   overflow:visible;
 }
-.modal-service.modal-eyeshadow .modal-close, .modal-service.modal-terracotta .modal-close{
+.modal-service.modal-eyeshadow .modal-close, .modal-service.modal-terracotta .modal-close, .modal-service.modal-gelliner .modal-close, .modal-service.modal-cakeliner .modal-close{
   background:rgba(255,255,255,.85); border:1px solid var(--line); color:var(--ink);
 }
-.modal-eyeshadow .modal-service-media, .modal-terracotta .modal-service-media{
+.modal-eyeshadow .modal-service-media, .modal-terracotta .modal-service-media, .modal-gelliner .modal-service-media, .modal-cakeliner .modal-service-media{
   flex:0 0 42%; height:auto; align-self:stretch;
   background-size:contain; background-repeat:no-repeat; background-position:center; background-color:#fff;
 }
-.modal-eyeshadow .modal-service-body, .modal-terracotta .modal-service-body{
+.modal-eyeshadow .modal-service-body, .modal-terracotta .modal-service-body, .modal-gelliner .modal-service-body, .modal-cakeliner .modal-service-body{
   flex:1; min-width:0;
   padding:clamp(14px,3.6vh,26px) clamp(20px,3.2vw,30px);
   display:flex; flex-direction:column;
 }
-.modal-eyeshadow .modal-service-body h3, .modal-terracotta .modal-service-body h3{ font-size:clamp(15px,2.4vh,19px); margin-bottom:clamp(2px,.6vh,4px); }
-.modal-eyeshadow .modal-service-body .product-price, .modal-terracotta .modal-service-body .product-price{
+.modal-eyeshadow .modal-service-body h3, .modal-terracotta .modal-service-body h3, .modal-gelliner .modal-service-body h3, .modal-cakeliner .modal-service-body h3{ font-size:clamp(15px,2.4vh,19px); margin-bottom:clamp(2px,.6vh,4px); }
+.modal-eyeshadow .modal-service-body .product-price, .modal-terracotta .modal-service-body .product-price, .modal-gelliner .modal-service-body .product-price, .modal-cakeliner .modal-service-body .product-price{
   font-size:clamp(14px,2.4vh,19px) !important;
   margin:clamp(2px,.6vh,4px) 0 clamp(4px,1.2vh,10px) !important;
 }
-.modal-eyeshadow .modal-service-actions, .modal-terracotta .modal-service-actions{
+.modal-eyeshadow .modal-service-actions, .modal-terracotta .modal-service-actions, .modal-gelliner .modal-service-actions, .modal-cakeliner .modal-service-actions{
   margin-top:clamp(6px,1.6vh,12px); padding-top:clamp(6px,1.6vh,12px); border-top:1px solid var(--line);
 }
-.modal-eyeshadow .modal-service-actions .btn, .modal-terracotta .modal-service-actions .btn{
+.modal-eyeshadow .modal-service-actions .btn, .modal-terracotta .modal-service-actions .btn, .modal-gelliner .modal-service-actions .btn, .modal-cakeliner .modal-service-actions .btn{
   padding:clamp(9px,1.8vh,16px) clamp(16px,3.6vw,34px);
   font-size:clamp(10px,1.5vh,12px);
 }
@@ -873,50 +874,50 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
      scroll: every size below is viewport-height-aware via clamp(), so on
      a short phone screen everything shrinks together to keep fitting —
      nothing ever needs to scroll or gets clipped off-screen. */
-  .modal-service.modal-eyeshadow, .modal-service.modal-terracotta{
+  .modal-service.modal-eyeshadow, .modal-service.modal-terracotta, .modal-service.modal-gelliner, .modal-service.modal-cakeliner{
     flex-direction:column;
   }
-  .modal-eyeshadow .modal-service-media, .modal-terracotta .modal-service-media{
+  .modal-eyeshadow .modal-service-media, .modal-terracotta .modal-service-media, .modal-gelliner .modal-service-media, .modal-cakeliner .modal-service-media{
     flex:0 0 auto; height:clamp(70px,14vh,200px);
     background-size:contain;
   }
 }
-.modal-eyeshadow .eyeshadow-desc, .modal-terracotta .terracotta-desc{
+.modal-eyeshadow .eyeshadow-desc, .modal-terracotta .terracotta-desc, .modal-gelliner .gelliner-desc, .modal-cakeliner .cakeliner-desc{
   font-size:clamp(11px,1.8vh,12.5px); line-height:1.4; color:var(--stone);
   margin:0 0 clamp(4px,1.2vh,9px); max-width:52ch;
 }
-.eyeshadow-pager, .terracotta-pager{
+.eyeshadow-pager, .terracotta-pager, .gelliner-pager, .cakeliner-pager{
   display:flex; align-items:center; justify-content:space-between; gap:10px;
   margin:0 0 clamp(3px,.8vh,6px);
 }
-.eyeshadow-page-btn, .terracotta-page-btn{
+.eyeshadow-page-btn, .terracotta-page-btn, .gelliner-page-btn, .cakeliner-page-btn{
   width:clamp(20px,3vh,24px); height:clamp(20px,3vh,24px); border-radius:50%; border:1px solid var(--line); background:none;
   display:flex; align-items:center; justify-content:center; flex:none; transition:all .3s var(--ease-soft);
 }
-.eyeshadow-page-btn svg, .terracotta-page-btn svg{ width:13px; height:13px; stroke:var(--ink); }
-.eyeshadow-page-btn:hover:not(:disabled), .terracotta-page-btn:hover:not(:disabled){ background:var(--ink); }
-.eyeshadow-page-btn:hover:not(:disabled) svg, .terracotta-page-btn:hover:not(:disabled) svg{ stroke:var(--alabaster); }
-.eyeshadow-page-btn:disabled, .terracotta-page-btn:disabled{ opacity:.3; cursor:default; }
-.eyeshadow-page-label, .terracotta-page-label{
+.eyeshadow-page-btn svg, .terracotta-page-btn svg, .gelliner-page-btn svg, .cakeliner-page-btn svg{ width:13px; height:13px; stroke:var(--ink); }
+.eyeshadow-page-btn:hover:not(:disabled), .terracotta-page-btn:hover:not(:disabled), .gelliner-page-btn:hover:not(:disabled), .cakeliner-page-btn:hover:not(:disabled){ background:var(--ink); }
+.eyeshadow-page-btn:hover:not(:disabled) svg, .terracotta-page-btn:hover:not(:disabled) svg, .gelliner-page-btn:hover:not(:disabled) svg, .cakeliner-page-btn:hover:not(:disabled) svg{ stroke:var(--alabaster); }
+.eyeshadow-page-btn:disabled, .terracotta-page-btn:disabled, .gelliner-page-btn:disabled, .cakeliner-page-btn:disabled{ opacity:.3; cursor:default; }
+.eyeshadow-page-label, .terracotta-page-label, .gelliner-page-label, .cakeliner-page-label{
   font-family:var(--font-body); font-weight:600; font-size:12px; letter-spacing:.04em; color:var(--ink);
 }
-.eyeshadow-shade-label, .terracotta-shade-label{
+.eyeshadow-shade-label, .terracotta-shade-label, .gelliner-shade-label, .cakeliner-shade-label{
   font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone);
   margin:-2px 0 clamp(3px,1vh,7px); display:flex; align-items:center; gap:6px;
 }
-.eyeshadow-shade-label b, .terracotta-shade-label b{ font-family:var(--font-body); font-weight:600; letter-spacing:.02em; text-transform:none; color:var(--ink); font-size:13px; }
-.eyeshadow-shades, .terracotta-shades{
+.eyeshadow-shade-label b, .terracotta-shade-label b, .gelliner-shade-label b, .cakeliner-shade-label b{ font-family:var(--font-body); font-weight:600; letter-spacing:.02em; text-transform:none; color:var(--ink); font-size:13px; }
+.eyeshadow-shades, .terracotta-shades, .gelliner-shades, .cakeliner-shades{
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(clamp(16px,2.7vh,40px), 1fr));
   gap:clamp(4px,1vh,6px);
   padding:2px 2px 4px; margin-bottom:4px;
 }
-.eyeshadow-shade-btn, .terracotta-shade-btn{
+.eyeshadow-shade-btn, .terracotta-shade-btn, .gelliner-shade-btn, .cakeliner-shade-btn{
   width:100%; aspect-ratio:1/1; border-radius:50%; border:2px solid var(--alabaster); box-shadow:0 0 0 1px var(--line-soft);
   cursor:pointer; padding:0; background-color:var(--stone); transition:transform .2s var(--ease-soft), box-shadow .2s;
 }
-.eyeshadow-shade-btn:hover, .terracotta-shade-btn:hover{ transform:scale(1.15); }
-.eyeshadow-shade-btn.active, .terracotta-shade-btn.active{ border-color:var(--white); box-shadow:0 0 0 2px var(--ink); transform:scale(1.12); }
+.eyeshadow-shade-btn:hover, .terracotta-shade-btn:hover, .gelliner-shade-btn:hover, .cakeliner-shade-btn:hover{ transform:scale(1.15); }
+.eyeshadow-shade-btn.active, .terracotta-shade-btn.active, .gelliner-shade-btn.active, .cakeliner-shade-btn.active{ border-color:var(--white); box-shadow:0 0 0 2px var(--ink); transform:scale(1.12); }
 
 .shop-hero-note{
   position:relative; z-index:2;
@@ -976,7 +977,7 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 .modal-service{ padding:0; max-width:480px; overflow:hidden; }
 .modal-service .modal-close{ background:rgba(11,11,11,.5); border:none; color:var(--alabaster); z-index:2; }
 .modal-service-media{
-  height:220px; background-size:cover; background-position:center;
+  height:220px; background-size:contain; background-repeat:no-repeat; background-position:center; background-color:#fff;
 }
 .modal-service-body{ padding:32px 34px 34px; }
 .modal-service-body h3{ font-size:24px; margin-bottom:12px; }
