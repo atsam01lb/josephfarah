@@ -84,10 +84,13 @@
       <a href="#section-lips" class="shop-section-link">Lips</a>
       <a href="#section-accessories" class="shop-section-link">Accessories</a>
     </nav>
-    <div class="shop-search" data-reveal>
-      <svg class="shop-search-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      <input type="text" id="shopSearchInput" placeholder="Search products&hellip;" aria-label="Search shop products" autocomplete="off">
-      <button type="button" class="shop-search-clear" id="shopSearchClear" aria-label="Clear search" style="display:none;">&times;</button>
+    <div class="shop-search-wrap" data-reveal>
+      <div class="shop-search">
+        <svg class="shop-search-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="shopSearchInput" placeholder="Search products or shades&hellip;" aria-label="Search shop products and shades" autocomplete="off">
+        <button type="button" class="shop-search-clear" id="shopSearchClear" aria-label="Clear search" style="display:none;">&times;</button>
+      </div>
+      <div class="shop-shade-results" id="shopShadeResults" style="display:none;"></div>
     </div>
     <div class="shop-search-empty" id="shopSearchEmpty" style="display:none;">No products match &ldquo;<span id="shopSearchEmptyQuery"></span>&rdquo;.</div>
     <div class="breadcrumb"><a href="/">Home</a><span>/</span><span>Shop</span></div>
@@ -1221,14 +1224,40 @@
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeProductModal(); });
   })();
 
-  /* ---------- Shop search: filters product cards across all sections ---------- */
+  /* ---------- Shop search: filters product cards across all sections, AND
+     lets a client search by individual shade name and jump straight into
+     that shade (opens the right product's modal, flips to the page that
+     shade lives on, and selects it) without touching any of the existing
+     per-product modal code above. ---------- */
   (function(){
     var input = document.getElementById("shopSearchInput");
     if(!input) return;
     var clearBtn = document.getElementById("shopSearchClear");
     var emptyMsg = document.getElementById("shopSearchEmpty");
     var emptyQuerySpan = document.getElementById("shopSearchEmptyQuery");
+    var resultsPanel = document.getElementById("shopShadeResults");
+    var searchWrap = document.querySelector(".shop-search-wrap");
     var sections = Array.prototype.slice.call(document.querySelectorAll("[data-shop-section]"));
+
+    var SHADE_PRODUCTS = [
+      { name: "K Stars Eyeshadow", cardSelector: "[data-eyeshadow-trigger]", shadeSelector: ".eyeshadow-shade-btn", modalId: "eyeshadowModal", nextId: "eyeshadowPageNext", prevId: "eyeshadowPagePrev" },
+      { name: "Baked Terracotta Shadow", cardSelector: "[data-terracotta-trigger]", shadeSelector: ".terracotta-shade-btn", modalId: "terracottaModal", nextId: "terracottaPageNext", prevId: "terracottaPagePrev" },
+      { name: "Gel Eye Liner", cardSelector: "[data-gelliner-trigger]", shadeSelector: ".gelliner-shade-btn", modalId: "gelLinerModal", nextId: "gelLinerPageNext", prevId: "gelLinerPagePrev" },
+      { name: "Cake Eye Liner", cardSelector: "[data-cakeliner-trigger]", shadeSelector: ".cakeliner-shade-btn", modalId: "cakeLinerModal", nextId: "cakeLinerPageNext", prevId: "cakeLinerPagePrev" }
+    ];
+
+    /* flat index of every shade across every shade-picker product, built once */
+    var shadeIndex = [];
+    SHADE_PRODUCTS.forEach(function(product){
+      Array.prototype.slice.call(document.querySelectorAll(product.shadeSelector)).forEach(function(btn){
+        shadeIndex.push({
+          product: product,
+          btn: btn,
+          code: btn.getAttribute("data-code") || "",
+          hex: btn.getAttribute("data-hex") || "#ccc"
+        });
+      });
+    });
 
     function normalize(s){ return (s || "").toLowerCase(); }
 
@@ -1237,8 +1266,104 @@
       var title = card.querySelector("h3");
       var cat = card.querySelector(".product-cat");
       var text = normalize((title ? title.textContent : "") + " " + (cat ? cat.textContent : ""));
+      /* fold every shade code belonging to this card's product into its search text too,
+         so typing a shade name (e.g. "K84") keeps the right product card visible,
+         not just cards whose title happens to contain that text */
+      SHADE_PRODUCTS.forEach(function(product){
+        if(card.matches(product.cardSelector)){
+          shadeIndex.forEach(function(entry){
+            if(entry.product === product) text += " " + normalize(entry.code);
+          });
+        }
+      });
       card.dataset.searchText = text;
       return text;
+    }
+
+    function currentPageOf(product){
+      var btns = document.querySelectorAll(product.shadeSelector);
+      for(var i=0;i<btns.length;i++){
+        if(getComputedStyle(btns[i]).display !== "none"){
+          return parseInt(btns[i].getAttribute("data-page"),10) || 1;
+        }
+      }
+      return 1;
+    }
+
+    function closeResults(){
+      resultsPanel.style.display = "none";
+      resultsPanel.innerHTML = "";
+    }
+
+    function resetFilters(){
+      if(clearBtn) clearBtn.style.display = "none";
+      sections.forEach(function(section){
+        Array.prototype.slice.call(section.querySelectorAll(".product-card")).forEach(function(c){ c.style.display = ""; });
+        section.style.display = "";
+      });
+      if(emptyMsg) emptyMsg.style.display = "none";
+    }
+
+    function jumpToShade(entry){
+      var modalEl = document.getElementById(entry.product.modalId);
+      if(modalEl && !modalEl.classList.contains("open")){
+        var card = document.querySelector(entry.product.cardSelector);
+        if(card) card.click();
+      }
+      var targetPage = parseInt(entry.btn.getAttribute("data-page"),10) || 1;
+      var guard = 0;
+      while(currentPageOf(entry.product) < targetPage && guard < 30){
+        var nextBtn = document.getElementById(entry.product.nextId);
+        if(!nextBtn || nextBtn.disabled) break;
+        nextBtn.click();
+        guard++;
+      }
+      guard = 0;
+      while(currentPageOf(entry.product) > targetPage && guard < 30){
+        var prevBtn = document.getElementById(entry.product.prevId);
+        if(!prevBtn || prevBtn.disabled) break;
+        prevBtn.click();
+        guard++;
+      }
+      entry.btn.click();
+      closeResults();
+      input.value = "";
+      resetFilters();
+      input.blur();
+    }
+
+    var MAX_SHADE_RESULTS = 8;
+
+    function renderShadeResults(q){
+      if(!q){ closeResults(); return; }
+      var matches = shadeIndex.filter(function(entry){ return normalize(entry.code).indexOf(q) !== -1; });
+      if(matches.length === 0){ closeResults(); return; }
+      var shown = matches.slice(0, MAX_SHADE_RESULTS);
+      resultsPanel.innerHTML = "";
+      shown.forEach(function(entry){
+        var row = document.createElement("button");
+        row.type = "button";
+        row.className = "shop-shade-result";
+        row.innerHTML =
+          '<span class="shop-shade-swatch" style="background:' + entry.hex + ';"></span>' +
+          '<span class="shop-shade-result-text">' +
+            '<span class="shop-shade-result-code"></span>' +
+            '<span class="shop-shade-result-product"></span>' +
+          '</span>';
+        row.querySelector(".shop-shade-result-code").textContent = entry.code;
+        row.querySelector(".shop-shade-result-product").textContent = entry.product.name;
+        row.setAttribute("aria-label", "Go to shade " + entry.code + ", " + entry.product.name);
+        row.addEventListener("click", function(){ jumpToShade(entry); });
+        resultsPanel.appendChild(row);
+      });
+      if(matches.length > MAX_SHADE_RESULTS){
+        var more = document.createElement("div");
+        more.className = "shop-shade-results-more";
+        var remaining = matches.length - MAX_SHADE_RESULTS;
+        more.textContent = "+" + remaining + " more shade" + (remaining === 1 ? "" : "s") + " match — keep typing to narrow it down";
+        resultsPanel.appendChild(more);
+      }
+      resultsPanel.style.display = "";
     }
 
     function runSearch(){
@@ -1272,6 +1397,8 @@
         section.style.display = visibleCount > 0 ? "" : "none";
       });
 
+      renderShadeResults(q);
+
       if(q && !anyMatch){
         if(emptyQuerySpan) emptyQuerySpan.textContent = raw;
         if(emptyMsg) emptyMsg.style.display = "";
@@ -1281,10 +1408,21 @@
     }
 
     input.addEventListener("input", runSearch);
+    input.addEventListener("focus", function(){
+      var q = normalize(input.value.trim());
+      if(q) renderShadeResults(q);
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape") closeResults();
+    });
+    document.addEventListener("click", function(e){
+      if(searchWrap && !searchWrap.contains(e.target)) closeResults();
+    });
     if(clearBtn){
       clearBtn.addEventListener("click", function(){
         input.value = "";
         runSearch();
+        closeResults();
         input.focus();
       });
     }
