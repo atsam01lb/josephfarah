@@ -970,9 +970,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openEyeshadowModal();
+          return;
+        }
         openEyeshadowModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeEyeshadowModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeEyeshadowModal(); });
@@ -984,6 +989,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p01-K1");
         cardBtn.setAttribute("data-name", baseName + " — K1");
@@ -1079,9 +1085,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openTerracottaModal();
+          return;
+        }
         openTerracottaModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeTerracottaModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeTerracottaModal(); });
@@ -1093,6 +1104,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p02-B1");
         cardBtn.setAttribute("data-name", baseName + " — B1");
@@ -1187,9 +1199,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openGelLinerModal();
+          return;
+        }
         openGelLinerModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeGelLinerModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeGelLinerModal(); });
@@ -1201,6 +1218,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p04-EMERALD BLAZE Y701");
         cardBtn.setAttribute("data-name", baseName + " — EMERALD BLAZE Y701");
@@ -1295,9 +1313,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openCakeLinerModal();
+          return;
+        }
         openCakeLinerModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeCakeLinerModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeCakeLinerModal(); });
@@ -1309,6 +1332,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p09-CE1 BLACK");
         cardBtn.setAttribute("data-name", baseName + " — CE1 BLACK");
@@ -1403,9 +1427,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openGlitterGlamModal();
+          return;
+        }
         openGlitterGlamModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeGlitterGlamModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeGlitterGlamModal(); });
@@ -1417,6 +1446,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p05-T701");
         cardBtn.setAttribute("data-name", baseName + " — SNOW QUEEN T701");
@@ -1511,9 +1541,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openHdShiningModal();
+          return;
+        }
         openHdShiningModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeHdShiningModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeHdShiningModal(); });
@@ -1525,6 +1560,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p06-BRONZE");
         cardBtn.setAttribute("data-name", baseName + " — BRONZE");
@@ -1619,9 +1655,14 @@
     }
     if(trigger){
       trigger.addEventListener("click", function(e){
-        if(e.target.closest(".add-cart-btn")) return;
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openCrystalPearlModal();
+          return;
+        }
         openCrystalPearlModal();
-      });
+      }, true);
     }
     closeBtn.addEventListener("click", closeCrystalPearlModal);
     modal.addEventListener("click", function(e){ if(e.target === modal) closeCrystalPearlModal(); });
@@ -1633,6 +1674,7 @@
         cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p07-CRYSTAL PEARL 2");
         cardBtn.setAttribute("data-name", baseName + " — CRYSTAL PEARL 2");
