@@ -852,6 +852,9 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
   background:var(--white); border:1px solid var(--line); position:relative; cursor:pointer;
 }
 .product-card .ph-media{ aspect-ratio:1/1; flex:none; }
+/* Catalog placeholders: no photo, price or basket yet (pricing to follow), so
+   there's nothing for a click to open — plain cursor keeps that honest. */
+.product-card.is-placeholder{ cursor:default; }
 .product-body{ padding:22px 20px 24px; display:flex; flex-direction:column; flex:1; }
 .product-cat{ font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--stone); }
 .product-card h3{ font-size:16.5px; margin:8px 0 10px; }
