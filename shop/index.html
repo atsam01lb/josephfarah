@@ -99,11 +99,23 @@
 
 <section class=" section-tight" id="section-eye" data-shop-section>
   <div class="container">
-    <div class="section-head" data-reveal>
-      <div class="eyebrow">Section 01</div>
-      <h2 class="section-title">Eye</h2>
+    <div class="shop-category" data-shop-category>
+    <div class="section-head split" data-reveal>
+      <div>
+        <div class="eyebrow">Section 01</div>
+        <h2 class="section-title">Eye</h2>
+      </div>
+      <div class="shop-carousel-nav">
+        <button type="button" class="shop-carousel-btn shop-carousel-prev" aria-label="Scroll left">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="button" class="shop-carousel-btn shop-carousel-next" aria-label="Scroll right">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
-    <div class="shop-grid" data-group="pm">
+    <div class="shop-carousel">
+      <div class="shop-grid" data-group="pm">
       <div class="product-card card-anim" data-reveal data-group="pm" data-eyeshadow-trigger>
         <div class="ph-media" style="background-image:url('/assets/img/shop/shades/k-K1.jpg');background-size:cover;background-position:center;"></div>
         <div class="product-body">
@@ -221,6 +233,8 @@
           </div>
         </div>
       </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -1703,6 +1717,71 @@
     document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeProductModal(); });
   })();
 
+  /* ---------- Shop category carousels: each section's products sit in a single
+     horizontally-scrolling row (native touch swipe / trackpad, plus prev/next
+     buttons docked beside the section heading — deliberately kept OUT of the
+     row itself so they never have to sit on top of a product photo, which is
+     still fading in from the page's scroll-reveal system when a click lands
+     early). Re-run refreshShopCarousels() whenever a card's visibility changes
+     (e.g. the search filter below) so the buttons and edge fades reflect
+     what's actually scrollable. ---------- */
+  var refreshShopCarousels = (function(){
+    var categories = Array.prototype.slice.call(document.querySelectorAll(".shop-category"));
+    categories.forEach(function(category){
+      var track = category.querySelector(".shop-grid");
+      var wrap = category.querySelector(".shop-carousel");
+      var prevBtn = category.querySelector(".shop-carousel-prev");
+      var nextBtn = category.querySelector(".shop-carousel-next");
+      if(!track) return;
+
+      function updateState(){
+        var maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+        var atStart = track.scrollLeft <= 2;
+        var atEnd = track.scrollLeft >= maxScroll - 2;
+        var noScroll = maxScroll <= 4;
+        [category, wrap].forEach(function(el){
+          if(!el) return;
+          el.classList.toggle("at-start", atStart);
+          el.classList.toggle("at-end", atEnd);
+          el.classList.toggle("no-scroll", noScroll);
+        });
+        if(prevBtn) prevBtn.disabled = atStart;
+        if(nextBtn) nextBtn.disabled = atEnd;
+      }
+
+      if(prevBtn) prevBtn.addEventListener("click", function(){
+        track.scrollBy({ left: -Math.round(track.clientWidth * 0.86), behavior: "smooth" });
+      });
+      if(nextBtn) nextBtn.addEventListener("click", function(){
+        track.scrollBy({ left: Math.round(track.clientWidth * 0.86), behavior: "smooth" });
+      });
+
+      track.addEventListener("scroll", function(){ window.requestAnimationFrame(updateState); }, { passive: true });
+      window.addEventListener("resize", updateState);
+      category.__updateState = updateState;
+      updateState();
+    });
+
+    return function(){
+      categories.forEach(function(category){
+        if(!category.__updateState) return;
+        /* filtered-out cards can leave the row already scrolled past its
+           new (shorter) scrollWidth; snap back to the start first */
+        var track = category.querySelector(".shop-grid");
+        if(track){
+          /* .shop-grid has scroll-behavior:smooth, which (per the CSSOM View
+             spec) also applies to a direct scrollLeft assignment — an
+             explicit "instant" scrollTo is needed here so the snap-back is
+             immediate rather than an animated scroll clients would see (and
+             so state reads right after this are accurate, not mid-animation). */
+          if(track.scrollTo) track.scrollTo({ left: 0, behavior: "instant" });
+          else track.scrollLeft = 0;
+        }
+        category.__updateState();
+      });
+    };
+  })();
+
   /* ---------- Shop search: filters product cards across all sections, AND
      lets a client search by individual shade name and jump straight into
      that shade (opens the right product's modal, flips to the page that
@@ -1878,6 +1957,8 @@
         });
         section.style.display = visibleCount > 0 ? "" : "none";
       });
+
+      if(typeof refreshShopCarousels === "function") refreshShopCarousels();
 
       renderShadeResults(q);
 
