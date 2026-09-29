@@ -310,34 +310,43 @@
     </div>
     <div class="shop-carousel">
       <div class="shop-grid" data-group="pm">
-      <div class="product-card card-anim is-placeholder" data-reveal data-group="pm" data-placeholder-id="pf01">
-        <div class="ph-media">
-          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Photo coming soon</span>
-        </div>
+      <div class="product-card card-anim" data-reveal data-group="pm">
+        <div class="ph-media" style="background-image:url('/assets/img/shop/shades/primer-kstars.jpg');background-size:cover;background-position:center;"></div>
         <div class="product-body">
           <div class="product-cat">Makeup &middot; K Stars Cosmetics</div>
-          <h3>KStars Foundation Primer</h3>
+          <h3>K Stars Foundation Primer</h3>
+          <div class="product-row">
+            <div class="product-price">$44.00<br><small>per unit</small></div>
+            <button class="add-cart-btn" data-id="p15" data-name="K Stars Foundation Primer" data-cat="Makeup" data-price="44.00" data-icon="makeup" data-img="/assets/img/shop/shades/primer-kstars.jpg" aria-label="Add K Stars Foundation Primer to basket">
+              <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="product-card card-anim is-placeholder" data-reveal data-group="pm" data-placeholder-id="pf02">
-        <div class="ph-media">
-          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Photo coming soon</span>
-        </div>
+      <div class="product-card card-anim" data-reveal data-group="pm" data-concealer-trigger>
+        <div class="ph-media" style="background-image:url('/assets/img/shop/shades/concealer-5.jpg');background-size:cover;background-position:center;"></div>
         <div class="product-body">
           <div class="product-cat">Makeup &middot; K Stars Cosmetics</div>
-          <h3>Perfect Teint Foundation 2ML</h3>
+          <h3>Perfect Teint Concealer <span class="product-code">5</span></h3>
+          <div class="product-row">
+            <div class="product-price">$24.00<br><small>per unit &middot; 4 shades</small></div>
+            <button class="add-cart-btn" data-id="p16-5" data-name="Perfect Teint Concealer — 5" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/concealer-5.jpg" aria-label="Add Perfect Teint Concealer to basket">
+              <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="product-card card-anim is-placeholder" data-reveal data-group="pm" data-placeholder-id="pf03">
-        <div class="ph-media">
-          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M9 3h6l1 5-4 3-4-3 1-5Z"/><path d="M9 11h6v7a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-7Z"/></svg>
-          <span>Photo coming soon</span>
-        </div>
+      <div class="product-card card-anim" data-reveal data-group="pm" data-camouflage-trigger>
+        <div class="ph-media" style="background-image:url('/assets/img/shop/shades/camouflage-dc01.jpg');background-size:cover;background-position:center;"></div>
         <div class="product-body">
           <div class="product-cat">Makeup &middot; K Stars Cosmetics</div>
-          <h3>Camouflage Q.36</h3>
+          <h3>Camouflage <span class="product-code">DC01</span></h3>
+          <div class="product-row">
+            <div class="product-price">$12.00<br><small>per unit &middot; 15 shades</small></div>
+            <button class="add-cart-btn" data-id="p17-DC01" data-name="Camouflage — DC01" data-cat="Makeup" data-price="12.00" data-icon="makeup" data-img="/assets/img/shop/shades/camouflage-dc01.jpg" aria-label="Add Camouflage to basket">
+              <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            </button>
+          </div>
         </div>
       </div>
       <div class="product-card card-anim is-placeholder" data-reveal data-group="pm" data-placeholder-id="pf04">
@@ -1406,6 +1415,81 @@
     </div>
   </div>
 </div>
+<!-- ===================== PERFECT TEINT CONCEALER SHADE PICKER MODAL ===================== -->
+<div class="modal-overlay" id="concealerModal">
+  <div class="modal-box modal-service modal-concealer">
+    <button class="btn-icon modal-close" id="concealerModalClose" aria-label="Close">&times;</button>
+    <div class="modal-service-media" id="concealerPreview" style="background-image:url('/assets/img/shop/shades/concealer-5.jpg');"></div>
+    <div class="modal-service-body">
+      <h3>Perfect Teint Concealer</h3>
+      <p class="concealer-desc">PERFECT TEINT CONCEALER takes care of under-eye shadows. Light, provides excellent coverage, the Liquid Concealer also takes care of blemishes and spots. Perfect when paired with Supercolor.</p>
+      <div class="concealer-shade-label">Shade <b id="concealerShadeCode">5</b></div>
+      <div class="concealer-pager">
+        <button type="button" class="concealer-page-btn" id="concealerPagePrev" aria-label="Previous shades">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="concealer-page-label" id="concealerPageLabel">5 – 8</span>
+        <button type="button" class="concealer-page-btn" id="concealerPageNext" aria-label="Next shades">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="concealer-shades" id="concealerShades">
+              <button type="button" class="concealer-shade-btn active" data-code="5" data-hex="#AF8F7A" data-img="/assets/img/shop/shades/concealer-5.jpg" data-page="1" style="background-color:#AF8F7A;" aria-label="Select shade 5"></button>
+              <button type="button" class="concealer-shade-btn" data-code="6" data-hex="#B29889" data-img="/assets/img/shop/shades/concealer-6.jpg" data-page="1" style="background-color:#B29889;" aria-label="Select shade 6"></button>
+              <button type="button" class="concealer-shade-btn" data-code="7" data-hex="#B0957A" data-img="/assets/img/shop/shades/concealer-7.jpg" data-page="1" style="background-color:#B0957A;" aria-label="Select shade 7"></button>
+              <button type="button" class="concealer-shade-btn" data-code="8" data-hex="#AC8371" data-img="/assets/img/shop/shades/concealer-8.jpg" data-page="1" style="background-color:#AC8371;" aria-label="Select shade 8"></button>
+      </div>
+      <div class="product-price" style="margin:4px 0 10px;">$24.00<br><small>per unit</small></div>
+      <div class="modal-service-actions">
+        <button class="btn btn-primary" id="concealerAdd" type="button">Add to Basket</button>
+        <a class="btn" id="concealerWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ===================== CAMOUFLAGE SHADE PICKER MODAL ===================== -->
+<div class="modal-overlay" id="camouflageModal">
+  <div class="modal-box modal-service modal-camouflage">
+    <button class="btn-icon modal-close" id="camouflageModalClose" aria-label="Close">&times;</button>
+    <div class="modal-service-media" id="camouflagePreview" style="background-image:url('/assets/img/shop/shades/camouflage-dc01.jpg');"></div>
+    <div class="modal-service-body">
+      <h3>Camouflage</h3>
+      <p class="camouflage-desc">DERMA COLOR CAMOUFLAGE covers up blemishes, discolorations, and skin inconsistencies with a smooth, natural finish. It also turns UV/Water-resistant when paired with the Fixing Spray.</p>
+      <div class="camouflage-shade-label">Shade <b id="camouflageShadeCode">DC01</b></div>
+      <div class="camouflage-pager">
+        <button type="button" class="camouflage-page-btn" id="camouflagePagePrev" aria-label="Previous shades">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <span class="camouflage-page-label" id="camouflagePageLabel">DC01 – DC17</span>
+        <button type="button" class="camouflage-page-btn" id="camouflagePageNext" aria-label="Next shades">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div class="camouflage-shades" id="camouflageShades">
+              <button type="button" class="camouflage-shade-btn active" data-code="DC01" data-hex="#D89E88" data-img="/assets/img/shop/shades/camouflage-dc01.jpg" data-page="1" style="background-color:#D89E88;" aria-label="Select shade DC01"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC02" data-hex="#AE8261" data-img="/assets/img/shop/shades/camouflage-dc02.jpg" data-page="1" style="background-color:#AE8261;" aria-label="Select shade DC02"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC03" data-hex="#CDAD7A" data-img="/assets/img/shop/shades/camouflage-dc03.jpg" data-page="1" style="background-color:#CDAD7A;" aria-label="Select shade DC03"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC04" data-hex="#CAB5B0" data-img="/assets/img/shop/shades/camouflage-dc04.jpg" data-page="1" style="background-color:#CAB5B0;" aria-label="Select shade DC04"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC05" data-hex="#B3816A" data-img="/assets/img/shop/shades/camouflage-dc05.jpg" data-page="1" style="background-color:#B3816A;" aria-label="Select shade DC05"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC06" data-hex="#C3A08A" data-img="/assets/img/shop/shades/camouflage-dc06.jpg" data-page="1" style="background-color:#C3A08A;" aria-label="Select shade DC06"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC08" data-hex="#C3A38D" data-img="/assets/img/shop/shades/camouflage-dc08.jpg" data-page="1" style="background-color:#C3A38D;" aria-label="Select shade DC08"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC09" data-hex="#BD856B" data-img="/assets/img/shop/shades/camouflage-dc09.jpg" data-page="1" style="background-color:#BD856B;" aria-label="Select shade DC09"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC10" data-hex="#A06A50" data-img="/assets/img/shop/shades/camouflage-dc10.jpg" data-page="1" style="background-color:#A06A50;" aria-label="Select shade DC10"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC11" data-hex="#CCAB9B" data-img="/assets/img/shop/shades/camouflage-dc11.jpg" data-page="1" style="background-color:#CCAB9B;" aria-label="Select shade DC11"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC12" data-hex="#C79C7A" data-img="/assets/img/shop/shades/camouflage-dc12.jpg" data-page="1" style="background-color:#C79C7A;" aria-label="Select shade DC12"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC13" data-hex="#C7A699" data-img="/assets/img/shop/shades/camouflage-dc13.jpg" data-page="1" style="background-color:#C7A699;" aria-label="Select shade DC13"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC14" data-hex="#AE8068" data-img="/assets/img/shop/shades/camouflage-dc14.jpg" data-page="1" style="background-color:#AE8068;" aria-label="Select shade DC14"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC15" data-hex="#A4B89F" data-img="/assets/img/shop/shades/camouflage-dc15.jpg" data-page="1" style="background-color:#A4B89F;" aria-label="Select shade DC15"></button>
+              <button type="button" class="camouflage-shade-btn" data-code="DC17" data-hex="#C59780" data-img="/assets/img/shop/shades/camouflage-dc17.jpg" data-page="1" style="background-color:#C59780;" aria-label="Select shade DC17"></button>
+      </div>
+      <div class="product-price" style="margin:4px 0 10px;">$12.00<br><small>per unit</small></div>
+      <div class="modal-service-actions">
+        <button class="btn btn-primary" id="camouflageAdd" type="button">Add to Basket</button>
+        <a class="btn" id="camouflageWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
 <section class="book-band">
   <div class="container" data-reveal="scale">
     <div class="eyebrow" style="justify-content:center;display:flex;">Reserve Your Visit</div>
@@ -1459,7 +1543,8 @@
 <script>
   var PRODUCT_DATA = {
     "p03": { title:"Mascara Long Lashes Deep Black", cat:"Makeup", icon:"makeup", price:"28.00", unit:"per unit", desc:"MASCARA Let your charm begin with bold, dramatic eyes. Hard waxes and synthetic polymers hold on tight to your lashes and elongates, curls, and intensifies your lashes, ensuring satin-like, clump-free application.", img:"/assets/img/shop/shades/mascara-long-lashes-deep-black.jpg" },
-    "p10": { title:"Palette 5 Colors Cake Eyeliner", cat:"Makeup", icon:"makeup", price:"29.00", unit:"per unit", desc:"CAKE EYE LINER A quick-drying, multitasking powder, it can be used as either a shadow or a liner. Super-sleek, leaves behind no residue, it gives your eyes a pop of high-definition and stays put for longer than ever.", img:"/assets/img/shop/shades/cake-eyeliner-palette.jpg" }
+    "p10": { title:"Palette 5 Colors Cake Eyeliner", cat:"Makeup", icon:"makeup", price:"29.00", unit:"per unit", desc:"CAKE EYE LINER A quick-drying, multitasking powder, it can be used as either a shadow or a liner. Super-sleek, leaves behind no residue, it gives your eyes a pop of high-definition and stays put for longer than ever.", img:"/assets/img/shop/shades/cake-eyeliner-palette.jpg" },
+    "p15": { title:"K Stars Foundation Primer", cat:"Makeup", icon:"makeup", price:"44.00", unit:"per unit", desc:"This silicon primer, with its high performance, is part of the latest generation of elastomers. Its rich texture blends smoothly with the skin for a silky feel and provides the perfect colorless make-up base for a matt effect. Contains no nano-sunscreen and is suitable for all types of skin.", img:"/assets/img/shop/shades/primer-kstars.jpg" }
   };
 
   /* ---------- K Stars Eyeshadow shade picker modal ---------- */
@@ -2717,6 +2802,234 @@
     updateWa();
     shadeBtns.forEach(function(btn){ btn.addEventListener("click", updateWa); });
   })();
+  /* ---------- Perfect Teint Concealer shade picker modal ---------- */
+  (function(){
+    var modal = document.getElementById("concealerModal");
+    if(!modal) return;
+    var trigger = document.querySelector('[data-concealer-trigger]');
+    var closeBtn = document.getElementById("concealerModalClose");
+    var preview = document.getElementById("concealerPreview");
+    var codeLabel = document.getElementById("concealerShadeCode");
+    var addBtn = document.getElementById("concealerAdd");
+    var waBtn = document.getElementById("concealerWa");
+    var shadeBtns = document.querySelectorAll(".concealer-shade-btn");
+    var cardBtn = trigger ? trigger.querySelector(".add-cart-btn") : null;
+    var baseName = "Perfect Teint Concealer";
+    var price = "24.00";
+    var currentCode = "5";
+    var currentImg = "/assets/img/shop/shades/concealer-5.jpg";
+
+    function selectShade(code, img){
+      currentCode = code;
+      currentImg = img;
+      preview.style.backgroundImage = "url('" + img + "')";
+      codeLabel.textContent = code;
+      shadeBtns.forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-code") === code); });
+    }
+
+    shadeBtns.forEach(function(btn){
+      btn.addEventListener("click", function(){
+        selectShade(btn.getAttribute("data-code"), btn.getAttribute("data-img"));
+      });
+    });
+
+    /* ---------- shade page navigation ---------- */
+    var shadesWrap = document.getElementById("concealerShades");
+    var pagePrev = document.getElementById("concealerPagePrev");
+    var pageNext = document.getElementById("concealerPageNext");
+    var pageLabel = document.getElementById("concealerPageLabel");
+    var totalPages = 1;
+    shadeBtns.forEach(function(b){
+      var p = parseInt(b.getAttribute("data-page"), 10) || 1;
+      if(p > totalPages) totalPages = p;
+    });
+    var currentPage = 1;
+
+    function pageRangeLabel(page){
+      var first = null, last = null;
+      shadeBtns.forEach(function(b){
+        if(b.getAttribute("data-page") === String(page)){
+          if(!first) first = b.getAttribute("data-code");
+          last = b.getAttribute("data-code");
+        }
+      });
+      return first ? (first + " – " + last) : "";
+    }
+
+    function showPage(page){
+      currentPage = page;
+      shadeBtns.forEach(function(b){
+        b.style.display = (b.getAttribute("data-page") === String(page)) ? "" : "none";
+      });
+      if(pageLabel) pageLabel.textContent = pageRangeLabel(page);
+      if(pagePrev) pagePrev.disabled = page === 1;
+      if(pageNext) pageNext.disabled = page === totalPages;
+      if(shadesWrap) shadesWrap.scrollTop = 0;
+    }
+    if(pagePrev) pagePrev.addEventListener("click", function(){ if(currentPage > 1) showPage(currentPage - 1); });
+    if(pageNext) pageNext.addEventListener("click", function(){ if(currentPage < totalPages) showPage(currentPage + 1); });
+    showPage(1);
+
+    function openConcealerModal(){
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeConcealerModal(){
+      modal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    if(trigger){
+      trigger.addEventListener("click", function(e){
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openConcealerModal();
+          return;
+        }
+        openConcealerModal();
+      }, true);
+    }
+    closeBtn.addEventListener("click", closeConcealerModal);
+    modal.addEventListener("click", function(e){ if(e.target === modal) closeConcealerModal(); });
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && modal.classList.contains("open")) closeConcealerModal(); });
+
+    addBtn.addEventListener("click", function(){
+      if(cardBtn){
+        cardBtn.setAttribute("data-id", "p16-" + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
+        cardBtn.setAttribute("data-img", currentImg);
+        cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
+        cardBtn.click();
+        cardBtn.setAttribute("data-id", "p16-5");
+        cardBtn.setAttribute("data-name", baseName + " — 5");
+        cardBtn.setAttribute("data-img", "/assets/img/shop/shades/concealer-5.jpg");
+        cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
+      }
+      closeConcealerModal();
+    });
+
+    function updateWa(){
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
+      waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
+    }
+    updateWa();
+    shadeBtns.forEach(function(btn){ btn.addEventListener("click", updateWa); });
+  })();
+  /* ---------- Camouflage shade picker modal ---------- */
+  (function(){
+    var modal = document.getElementById("camouflageModal");
+    if(!modal) return;
+    var trigger = document.querySelector('[data-camouflage-trigger]');
+    var closeBtn = document.getElementById("camouflageModalClose");
+    var preview = document.getElementById("camouflagePreview");
+    var codeLabel = document.getElementById("camouflageShadeCode");
+    var addBtn = document.getElementById("camouflageAdd");
+    var waBtn = document.getElementById("camouflageWa");
+    var shadeBtns = document.querySelectorAll(".camouflage-shade-btn");
+    var cardBtn = trigger ? trigger.querySelector(".add-cart-btn") : null;
+    var baseName = "Camouflage";
+    var price = "12.00";
+    var currentCode = "DC01";
+    var currentImg = "/assets/img/shop/shades/camouflage-dc01.jpg";
+
+    function selectShade(code, img){
+      currentCode = code;
+      currentImg = img;
+      preview.style.backgroundImage = "url('" + img + "')";
+      codeLabel.textContent = code;
+      shadeBtns.forEach(function(b){ b.classList.toggle("active", b.getAttribute("data-code") === code); });
+    }
+
+    shadeBtns.forEach(function(btn){
+      btn.addEventListener("click", function(){
+        selectShade(btn.getAttribute("data-code"), btn.getAttribute("data-img"));
+      });
+    });
+
+    /* ---------- shade page navigation ---------- */
+    var shadesWrap = document.getElementById("camouflageShades");
+    var pagePrev = document.getElementById("camouflagePagePrev");
+    var pageNext = document.getElementById("camouflagePageNext");
+    var pageLabel = document.getElementById("camouflagePageLabel");
+    var totalPages = 1;
+    shadeBtns.forEach(function(b){
+      var p = parseInt(b.getAttribute("data-page"), 10) || 1;
+      if(p > totalPages) totalPages = p;
+    });
+    var currentPage = 1;
+
+    function pageRangeLabel(page){
+      var first = null, last = null;
+      shadeBtns.forEach(function(b){
+        if(b.getAttribute("data-page") === String(page)){
+          if(!first) first = b.getAttribute("data-code");
+          last = b.getAttribute("data-code");
+        }
+      });
+      return first ? (first + " – " + last) : "";
+    }
+
+    function showPage(page){
+      currentPage = page;
+      shadeBtns.forEach(function(b){
+        b.style.display = (b.getAttribute("data-page") === String(page)) ? "" : "none";
+      });
+      if(pageLabel) pageLabel.textContent = pageRangeLabel(page);
+      if(pagePrev) pagePrev.disabled = page === 1;
+      if(pageNext) pageNext.disabled = page === totalPages;
+      if(shadesWrap) shadesWrap.scrollTop = 0;
+    }
+    if(pagePrev) pagePrev.addEventListener("click", function(){ if(currentPage > 1) showPage(currentPage - 1); });
+    if(pageNext) pageNext.addEventListener("click", function(){ if(currentPage < totalPages) showPage(currentPage + 1); });
+    showPage(1);
+
+    function openCamouflageModal(){
+      modal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function closeCamouflageModal(){
+      modal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    if(trigger){
+      trigger.addEventListener("click", function(e){
+        if(e.target.closest(".add-cart-btn")){
+          if(cardBtn && cardBtn.__allowDirectAdd){ cardBtn.__allowDirectAdd = false; return; }
+          e.stopPropagation();
+          openCamouflageModal();
+          return;
+        }
+        openCamouflageModal();
+      }, true);
+    }
+    closeBtn.addEventListener("click", closeCamouflageModal);
+    modal.addEventListener("click", function(e){ if(e.target === modal) closeCamouflageModal(); });
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && modal.classList.contains("open")) closeCamouflageModal(); });
+
+    addBtn.addEventListener("click", function(){
+      if(cardBtn){
+        cardBtn.setAttribute("data-id", "p17-" + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
+        cardBtn.setAttribute("data-img", currentImg);
+        cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
+        cardBtn.__allowDirectAdd = true;
+        cardBtn.click();
+        cardBtn.setAttribute("data-id", "p17-DC01");
+        cardBtn.setAttribute("data-name", baseName + " — DC01");
+        cardBtn.setAttribute("data-img", "/assets/img/shop/shades/camouflage-dc01.jpg");
+        cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
+      }
+      closeCamouflageModal();
+    });
+
+    function updateWa(){
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
+      waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
+    }
+    updateWa();
+    shadeBtns.forEach(function(btn){ btn.addEventListener("click", updateWa); });
+  })();
   (function(){
     var modal = document.getElementById("productModal");
     if(!modal) return;
@@ -2766,7 +3079,7 @@
       document.body.style.overflow = "";
     }
     document.querySelectorAll(".product-card").forEach(function(card){
-      if(card.hasAttribute("data-eyeshadow-trigger") || card.hasAttribute("data-terracotta-trigger") || card.hasAttribute("data-gelliner-trigger") || card.hasAttribute("data-cakeliner-trigger") || card.hasAttribute("data-glitterglam-trigger") || card.hasAttribute("data-hdshining-trigger") || card.hasAttribute("data-crystalpearl-trigger")) return;
+      if(card.hasAttribute("data-eyeshadow-trigger") || card.hasAttribute("data-terracotta-trigger") || card.hasAttribute("data-gelliner-trigger") || card.hasAttribute("data-cakeliner-trigger") || card.hasAttribute("data-glitterglam-trigger") || card.hasAttribute("data-hdshining-trigger") || card.hasAttribute("data-crystalpearl-trigger") || card.hasAttribute("data-tripleaction-trigger") || card.hasAttribute("data-shiningpowder-trigger") || card.hasAttribute("data-eyepencil-trigger") || card.hasAttribute("data-browpencil-trigger") || card.hasAttribute("data-concealer-trigger") || card.hasAttribute("data-camouflage-trigger")) return;
       card.addEventListener("click", function(e){
         if(e.target.closest(".add-cart-btn")) return;
         var btn = card.querySelector(".add-cart-btn");
@@ -2876,7 +3189,9 @@
       { name: "Triple Action (Glitter)", cardSelector: "[data-tripleaction-trigger]", shadeSelector: ".tripleaction-shade-btn", modalId: "tripleActionModal", nextId: "tripleActionPageNext", prevId: "tripleActionPagePrev" },
       { name: "Shining Powder", cardSelector: "[data-shiningpowder-trigger]", shadeSelector: ".shiningpowder-shade-btn", modalId: "shiningPowderModal", nextId: "shiningPowderPageNext", prevId: "shiningPowderPagePrev" },
       { name: "Eye Pencil (Eyeliner)", cardSelector: "[data-eyepencil-trigger]", shadeSelector: ".eyepencil-shade-btn", modalId: "eyePencilModal", nextId: "eyePencilPageNext", prevId: "eyePencilPagePrev" },
-      { name: "Eyebrow Pencil", cardSelector: "[data-browpencil-trigger]", shadeSelector: ".browpencil-shade-btn", modalId: "browPencilModal", nextId: "browPencilPageNext", prevId: "browPencilPagePrev" }
+      { name: "Eyebrow Pencil", cardSelector: "[data-browpencil-trigger]", shadeSelector: ".browpencil-shade-btn", modalId: "browPencilModal", nextId: "browPencilPageNext", prevId: "browPencilPagePrev" },
+      { name: "Perfect Teint Concealer", cardSelector: "[data-concealer-trigger]", shadeSelector: ".concealer-shade-btn", modalId: "concealerModal", nextId: "concealerPageNext", prevId: "concealerPagePrev" },
+      { name: "Camouflage", cardSelector: "[data-camouflage-trigger]", shadeSelector: ".camouflage-shade-btn", modalId: "camouflageModal", nextId: "camouflagePageNext", prevId: "camouflagePagePrev" }
     ];
 
     /* flat index of every shade across every shade-picker product, built once */
@@ -3065,6 +3380,6 @@
 </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BeautySalon", "@id": "https://josephfarahbeauty.com/#business", "name": "Joseph Farah", "image": ["https://josephfarahbeauty.com/assets/logo/og-image.jpg"], "url": "https://josephfarahbeauty.com/", "telephone": "+961 3 29 36 37", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "Zahle Boulevard, Centre Maalouf", "addressLocality": "Zahle", "addressCountry": "LB"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "10:00", "closes": "13:00"}], "sameAs": ["https://facebook.com/josephfarahofficial", "https://instagram.com/josephfarahofficial", "https://tiktok.com/@josephfarahofficial"], "founder": {"@type": "Person", "name": "Joseph Farah", "jobTitle": "Beauty & Personal Care Specialist", "knowsAbout": ["Makeup", "Skin Care", "Permanent Makeup", "Nail Art", "Medical Pedicure", "Laser Hair Removal", "Solarium", "Hair Styling"]}, "areaServed": {"@type": "City", "name": "Zahle"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Beauty & Personal Care Services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Makeup"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Skin Care"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Permanent Makeup"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Nail Art"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Medical Pedicure"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laser Hair Removal"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Solarium"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hair Styling"}}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://josephfarahbeauty.com/"}, {"@type": "ListItem", "position": 2, "name": "Shop", "item": "https://josephfarahbeauty.com/shop"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Joseph Farah Professional Beauty Products", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#kstars-eyeshadow", "name": "K Stars Eyeshadow", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#baked-terracotta-shadow", "name": "Baked Terracotta Shadow", "category": "Makeup", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p03", "name": "Mascara Long Lashes Deep Black", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "28.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#gel-eye-liner", "name": "Gel Eye Liner", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "24.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#cake-eye-liner", "name": "Cake Eye Liner", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p10", "name": "Palette 5 Colors Cake Eyeliner", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 7, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p05", "name": "Glitter Glam", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 8, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p06", "name": "HD Shining Powder", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "22.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 9, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p07", "name": "Crystal Pearl (Glitter)", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "30.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 10, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#triple-action", "name": "Triple Action (Glitter)", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "24.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 11, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#shining-powder", "name": "Shining Powder", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "33.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 12, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#eye-pencil", "name": "Eye Pencil (Eyeliner)", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "13.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 13, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#eyebrow-pencil", "name": "Eyebrow Pencil", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Joseph Farah Professional Beauty Products", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#kstars-eyeshadow", "name": "K Stars Eyeshadow", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#baked-terracotta-shadow", "name": "Baked Terracotta Shadow", "category": "Makeup", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p03", "name": "Mascara Long Lashes Deep Black", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "28.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#gel-eye-liner", "name": "Gel Eye Liner", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "24.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#cake-eye-liner", "name": "Cake Eye Liner", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "20.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p10", "name": "Palette 5 Colors Cake Eyeliner", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "29.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 7, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p05", "name": "Glitter Glam", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 8, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p06", "name": "HD Shining Powder", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "22.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 9, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p07", "name": "Crystal Pearl (Glitter)", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "30.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 10, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#triple-action", "name": "Triple Action (Glitter)", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "24.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 11, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#shining-powder", "name": "Shining Powder", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "33.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 12, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#eye-pencil", "name": "Eye Pencil (Eyeliner)", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "13.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 13, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#eyebrow-pencil", "name": "Eyebrow Pencil", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "14.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 14, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#p15", "name": "K Stars Foundation Primer", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "44.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 15, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#perfect-teint-concealer", "name": "Perfect Teint Concealer", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "24.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}, {"@type": "ListItem", "position": 16, "item": {"@type": "Product", "@id": "https://josephfarahbeauty.com/shop#camouflage", "name": "Camouflage", "category": "Makeup", "brand": {"@type": "Brand", "name": "K Stars Cosmetics"}, "offers": {"@type": "Offer", "price": "12.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://josephfarahbeauty.com/shop"}}}]}</script>
 </body>
 </html>
