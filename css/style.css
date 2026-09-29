@@ -847,12 +847,19 @@ html.js [data-reveal="scale"].in{ transform:scale(1); }
 @media(max-width:640px){
   .shop-category .section-head.split{ align-items:flex-start; }
 }
-.product-card{ background:var(--white); border:1px solid var(--line); position:relative; cursor:pointer; }
-.product-card .ph-media{ aspect-ratio:1/1; }
-.product-body{ padding:22px 20px 24px; }
+.product-card{
+  display:flex; flex-direction:column;
+  background:var(--white); border:1px solid var(--line); position:relative; cursor:pointer;
+}
+.product-card .ph-media{ aspect-ratio:1/1; flex:none; }
+.product-body{ padding:22px 20px 24px; display:flex; flex-direction:column; flex:1; }
 .product-cat{ font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--stone); }
 .product-card h3{ font-size:16.5px; margin:8px 0 10px; }
-.product-row{ display:flex; align-items:center; justify-content:space-between; margin-top:14px; }
+/* margin-top:auto pins price+button to the bottom of every card, so it lines
+   up across a row regardless of how many lines the title/category above it
+   wraps to; padding-top keeps a minimum gap even on the tallest card, where
+   the auto margin itself resolves to ~0. */
+.product-row{ display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:14px; }
 .product-price{ font-family:var(--font-display); font-size:19px; }
 .product-price small{ font-family:var(--font-body); font-size:10.5px; color:var(--stone); }
 .add-cart-btn{
