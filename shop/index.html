@@ -58,11 +58,37 @@
 </header>
 
 <nav class="mobile-nav">
-  <a href="/">Home</a>
-  <a href="/certificates">Certificates</a>
-  <a href="/gallery">Gallery</a>
-  <a href="/shop">Shop</a>
-  <a href="/booking">Booking</a>
+  <div class="mn-scroll">
+    <div class="mn-group">
+      <div class="mn-row">
+        <a href="/" class="mn-link">Home</a>
+        <button type="button" class="mn-expand" aria-label="Show Home sections" aria-expanded="false"><span></span></button>
+      </div>
+      <div class="mn-subnav">
+        <a href="/#about">About</a>
+        <a href="/#services">Services</a>
+        <a href="/#why">Why Us</a>
+        <a href="/#work">Our Work</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+    </div>
+    <a href="/certificates" class="mn-link">Certificates</a>
+    <a href="/gallery" class="mn-link">Gallery</a>
+    <div class="mn-group">
+      <div class="mn-row">
+        <a href="/shop" class="mn-link">Shop</a>
+        <button type="button" class="mn-expand" aria-label="Show Shop sections" aria-expanded="false"><span></span></button>
+      </div>
+      <div class="mn-subnav">
+        <a href="/shop#section-eye">Eye</a>
+        <a href="/shop#section-face">Face</a>
+        <a href="/shop#section-lips">Lips</a>
+        <a href="/shop#section-accessories">Accessories</a>
+      </div>
+    </div>
+    <a href="/booking" class="mn-link">Booking</a>
+  </div>
   <div class="mn-sub">
     <button class="btn-icon" data-cart-open aria-label="Open basket"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.4a2 2 0 0 0 2-1.6L20 8H6"/></svg></button>
     <a class="btn-icon" href="https://wa.me/9613293637" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"/></svg></a>
@@ -123,7 +149,7 @@
           <h3>K Stars Eyeshadow <span class="product-code">K1</span></h3>
           <div class="product-row">
             <div class="product-price">$14.00<br><small>per unit &middot; 196 shades</small></div>
-            <button class="add-cart-btn" data-id="p01-K1" data-name="K Stars Eyeshadow | K1" data-cat="Makeup" data-price="14.00" data-icon="makeup" data-img="/assets/img/shop/shades/k-K1.jpg" aria-label="Add K Stars Eyeshadow to basket">
+            <button class="add-cart-btn" data-id="p01-K1" data-name="K Stars Eyeshadow — K1" data-cat="Makeup" data-price="14.00" data-icon="makeup" data-img="/assets/img/shop/shades/k-K1.jpg" aria-label="Add K Stars Eyeshadow to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -136,7 +162,7 @@
           <h3>Baked Terracotta Shadow <span class="product-code">B1</span></h3>
           <div class="product-row">
             <div class="product-price">$16.00<br><small>per unit &middot; 70 shades</small></div>
-            <button class="add-cart-btn" data-id="p02-B1" data-name="Baked Terracotta Shadow | B1" data-cat="Makeup" data-price="16.00" data-icon="makeup" data-img="/assets/img/shop/shades/bts-B1.jpg" aria-label="Add Baked Terracotta Shadow to basket">
+            <button class="add-cart-btn" data-id="p02-B1" data-name="Baked Terracotta Shadow — B1" data-cat="Makeup" data-price="16.00" data-icon="makeup" data-img="/assets/img/shop/shades/bts-B1.jpg" aria-label="Add Baked Terracotta Shadow to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -162,7 +188,7 @@
           <h3>Gel Eye Liner <span class="product-code">Y701</span></h3>
           <div class="product-row">
             <div class="product-price">$24.00<br><small>per unit &middot; 7 shades</small></div>
-            <button class="add-cart-btn" data-id="p04-Y701" data-name="Gel Eye Liner | EMERALD BLAZE Y701" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/gl-Y701.jpg" aria-label="Add Gel Eye Liner to basket">
+            <button class="add-cart-btn" data-id="p04-Y701" data-name="Gel Eye Liner — EMERALD BLAZE Y701" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/gl-Y701.jpg" aria-label="Add Gel Eye Liner to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -175,7 +201,7 @@
           <h3>Cake Eye Liner <span class="product-code">CE1</span></h3>
           <div class="product-row">
             <div class="product-price">$20.00<br><small>per unit &middot; 5 shades</small></div>
-            <button class="add-cart-btn" data-id="p09-CE1" data-name="Cake Eye Liner | CE1 BLACK" data-cat="Makeup" data-price="20.00" data-icon="makeup" data-img="/assets/img/shop/shades/cl-CE1.jpg" aria-label="Add Cake Eye Liner to basket">
+            <button class="add-cart-btn" data-id="p09-CE1" data-name="Cake Eye Liner — CE1 BLACK" data-cat="Makeup" data-price="20.00" data-icon="makeup" data-img="/assets/img/shop/shades/cl-CE1.jpg" aria-label="Add Cake Eye Liner to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -201,7 +227,7 @@
           <h3>Glitter Glam <span class="product-code">T701</span></h3>
           <div class="product-row">
             <div class="product-price">$19.00<br><small>per unit &middot; 7 shades</small></div>
-            <button class="add-cart-btn" data-id="p05-T701" data-name="Glitter Glam | SNOW QUEEN T701" data-cat="Makeup" data-price="19.00" data-icon="makeup" data-img="/assets/img/shop/shades/gg-T701.jpg" aria-label="Add Glitter Glam to basket">
+            <button class="add-cart-btn" data-id="p05-T701" data-name="Glitter Glam — SNOW QUEEN T701" data-cat="Makeup" data-price="19.00" data-icon="makeup" data-img="/assets/img/shop/shades/gg-T701.jpg" aria-label="Add Glitter Glam to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -214,7 +240,7 @@
           <h3>HD Shining Powder <span class="product-code">BRONZE</span></h3>
           <div class="product-row">
             <div class="product-price">$22.00<br><small>per unit &middot; 18 shades</small></div>
-            <button class="add-cart-btn" data-id="p06-BRONZE" data-name="HD Shining Powder | BRONZE" data-cat="Makeup" data-price="22.00" data-icon="makeup" data-img="/assets/img/shop/shades/hd-bronze.jpg" aria-label="Add HD Shining Powder to basket">
+            <button class="add-cart-btn" data-id="p06-BRONZE" data-name="HD Shining Powder — BRONZE" data-cat="Makeup" data-price="22.00" data-icon="makeup" data-img="/assets/img/shop/shades/hd-bronze.jpg" aria-label="Add HD Shining Powder to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -227,7 +253,7 @@
           <h3>Crystal Pearl (Glitter) <span class="product-code">CRYSTAL PEARL 2</span></h3>
           <div class="product-row">
             <div class="product-price">$30.00<br><small>per unit &middot; 7 shades</small></div>
-            <button class="add-cart-btn" data-id="p07-CRYSTAL PEARL 2" data-name="Crystal Pearl (Glitter) | CRYSTAL PEARL 2" data-cat="Makeup" data-price="30.00" data-icon="makeup" data-img="/assets/img/shop/shades/cp-2.jpg" aria-label="Add Crystal Pearl (Glitter) to basket">
+            <button class="add-cart-btn" data-id="p07-CRYSTAL PEARL 2" data-name="Crystal Pearl (Glitter) — CRYSTAL PEARL 2" data-cat="Makeup" data-price="30.00" data-icon="makeup" data-img="/assets/img/shop/shades/cp-2.jpg" aria-label="Add Crystal Pearl (Glitter) to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -240,7 +266,7 @@
           <h3>Triple Action (Glitter) <span class="product-code">CALIFORNIA GOLD 05</span></h3>
           <div class="product-row">
             <div class="product-price">$24.00<br><small>per unit &middot; 23 shades</small></div>
-            <button class="add-cart-btn" data-id="p11-CALIFORNIA GOLD 05" data-name="Triple Action (Glitter) | CALIFORNIA GOLD 05" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/ta-california-gold-05.jpg" aria-label="Add Triple Action (Glitter) to basket">
+            <button class="add-cart-btn" data-id="p11-CALIFORNIA GOLD 05" data-name="Triple Action (Glitter) — CALIFORNIA GOLD 05" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/ta-california-gold-05.jpg" aria-label="Add Triple Action (Glitter) to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -253,7 +279,7 @@
           <h3>Shining Powder <span class="product-code">GOLDEN BLUE</span></h3>
           <div class="product-row">
             <div class="product-price">$33.00<br><small>per unit &middot; 10 shades</small></div>
-            <button class="add-cart-btn" data-id="p12-GOLDEN BLUE" data-name="Shining Powder | GOLDEN BLUE" data-cat="Makeup" data-price="33.00" data-icon="makeup" data-img="/assets/img/shop/shades/sp-golden-blue.jpg" aria-label="Add Shining Powder to basket">
+            <button class="add-cart-btn" data-id="p12-GOLDEN BLUE" data-name="Shining Powder — GOLDEN BLUE" data-cat="Makeup" data-price="33.00" data-icon="makeup" data-img="/assets/img/shop/shades/sp-golden-blue.jpg" aria-label="Add Shining Powder to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -266,7 +292,7 @@
           <h3>Eye Pencil (Eyeliner) <span class="product-code">70-01</span></h3>
           <div class="product-row">
             <div class="product-price">$13.00<br><small>per unit &middot; 4 shades</small></div>
-            <button class="add-cart-btn" data-id="p13-70-01" data-name="Eye Pencil (Eyeliner) | 70-01" data-cat="Makeup" data-price="13.00" data-icon="makeup" data-img="/assets/img/shop/shades/ep-70-01.jpg" aria-label="Add Eye Pencil (Eyeliner) to basket">
+            <button class="add-cart-btn" data-id="p13-70-01" data-name="Eye Pencil (Eyeliner) — 70-01" data-cat="Makeup" data-price="13.00" data-icon="makeup" data-img="/assets/img/shop/shades/ep-70-01.jpg" aria-label="Add Eye Pencil (Eyeliner) to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -279,7 +305,7 @@
           <h3>Eyebrow Pencil <span class="product-code">50-01</span></h3>
           <div class="product-row">
             <div class="product-price">$14.00<br><small>per unit &middot; 3 shades</small></div>
-            <button class="add-cart-btn" data-id="p14-50-01" data-name="Eyebrow Pencil | 50-01" data-cat="Makeup" data-price="14.00" data-icon="makeup" data-img="/assets/img/shop/shades/bp-50-01.jpg" aria-label="Add Eyebrow Pencil to basket">
+            <button class="add-cart-btn" data-id="p14-50-01" data-name="Eyebrow Pencil — 50-01" data-cat="Makeup" data-price="14.00" data-icon="makeup" data-img="/assets/img/shop/shades/bp-50-01.jpg" aria-label="Add Eyebrow Pencil to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -330,7 +356,7 @@
           <h3>Perfect Teint Concealer <span class="product-code">5</span></h3>
           <div class="product-row">
             <div class="product-price">$24.00<br><small>per unit &middot; 4 shades</small></div>
-            <button class="add-cart-btn" data-id="p16-5" data-name="Perfect Teint Concealer | 5" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/concealer-5.jpg" aria-label="Add Perfect Teint Concealer to basket">
+            <button class="add-cart-btn" data-id="p16-5" data-name="Perfect Teint Concealer — 5" data-cat="Makeup" data-price="24.00" data-icon="makeup" data-img="/assets/img/shop/shades/concealer-5.jpg" aria-label="Add Perfect Teint Concealer to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -343,7 +369,7 @@
           <h3>Camouflage <span class="product-code">DC01</span></h3>
           <div class="product-row">
             <div class="product-price">$12.00<br><small>per unit &middot; 15 shades</small></div>
-            <button class="add-cart-btn" data-id="p17-DC01" data-name="Camouflage | DC01" data-cat="Makeup" data-price="12.00" data-icon="makeup" data-img="/assets/img/shop/shades/camouflage-dc01.jpg" aria-label="Add Camouflage to basket">
+            <button class="add-cart-btn" data-id="p17-DC01" data-name="Camouflage — DC01" data-cat="Makeup" data-price="12.00" data-icon="makeup" data-img="/assets/img/shop/shades/camouflage-dc01.jpg" aria-label="Add Camouflage to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -356,7 +382,7 @@
           <h3>Silky Touch Foundation <span class="product-code">2</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 9 shades</small></div>
-            <button class="add-cart-btn" data-id="p18-2" data-name="Silky Touch Foundation | 2" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/st-2.jpg" aria-label="Add Silky Touch Foundation to basket">
+            <button class="add-cart-btn" data-id="p18-2" data-name="Silky Touch Foundation — 2" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/st-2.jpg" aria-label="Add Silky Touch Foundation to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -369,7 +395,7 @@
           <h3>Supercolor Foundation <span class="product-code">SC1</span></h3>
           <div class="product-row">
             <div class="product-price">$47.00<br><small>per unit &middot; 9 shades</small></div>
-            <button class="add-cart-btn" data-id="p19-SC1" data-name="Supercolor Foundation | SC1" data-cat="Makeup" data-price="47.00" data-icon="makeup" data-img="/assets/img/shop/shades/scf-sc1.jpg" aria-label="Add Supercolor Foundation to basket">
+            <button class="add-cart-btn" data-id="p19-SC1" data-name="Supercolor Foundation — SC1" data-cat="Makeup" data-price="47.00" data-icon="makeup" data-img="/assets/img/shop/shades/scf-sc1.jpg" aria-label="Add Supercolor Foundation to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -382,7 +408,7 @@
           <h3>Supra Color Platinum <span class="product-code">CREAMY BEIGE</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 18 shades</small></div>
-            <button class="add-cart-btn" data-id="p21-CREAMY BEIGE" data-name="Supra Color Platinum | CREAMY BEIGE" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/scp-creamy-beige.jpg" aria-label="Add Supra Color Platinum to basket">
+            <button class="add-cart-btn" data-id="p21-CREAMY BEIGE" data-name="Supra Color Platinum — CREAMY BEIGE" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/scp-creamy-beige.jpg" aria-label="Add Supra Color Platinum to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -395,7 +421,7 @@
           <h3>Ultra Foundation Cream <span class="product-code">OB1</span></h3>
           <div class="product-row">
             <div class="product-price">$36.00<br><small>per unit &middot; 7 shades</small></div>
-            <button class="add-cart-btn" data-id="p20-OB1" data-name="Ultra Foundation Cream | OB1" data-cat="Makeup" data-price="36.00" data-icon="makeup" data-img="/assets/img/shop/shades/ufc-ob1.jpg" aria-label="Add Ultra Foundation Cream to basket">
+            <button class="add-cart-btn" data-id="p20-OB1" data-name="Ultra Foundation Cream — OB1" data-cat="Makeup" data-price="36.00" data-icon="makeup" data-img="/assets/img/shop/shades/ufc-ob1.jpg" aria-label="Add Ultra Foundation Cream to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -408,7 +434,7 @@
           <h3>Compact Foundation <span class="product-code">1</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 3 shades</small></div>
-            <button class="add-cart-btn" data-id="p22-1" data-name="Compact Foundation | 1" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/cptf-1.jpg" aria-label="Add Compact Foundation to basket">
+            <button class="add-cart-btn" data-id="p22-1" data-name="Compact Foundation — 1" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/cptf-1.jpg" aria-label="Add Compact Foundation to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -421,7 +447,7 @@
           <h3>Creamliss Foundation <span class="product-code">CF1</span></h3>
           <div class="product-row">
             <div class="product-price">$58.00<br><small>per unit &middot; 5 shades</small></div>
-            <button class="add-cart-btn" data-id="p23-CF1" data-name="Creamliss Foundation | CF1" data-cat="Makeup" data-price="58.00" data-icon="makeup" data-img="/assets/img/shop/shades/crl-cf1.jpg" aria-label="Add Creamliss Foundation to basket">
+            <button class="add-cart-btn" data-id="p23-CF1" data-name="Creamliss Foundation — CF1" data-cat="Makeup" data-price="58.00" data-icon="makeup" data-img="/assets/img/shop/shades/crl-cf1.jpg" aria-label="Add Creamliss Foundation to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -434,7 +460,7 @@
           <h3>Combi Foundation <span class="product-code">COLOR A</span></h3>
           <div class="product-row">
             <div class="product-price">$47.00<br><small>per unit &middot; 4 shades</small></div>
-            <button class="add-cart-btn" data-id="p24-COLOR A" data-name="Combi Foundation | COLOR A" data-cat="Makeup" data-price="47.00" data-icon="makeup" data-img="/assets/img/shop/shades/combi-a.jpg" aria-label="Add Combi Foundation to basket">
+            <button class="add-cart-btn" data-id="p24-COLOR A" data-name="Combi Foundation — COLOR A" data-cat="Makeup" data-price="47.00" data-icon="makeup" data-img="/assets/img/shop/shades/combi-a.jpg" aria-label="Add Combi Foundation to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -460,7 +486,7 @@
           <h3>Fixing Powder <span class="product-code">P3</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 6 shades</small></div>
-            <button class="add-cart-btn" data-id="p26-P3" data-name="Fixing Powder | P3" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/fp-p3.jpg" aria-label="Add Fixing Powder to basket">
+            <button class="add-cart-btn" data-id="p26-P3" data-name="Fixing Powder — P3" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/fp-p3.jpg" aria-label="Add Fixing Powder to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -473,7 +499,7 @@
           <h3>Iridescent Loose Powder <span class="product-code">F1319</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 5 shades</small></div>
-            <button class="add-cart-btn" data-id="p27-F1319" data-name="Iridescent Loose Powder | F1319" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/iridescentpowder-f1319.jpg" aria-label="Add Iridescent Loose Powder to basket">
+            <button class="add-cart-btn" data-id="p27-F1319" data-name="Iridescent Loose Powder — F1319" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/iridescentpowder-f1319.jpg" aria-label="Add Iridescent Loose Powder to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -486,7 +512,7 @@
           <h3>Loose Powder <span class="product-code">F305</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 7 shades</small></div>
-            <button class="add-cart-btn" data-id="p28-F305" data-name="Loose Powder | F305" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/loosepowder-f305.jpg" aria-label="Add Loose Powder to basket">
+            <button class="add-cart-btn" data-id="p28-F305" data-name="Loose Powder — F305" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/loosepowder-f305.jpg" aria-label="Add Loose Powder to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -499,7 +525,7 @@
           <h3>Translucent Powder <span class="product-code">ILP1</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 2 shades</small></div>
-            <button class="add-cart-btn" data-id="p29-ILP1" data-name="Translucent Powder | ILP1" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/translucentpowder-ilp1.jpg" aria-label="Add Translucent Powder to basket">
+            <button class="add-cart-btn" data-id="p29-ILP1" data-name="Translucent Powder — ILP1" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/translucentpowder-ilp1.jpg" aria-label="Add Translucent Powder to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -512,7 +538,7 @@
           <h3>Compact Glitter <span class="product-code">KCP1</span></h3>
           <div class="product-row">
             <div class="product-price">$35.00<br><small>per unit &middot; 13 shades</small></div>
-            <button class="add-cart-btn" data-id="p30-KCP1" data-name="Compact Glitter | KCP1" data-cat="Makeup" data-price="35.00" data-icon="makeup" data-img="/assets/img/shop/shades/compactglitter-kcp1.jpg" aria-label="Add Compact Glitter to basket">
+            <button class="add-cart-btn" data-id="p30-KCP1" data-name="Compact Glitter — KCP1" data-cat="Makeup" data-price="35.00" data-icon="makeup" data-img="/assets/img/shop/shades/compactglitter-kcp1.jpg" aria-label="Add Compact Glitter to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -525,7 +551,7 @@
           <h3>Ultra Dual Finish <span class="product-code">OB1</span></h3>
           <div class="product-row">
             <div class="product-price">$42.00<br><small>per unit &middot; 9 shades</small></div>
-            <button class="add-cart-btn" data-id="p31-OB1" data-name="Ultra Dual Finish | OB1" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/ultradualfinish-ob1.jpg" aria-label="Add Ultra Dual Finish to basket">
+            <button class="add-cart-btn" data-id="p31-OB1" data-name="Ultra Dual Finish — OB1" data-cat="Makeup" data-price="42.00" data-icon="makeup" data-img="/assets/img/shop/shades/ultradualfinish-ob1.jpg" aria-label="Add Ultra Dual Finish to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -551,7 +577,7 @@
           <h3>Blush <span class="product-code">S1</span></h3>
           <div class="product-row">
             <div class="product-price">$35.00<br><small>per unit &middot; 21 shades</small></div>
-            <button class="add-cart-btn" data-id="p33-S1" data-name="Blush | S1" data-cat="Makeup" data-price="35.00" data-icon="makeup" data-img="/assets/img/shop/shades/blush-s1.jpg" aria-label="Add Blush to basket">
+            <button class="add-cart-btn" data-id="p33-S1" data-name="Blush — S1" data-cat="Makeup" data-price="35.00" data-icon="makeup" data-img="/assets/img/shop/shades/blush-s1.jpg" aria-label="Add Blush to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -564,7 +590,7 @@
           <h3>Baked Blush <span class="product-code">BT1</span></h3>
           <div class="product-row">
             <div class="product-price">$35.00<br><small>per unit &middot; 15 shades</small></div>
-            <button class="add-cart-btn" data-id="p34-BT1" data-name="Baked Blush | BT1" data-cat="Makeup" data-price="35.00" data-icon="makeup" data-img="/assets/img/shop/shades/bakedblush-bt1.jpg" aria-label="Add Baked Blush to basket">
+            <button class="add-cart-btn" data-id="p34-BT1" data-name="Baked Blush — BT1" data-cat="Makeup" data-price="35.00" data-icon="makeup" data-img="/assets/img/shop/shades/bakedblush-bt1.jpg" aria-label="Add Baked Blush to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -602,7 +628,7 @@
           <h3>Wheel Lipstick <span class="product-code">15</span></h3>
           <div class="product-row">
             <div class="product-price">$44.00<br><small>per unit &middot; 8 shades</small></div>
-            <button class="add-cart-btn" data-id="p35-15" data-name="Wheel Lipstick | 15" data-cat="Makeup" data-price="44.00" data-icon="makeup" data-img="/assets/img/shop/shades/wheellipstick-15.jpg" aria-label="Add Wheel Lipstick to basket">
+            <button class="add-cart-btn" data-id="p35-15" data-name="Wheel Lipstick — 15" data-cat="Makeup" data-price="44.00" data-icon="makeup" data-img="/assets/img/shop/shades/wheellipstick-15.jpg" aria-label="Add Wheel Lipstick to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -615,7 +641,7 @@
           <h3>Creamy Lip Liner <span class="product-code">80-01</span></h3>
           <div class="product-row">
             <div class="product-price">$13.00<br><small>per unit &middot; 10 shades</small></div>
-            <button class="add-cart-btn" data-id="p36-80-01" data-name="Creamy Lip Liner | 80-01" data-cat="Makeup" data-price="13.00" data-icon="makeup" data-img="/assets/img/shop/shades/creamyliner-80-01.jpg" aria-label="Add Creamy Lip Liner to basket">
+            <button class="add-cart-btn" data-id="p36-80-01" data-name="Creamy Lip Liner — 80-01" data-cat="Makeup" data-price="13.00" data-icon="makeup" data-img="/assets/img/shop/shades/creamyliner-80-01.jpg" aria-label="Add Creamy Lip Liner to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -628,7 +654,7 @@
           <h3>K Stars Lipliner <span class="product-code">60-1</span></h3>
           <div class="product-row">
             <div class="product-price">$13.00<br><small>per unit &middot; 6 shades</small></div>
-            <button class="add-cart-btn" data-id="p37-60-1" data-name="K Stars Lipliner | 60-1" data-cat="Makeup" data-price="13.00" data-icon="makeup" data-img="/assets/img/shop/shades/kstarsliner-60-1.jpg" aria-label="Add K Stars Lipliner to basket">
+            <button class="add-cart-btn" data-id="p37-60-1" data-name="K Stars Lipliner — 60-1" data-cat="Makeup" data-price="13.00" data-icon="makeup" data-img="/assets/img/shop/shades/kstarsliner-60-1.jpg" aria-label="Add K Stars Lipliner to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -641,7 +667,7 @@
           <h3>Lipstick Matt Matt <span class="product-code">EMBRACE</span></h3>
           <div class="product-row">
             <div class="product-price">$21.00<br><small>per unit &middot; 8 shades</small></div>
-            <button class="add-cart-btn" data-id="p38-EMBRACE" data-name="Lipstick Matt Matt | EMBRACE" data-cat="Makeup" data-price="21.00" data-icon="makeup" data-img="/assets/img/shop/shades/lipstickmatt-embrace.jpg" aria-label="Add Lipstick Matt Matt to basket">
+            <button class="add-cart-btn" data-id="p38-EMBRACE" data-name="Lipstick Matt Matt — EMBRACE" data-cat="Makeup" data-price="21.00" data-icon="makeup" data-img="/assets/img/shop/shades/lipstickmatt-embrace.jpg" aria-label="Add Lipstick Matt Matt to basket">
               <svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M6 8h12l-1 10a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 18L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
             </button>
           </div>
@@ -750,7 +776,7 @@
       <p id="productModalDesc"></p>
       <div class="product-price" id="productModalPrice" style="margin:16px 0 22px;"></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="productModalAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="productModalAdd" type="button">Add to Basket</button>
         <a class="btn" id="productModalWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -975,7 +1001,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$14.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="eyeshadowAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="eyeshadowAdd" type="button">Add to Basket</button>
         <a class="btn" id="eyeshadowWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1059,7 +1085,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$16.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="terracottaAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="terracottaAdd" type="button">Add to Basket</button>
         <a class="btn" id="terracottaWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1094,7 +1120,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$24.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="gelLinerAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="gelLinerAdd" type="button">Add to Basket</button>
         <a class="btn" id="gelLinerWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1127,7 +1153,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$20.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="cakeLinerAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="cakeLinerAdd" type="button">Add to Basket</button>
         <a class="btn" id="cakeLinerWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1162,7 +1188,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$19.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="glitterGlamAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="glitterGlamAdd" type="button">Add to Basket</button>
         <a class="btn" id="glitterGlamWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1208,7 +1234,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$22.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="hdShiningAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="hdShiningAdd" type="button">Add to Basket</button>
         <a class="btn" id="hdShiningWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1243,7 +1269,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$30.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="crystalPearlAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="crystalPearlAdd" type="button">Add to Basket</button>
         <a class="btn" id="crystalPearlWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1294,7 +1320,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$24.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="tripleActionAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="tripleActionAdd" type="button">Add to Basket</button>
         <a class="btn" id="tripleActionWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1332,7 +1358,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$33.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="shiningPowderAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="shiningPowderAdd" type="button">Add to Basket</button>
         <a class="btn" id="shiningPowderWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1364,7 +1390,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$13.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="eyePencilAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="eyePencilAdd" type="button">Add to Basket</button>
         <a class="btn" id="eyePencilWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1395,7 +1421,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$14.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="browPencilAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="browPencilAdd" type="button">Add to Basket</button>
         <a class="btn" id="browPencilWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1427,7 +1453,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$24.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="concealerAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="concealerAdd" type="button">Add to Basket</button>
         <a class="btn" id="concealerWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1470,7 +1496,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$12.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="camouflageAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="camouflageAdd" type="button">Add to Basket</button>
         <a class="btn" id="camouflageWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1507,7 +1533,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="silkyTouchAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="silkyTouchAdd" type="button">Add to Basket</button>
         <a class="btn" id="silkyTouchWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1544,7 +1570,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$47.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="supercolorAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="supercolorAdd" type="button">Add to Basket</button>
         <a class="btn" id="supercolorWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1579,7 +1605,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$36.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="ultraCreamAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="ultraCreamAdd" type="button">Add to Basket</button>
         <a class="btn" id="ultraCreamWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1625,7 +1651,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="supraPlatinumAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="supraPlatinumAdd" type="button">Add to Basket</button>
         <a class="btn" id="supraPlatinumWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1656,7 +1682,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="compactFoundationAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="compactFoundationAdd" type="button">Add to Basket</button>
         <a class="btn" id="compactFoundationWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1689,7 +1715,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$58.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="creamlissAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="creamlissAdd" type="button">Add to Basket</button>
         <a class="btn" id="creamlissWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1721,7 +1747,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$47.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="combiAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="combiAdd" type="button">Add to Basket</button>
         <a class="btn" id="combiWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1755,7 +1781,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="fixingPowderAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="fixingPowderAdd" type="button">Add to Basket</button>
         <a class="btn" id="fixingPowderWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1788,7 +1814,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="iridescentPowderAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="iridescentPowderAdd" type="button">Add to Basket</button>
         <a class="btn" id="iridescentPowderWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1823,7 +1849,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="loosePowderAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="loosePowderAdd" type="button">Add to Basket</button>
         <a class="btn" id="loosePowderWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1853,7 +1879,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="translucentPowderAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="translucentPowderAdd" type="button">Add to Basket</button>
         <a class="btn" id="translucentPowderWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1894,7 +1920,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$35.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="compactGlitterAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="compactGlitterAdd" type="button">Add to Basket</button>
         <a class="btn" id="compactGlitterWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1931,7 +1957,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$42.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="ultraDualFinishAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="ultraDualFinishAdd" type="button">Add to Basket</button>
         <a class="btn" id="ultraDualFinishWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -1944,7 +1970,7 @@
     <div class="modal-service-media" id="blushPreview" style="background-image:url('/assets/img/shop/shades/blush-s1.jpg');"></div>
     <div class="modal-service-body">
       <h3>Blush</h3>
-      <p class="blush-desc">Brings intense, sensual warmth to the face. This Blush comes in a vast collection of shades and combinations, each with a designed relief shape | from sensual lace prints to ultrafeminine floral patterns.</p>
+      <p class="blush-desc">Brings intense, sensual warmth to the face. This Blush comes in a vast collection of shades and combinations, each with a designed relief shape — from sensual lace prints to ultrafeminine floral patterns.</p>
       <div class="blush-shade-label">Shade <b id="blushShadeCode">S1</b></div>
       <div class="blush-pager">
         <button type="button" class="blush-page-btn" id="blushPagePrev" aria-label="Previous shades">
@@ -1980,7 +2006,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$35.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="blushAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="blushAdd" type="button">Add to Basket</button>
         <a class="btn" id="blushWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -2023,7 +2049,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$35.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="bakedBlushAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="bakedBlushAdd" type="button">Add to Basket</button>
         <a class="btn" id="bakedBlushWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -2059,7 +2085,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$44.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="wheelLipstickAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="wheelLipstickAdd" type="button">Add to Basket</button>
         <a class="btn" id="wheelLipstickWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -2072,7 +2098,7 @@
     <div class="modal-service-media" id="creamyLinerPreview" style="background-image:url('/assets/img/shop/shades/creamyliner-80-01.jpg');"></div>
     <div class="modal-service-body">
       <h3>Creamy Lip Liner</h3>
-      <p class="creamyliner-desc">Dries up immediately after application | no fussy smudging or wiping. Long wear, super smooth, surgically precise. Gives off unmatched color coverage and wear. Shade out your lip liner after you apply for a full, luscious look.</p>
+      <p class="creamyliner-desc">Dries up immediately after application — no fussy smudging or wiping. Long wear, super smooth, surgically precise. Gives off unmatched color coverage and wear. Shade out your lip liner after you apply for a full, luscious look.</p>
       <div class="creamyliner-shade-label">Shade <b id="creamyLinerShadeCode">80-01</b></div>
       <div class="creamyliner-pager">
         <button type="button" class="creamyliner-page-btn" id="creamyLinerPagePrev" aria-label="Previous shades">
@@ -2097,7 +2123,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$13.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="creamyLinerAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="creamyLinerAdd" type="button">Add to Basket</button>
         <a class="btn" id="creamyLinerWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -2131,7 +2157,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$13.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="kstarsLinerAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="kstarsLinerAdd" type="button">Add to Basket</button>
         <a class="btn" id="kstarsLinerWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -2167,7 +2193,7 @@
       </div>
       <div class="product-price" style="margin:4px 0 10px;">$21.00<br><small>per unit</small></div>
       <div class="modal-service-actions">
-        <button class="btn btn-primary" id="lipstickMattAdd" type="button">ADD TO CART</button>
+        <button class="btn btn-primary" id="lipstickMattAdd" type="button">Add to Basket</button>
         <a class="btn" id="lipstickMattWa" href="https://wa.me/9613293637" target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
     </div>
@@ -2231,7 +2257,7 @@
     "p25": { title:"Wheel Corrector", cat:"Makeup", icon:"makeup", price:"47.00", unit:"per unit", desc:"Life-saving and practical. The Wheel Corrector is a palette of six shades targeting specific types of blemishes, discolorations, and also unevenness in your complexion.", img:"/assets/img/shop/shades/wheel-corrector.jpg" }
 ,
     "p32": { title:"Compact Bronzing Powder", cat:"Makeup", icon:"makeup", price:"53.00", unit:"per unit", desc:"COMPACT BRONZING gives you sun-kissed sizzle with little effort. Comes in an iconic heart-shaped relief design or as powder pellets. Bronze on as you go.", img:"/assets/img/shop/shades/compactbronzing-sl.jpg" },
-    "p39": { title:"K Stars Natural Lash Kit 04", cat:"Makeup", icon:"makeup", price:"5.00", unit:"per unit", desc:"K STARS NATURAL LASH KIT A ready-to-wear set of individually clustered lashes for soft, natural volume. Lightweight and comfortable with a long-lasting hold | easy to apply for everyday wear or a quick touch-up.", img:"/assets/img/shop/shades/kstars-natural-lash-kit-04.jpg" }
+    "p39": { title:"K Stars Natural Lash Kit 04", cat:"Makeup", icon:"makeup", price:"5.00", unit:"per unit", desc:"K STARS NATURAL LASH KIT A ready-to-wear set of individually clustered lashes for soft, natural volume. Lightweight and comfortable with a long-lasting hold — easy to apply for everyday wear or a quick touch-up.", img:"/assets/img/shop/shades/kstars-natural-lash-kit-04.jpg" }
   };
 
   /* ---------- K Stars Eyeshadow shade picker modal ---------- */
@@ -2328,13 +2354,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p01-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p01-K1");
-        cardBtn.setAttribute("data-name", baseName + " | K1");
+        cardBtn.setAttribute("data-name", baseName + " — K1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/k-K1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -2342,7 +2368,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -2443,13 +2469,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p02-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p02-B1");
-        cardBtn.setAttribute("data-name", baseName + " | B1");
+        cardBtn.setAttribute("data-name", baseName + " — B1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/bts-B1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -2457,7 +2483,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -2557,13 +2583,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p04-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p04-EMERALD BLAZE Y701");
-        cardBtn.setAttribute("data-name", baseName + " | EMERALD BLAZE Y701");
+        cardBtn.setAttribute("data-name", baseName + " — EMERALD BLAZE Y701");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/gl-Y701.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -2571,7 +2597,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -2671,13 +2697,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p09-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p09-CE1 BLACK");
-        cardBtn.setAttribute("data-name", baseName + " | CE1 BLACK");
+        cardBtn.setAttribute("data-name", baseName + " — CE1 BLACK");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/cl-CE1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -2685,7 +2711,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -2785,13 +2811,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p05-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p05-T701");
-        cardBtn.setAttribute("data-name", baseName + " | SNOW QUEEN T701");
+        cardBtn.setAttribute("data-name", baseName + " — SNOW QUEEN T701");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/gg-T701.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -2799,7 +2825,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -2899,13 +2925,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p06-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p06-BRONZE");
-        cardBtn.setAttribute("data-name", baseName + " | BRONZE");
+        cardBtn.setAttribute("data-name", baseName + " — BRONZE");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/hd-bronze.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -2913,7 +2939,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3013,13 +3039,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p07-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p07-CRYSTAL PEARL 2");
-        cardBtn.setAttribute("data-name", baseName + " | CRYSTAL PEARL 2");
+        cardBtn.setAttribute("data-name", baseName + " — CRYSTAL PEARL 2");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/cp-2.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3027,7 +3053,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3127,13 +3153,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p11-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p11-CALIFORNIA GOLD 05");
-        cardBtn.setAttribute("data-name", baseName + " | CALIFORNIA GOLD 05");
+        cardBtn.setAttribute("data-name", baseName + " — CALIFORNIA GOLD 05");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/ta-california-gold-05.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3141,7 +3167,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3241,13 +3267,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p12-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p12-GOLDEN BLUE");
-        cardBtn.setAttribute("data-name", baseName + " | GOLDEN BLUE");
+        cardBtn.setAttribute("data-name", baseName + " — GOLDEN BLUE");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/sp-golden-blue.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3255,7 +3281,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3355,13 +3381,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p13-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p13-70-01");
-        cardBtn.setAttribute("data-name", baseName + " | 70-01");
+        cardBtn.setAttribute("data-name", baseName + " — 70-01");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/ep-70-01.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3369,7 +3395,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3469,13 +3495,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p14-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p14-50-01");
-        cardBtn.setAttribute("data-name", baseName + " | 50-01");
+        cardBtn.setAttribute("data-name", baseName + " — 50-01");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/bp-50-01.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3483,7 +3509,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3583,13 +3609,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p16-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p16-5");
-        cardBtn.setAttribute("data-name", baseName + " | 5");
+        cardBtn.setAttribute("data-name", baseName + " — 5");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/concealer-5.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3597,7 +3623,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3697,13 +3723,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p17-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p17-DC01");
-        cardBtn.setAttribute("data-name", baseName + " | DC01");
+        cardBtn.setAttribute("data-name", baseName + " — DC01");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/camouflage-dc01.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3711,7 +3737,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3811,13 +3837,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p18-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p18-2");
-        cardBtn.setAttribute("data-name", baseName + " | 2");
+        cardBtn.setAttribute("data-name", baseName + " — 2");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/st-2.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3825,7 +3851,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -3925,13 +3951,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p19-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p19-SC1");
-        cardBtn.setAttribute("data-name", baseName + " | SC1");
+        cardBtn.setAttribute("data-name", baseName + " — SC1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/scf-sc1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -3939,7 +3965,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4039,13 +4065,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p20-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p20-OB1");
-        cardBtn.setAttribute("data-name", baseName + " | OB1");
+        cardBtn.setAttribute("data-name", baseName + " — OB1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/ufc-ob1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4053,7 +4079,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4153,13 +4179,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p21-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p21-CREAMY BEIGE");
-        cardBtn.setAttribute("data-name", baseName + " | CREAMY BEIGE");
+        cardBtn.setAttribute("data-name", baseName + " — CREAMY BEIGE");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/scp-creamy-beige.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4167,7 +4193,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4267,13 +4293,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p22-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p22-1");
-        cardBtn.setAttribute("data-name", baseName + " | 1");
+        cardBtn.setAttribute("data-name", baseName + " — 1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/cptf-1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4281,7 +4307,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4381,13 +4407,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p23-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p23-CF1");
-        cardBtn.setAttribute("data-name", baseName + " | CF1");
+        cardBtn.setAttribute("data-name", baseName + " — CF1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/crl-cf1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4395,7 +4421,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4495,13 +4521,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p24-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p24-COLOR A");
-        cardBtn.setAttribute("data-name", baseName + " | COLOR A");
+        cardBtn.setAttribute("data-name", baseName + " — COLOR A");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/combi-a.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4509,7 +4535,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4609,13 +4635,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p26-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p26-P3");
-        cardBtn.setAttribute("data-name", baseName + " | P3");
+        cardBtn.setAttribute("data-name", baseName + " — P3");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/fp-p3.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4623,7 +4649,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4723,13 +4749,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p27-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p27-F1319");
-        cardBtn.setAttribute("data-name", baseName + " | F1319");
+        cardBtn.setAttribute("data-name", baseName + " — F1319");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/iridescentpowder-f1319.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4737,7 +4763,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4837,13 +4863,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p28-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p28-F305");
-        cardBtn.setAttribute("data-name", baseName + " | F305");
+        cardBtn.setAttribute("data-name", baseName + " — F305");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/loosepowder-f305.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4851,7 +4877,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -4951,13 +4977,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p29-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p29-ILP1");
-        cardBtn.setAttribute("data-name", baseName + " | ILP1");
+        cardBtn.setAttribute("data-name", baseName + " — ILP1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/translucentpowder-ilp1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -4965,7 +4991,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5065,13 +5091,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p30-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p30-KCP1");
-        cardBtn.setAttribute("data-name", baseName + " | KCP1");
+        cardBtn.setAttribute("data-name", baseName + " — KCP1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/compactglitter-kcp1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5079,7 +5105,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5179,13 +5205,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p31-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p31-OB1");
-        cardBtn.setAttribute("data-name", baseName + " | OB1");
+        cardBtn.setAttribute("data-name", baseName + " — OB1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/ultradualfinish-ob1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5193,7 +5219,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5293,13 +5319,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p33-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p33-S1");
-        cardBtn.setAttribute("data-name", baseName + " | S1");
+        cardBtn.setAttribute("data-name", baseName + " — S1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/blush-s1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5307,7 +5333,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5407,13 +5433,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p34-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p34-BT1");
-        cardBtn.setAttribute("data-name", baseName + " | BT1");
+        cardBtn.setAttribute("data-name", baseName + " — BT1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/bakedblush-bt1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5421,7 +5447,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5521,13 +5547,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p35-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p35-15");
-        cardBtn.setAttribute("data-name", baseName + " | 15");
+        cardBtn.setAttribute("data-name", baseName + " — 15");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/wheellipstick-15.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5535,7 +5561,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5635,13 +5661,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p36-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p36-80-01");
-        cardBtn.setAttribute("data-name", baseName + " | 80-01");
+        cardBtn.setAttribute("data-name", baseName + " — 80-01");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/creamyliner-80-01.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5649,7 +5675,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5749,13 +5775,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p37-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p37-60-1");
-        cardBtn.setAttribute("data-name", baseName + " | 60-1");
+        cardBtn.setAttribute("data-name", baseName + " — 60-1");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/kstarsliner-60-1.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5763,7 +5789,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5863,13 +5889,13 @@
     addBtn.addEventListener("click", function(){
       if(cardBtn){
         cardBtn.setAttribute("data-id", "p38-" + currentCode);
-        cardBtn.setAttribute("data-name", baseName + " | " + currentCode);
+        cardBtn.setAttribute("data-name", baseName + " — " + currentCode);
         cardBtn.setAttribute("data-img", currentImg);
         cardBtn.setAttribute("aria-label", "Add " + baseName + " " + currentCode + " to basket");
         cardBtn.__allowDirectAdd = true;
         cardBtn.click();
         cardBtn.setAttribute("data-id", "p38-EMBRACE");
-        cardBtn.setAttribute("data-name", baseName + " | EMBRACE");
+        cardBtn.setAttribute("data-name", baseName + " — EMBRACE");
         cardBtn.setAttribute("data-img", "/assets/img/shop/shades/lipstickmatt-embrace.jpg");
         cardBtn.setAttribute("aria-label", "Add " + baseName + " to basket");
       }
@@ -5877,7 +5903,7 @@
     });
 
     function updateWa(){
-      var msg = "Hi Joseph, I'd like to order: " + baseName + " | Shade " + currentCode + " ($" + price + ").";
+      var msg = "Hi Joseph, I'd like to order: " + baseName + " — Shade " + currentCode + " ($" + price + ").";
       waBtn.href = "https://wa.me/9613293637?text=" + encodeURIComponent(msg);
     }
     updateWa();
@@ -5953,7 +5979,7 @@
 
   /* ---------- Shop category carousels: each section's products sit in a single
      horizontally-scrolling row (native touch swipe / trackpad, plus prev/next
-     buttons docked beside the section heading | deliberately kept OUT of the
+     buttons docked beside the section heading — deliberately kept OUT of the
      row itself so they never have to sit on top of a product photo, which is
      still fading in from the page's scroll-reveal system when a click lands
      early). Re-run refreshShopCarousels() whenever a card's visibility changes
@@ -6004,7 +6030,7 @@
         var track = category.querySelector(".shop-grid");
         if(track){
           /* .shop-grid has scroll-behavior:smooth, which (per the CSSOM View
-             spec) also applies to a direct scrollLeft assignment | an
+             spec) also applies to a direct scrollLeft assignment — an
              explicit "instant" scrollTo is needed here so the snap-back is
              immediate rather than an animated scroll clients would see (and
              so state reads right after this are accurate, not mid-animation). */
@@ -6180,7 +6206,7 @@
         var more = document.createElement("div");
         more.className = "shop-shade-results-more";
         var remaining = matches.length - MAX_SHADE_RESULTS;
-        more.textContent = "+" + remaining + " more shade" + (remaining === 1 ? "" : "s") + " match | keep typing to narrow it down";
+        more.textContent = "+" + remaining + " more shade" + (remaining === 1 ? "" : "s") + " match — keep typing to narrow it down";
         resultsPanel.appendChild(more);
       }
       resultsPanel.style.display = "";
