@@ -58,11 +58,37 @@
 </header>
 
 <nav class="mobile-nav">
-  <a href="/">Home</a>
-  <a href="/certificates">Certificates</a>
-  <a href="/gallery">Gallery</a>
-  <a href="/shop">Shop</a>
-  <a href="/booking">Booking</a>
+  <div class="mn-scroll">
+    <div class="mn-group">
+      <div class="mn-row">
+        <a href="/" class="mn-link">Home</a>
+        <button type="button" class="mn-expand" aria-label="Show Home sections" aria-expanded="false"><span></span></button>
+      </div>
+      <div class="mn-subnav">
+        <a href="/#about">About</a>
+        <a href="/#services">Services</a>
+        <a href="/#why">Why Us</a>
+        <a href="/#work">Our Work</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/#faq">FAQ</a>
+      </div>
+    </div>
+    <a href="/certificates" class="mn-link">Certificates</a>
+    <a href="/gallery" class="mn-link">Gallery</a>
+    <div class="mn-group">
+      <div class="mn-row">
+        <a href="/shop" class="mn-link">Shop</a>
+        <button type="button" class="mn-expand" aria-label="Show Shop sections" aria-expanded="false"><span></span></button>
+      </div>
+      <div class="mn-subnav">
+        <a href="/shop#section-eye">Eye</a>
+        <a href="/shop#section-face">Face</a>
+        <a href="/shop#section-lips">Lips</a>
+        <a href="/shop#section-accessories">Accessories</a>
+      </div>
+    </div>
+    <a href="/booking" class="mn-link">Booking</a>
+  </div>
   <div class="mn-sub">
     <a class="btn-icon" href="tel:+9618805017" aria-label="Call"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.6 21 3 12.4 3 2a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1c0 1.3.2 2.5.6 3.6a1 1 0 0 1-.2 1L6.6 10.8Z"/></svg></a>
     <a class="btn-icon" href="https://wa.me/9613293637" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"/></svg></a>
@@ -76,6 +102,11 @@
     <img class="hero-mark" src="/assets/logo/jf-full-logo-black.png" alt="Joseph Farah">
     <h1><span>30+ Years of Beauty Expertise in Zahle</span></h1>
     <p class="hero-subtitle">Beauty, care and confidence, personalized for you.</p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn">Explore Services</a>
+      <a href="/shop" class="btn">Shop Now</a>
+      <a href="/booking" class="btn btn-primary">Book Now</a>
+    </div>
   </div>
   <div class="hero-scroll"><span>Scroll</span><span class="line"></span></div>
 </section>
@@ -121,6 +152,7 @@
     <div class="svc-tabs" data-reveal>
       <button class="svc-tab active" data-tab="women">For Her</button>
       <button class="svc-tab" data-tab="men">For Him</button>
+      <button class="svc-tab" data-tab="kids" disabled>Kids — Coming Soon</button>
     </div>
 
     <div class="svc-grid active" id="svc-women" data-reveal="scale">
@@ -197,7 +229,7 @@
 </div>
 
 <!-- ===================== WHY CHOOSE ===================== -->
-<section class="bg-ink" style="padding-bottom:0;">
+<section class="bg-ink" style="padding-bottom:0;" id="why">
   <div class="container">
     <div class="section-head center" data-reveal>
       <div class="eyebrow" style="justify-content:center;display:flex;">The Difference</div>
@@ -214,7 +246,7 @@
 </section>
 
 <!-- ===================== GALLERY PREVIEW ===================== -->
-<section style="padding-bottom:60px;">
+<section style="padding-bottom:60px;" id="work">
   <div class="container">
     <div class="section-head split" data-reveal>
       <div>
@@ -245,7 +277,7 @@
 </section>
 
 <!-- ===================== REVIEWS ===================== -->
-<section class="bg-alt">
+<section class="bg-alt" id="reviews">
   <div class="container">
     <div class="section-head center" data-reveal>
       <div class="eyebrow" style="justify-content:center;display:flex;">Google Reviews</div>
