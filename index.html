@@ -24,9 +24,11 @@
 <meta name="twitter:image" content="https://josephfarahbeauty.com/assets/logo/og-image.jpg">
 <link rel="icon" href="/assets/logo/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/gfs-didot-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/logo/hero-marble.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -99,7 +101,7 @@
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <img class="hero-mark" src="/assets/logo/jf-full-logo-black.png" alt="Joseph Farah">
+    <img class="hero-mark" src="/assets/logo/jf-full-logo-black.webp" alt="Joseph Farah" width="700" height="575" fetchpriority="high" decoding="async">
     <h1><span>30+ Years of Beauty Expertise in Zahle</span></h1>
     <p class="hero-subtitle">Beauty, care and confidence, personalized for you.</p>
     <div class="hero-ctas">
@@ -116,7 +118,7 @@
   <div class="container about-grid">
     <div class="about-media" data-reveal="left">
       <div class="about-frame">
-        <img class="about-photo" src="/assets/img/joseph-farah-portrait.jpg" alt="Joseph Farah, beauty and personal care specialist in Zahle, Lebanon" width="770" height="1024" loading="eager">
+        <img class="about-photo" src="/assets/img/joseph-farah-portrait.webp" alt="Joseph Farah, beauty and personal care specialist in Zahle, Lebanon" width="640" height="851" loading="lazy" decoding="async">
         <div class="ph-caption"><span>Joseph Farah</span></div>
       </div>
       <div class="about-badge"><strong>30</strong><span>Years Experience</span></div>
@@ -156,52 +158,52 @@
     </div>
 
     <div class="svc-grid active" id="svc-women" data-reveal="scale">
-      <button class="svc-card" type="button" data-service="makeup"><div class="svc-media" style="background-image:url('/assets/img/services/makeup.jpg')"></div><span class="svc-num">01</span>
+      <button class="svc-card" type="button" data-service="makeup"><div class="svc-media" style="background-image:url('/assets/img/services/makeup.webp')"></div><span class="svc-num">01</span>
         <h3>Makeup</h3><p class="svc-teaser">Bridal, engagement, special occasion &amp; professional makeup.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="hair-styling"><div class="svc-media" style="background-image:url('/assets/img/services/hair-styling.jpg')"></div><span class="svc-num">02</span>
+      <button class="svc-card" type="button" data-service="hair-styling"><div class="svc-media" style="background-image:url('/assets/img/services/hair-styling.webp')"></div><span class="svc-num">02</span>
         <h3>Hair Styling</h3><p class="svc-teaser">Cuts, styling, bridal &amp; engagement hairstyles.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="permanent-makeup"><div class="svc-media" style="background-image:url('/assets/img/services/permanent-makeup.jpg')"></div><span class="svc-num">03</span>
+      <button class="svc-card" type="button" data-service="permanent-makeup"><div class="svc-media" style="background-image:url('/assets/img/services/permanent-makeup.webp')"></div><span class="svc-num">03</span>
         <h3>Permanent Makeup</h3><p class="svc-teaser">Brows, lips and eyeliner designed to enhance your natural features.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="nail-art"><div class="svc-media" style="background-image:url('/assets/img/services/nail-art.jpg')"></div><span class="svc-num">04</span>
+      <button class="svc-card" type="button" data-service="nail-art"><div class="svc-media" style="background-image:url('/assets/img/services/nail-art.webp')"></div><span class="svc-num">04</span>
         <h3>Nail Art</h3><p class="svc-teaser">Manicure, Acrylic &amp; Gelish.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="skincare"><div class="svc-media" style="background-image:url('/assets/img/services/skincare.jpg')"></div><span class="svc-num">05</span>
+      <button class="svc-card" type="button" data-service="skincare"><div class="svc-media" style="background-image:url('/assets/img/services/skincare.webp')"></div><span class="svc-num">05</span>
         <h3>Skincare</h3><p class="svc-teaser">Personalized facials and professional treatments.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="laser"><div class="svc-media" style="background-image:url('/assets/img/services/laser.jpg')"></div><span class="svc-num">06</span>
+      <button class="svc-card" type="button" data-service="laser"><div class="svc-media" style="background-image:url('/assets/img/services/laser.webp')"></div><span class="svc-num">06</span>
         <h3>Laser</h3><p class="svc-teaser">Professional laser hair-removal treatments.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="medical-pedicure-her"><div class="svc-media" style="background-image:url('/assets/img/services/medical-pedicure-her.jpg')"></div><span class="svc-num">07</span>
+      <button class="svc-card" type="button" data-service="medical-pedicure-her"><div class="svc-media" style="background-image:url('/assets/img/services/medical-pedicure-her.webp')"></div><span class="svc-num">07</span>
         <h3>Medical Pedicure</h3><p class="svc-teaser">Professional foot care with a focus on hygiene and comfort.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="wax-hair-removal-her"><div class="svc-media" style="background-image:url('/assets/img/services/wax-hair-removal-her.jpg')"></div><span class="svc-num">08</span>
+      <button class="svc-card" type="button" data-service="wax-hair-removal-her"><div class="svc-media" style="background-image:url('/assets/img/services/wax-hair-removal-her.webp')"></div><span class="svc-num">08</span>
         <h3>Wax Hair Removal</h3><p class="svc-teaser">Fast, effective waxing for smooth, long-lasting results.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="solarium-her"><div class="svc-media" style="background-image:url('/assets/img/services/solarium-her.jpg')"></div><span class="svc-num">09</span>
+      <button class="svc-card" type="button" data-service="solarium-her"><div class="svc-media" style="background-image:url('/assets/img/services/solarium-her.webp')"></div><span class="svc-num">09</span>
         <h3>Solarium</h3><p class="svc-teaser">Controlled tanning experience.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
     </div>
 
     <div class="svc-grid" id="svc-men" data-reveal="scale">
-      <button class="svc-card" type="button" data-service="skin-care-him"><div class="svc-media" style="background-image:url('/assets/img/services/skin-care-him.jpg')"></div><span class="svc-num">01</span>
+      <button class="svc-card" type="button" data-service="skin-care-him"><div class="svc-media" style="background-image:url('/assets/img/services/skin-care-him.webp')"></div><span class="svc-num">01</span>
         <h3>Skin Care</h3><p class="svc-teaser">Facials and skin treatments designed for men's skin.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="medical-manicure"><div class="svc-media" style="background-image:url('/assets/img/services/medical-manicure.jpg')"></div><span class="svc-num">02</span>
+      <button class="svc-card" type="button" data-service="medical-manicure"><div class="svc-media" style="background-image:url('/assets/img/services/medical-manicure.webp')"></div><span class="svc-num">02</span>
         <h3>Medical Manicure</h3><p class="svc-teaser">Clinical, precise nail and hand care for men.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="medical-pedicure-him"><div class="svc-media" style="background-image:url('/assets/img/services/medical-pedicure-him.jpg')"></div><span class="svc-num">03</span>
+      <button class="svc-card" type="button" data-service="medical-pedicure-him"><div class="svc-media" style="background-image:url('/assets/img/services/medical-pedicure-him.webp')"></div><span class="svc-num">03</span>
         <h3>Medical Pedicure</h3><p class="svc-teaser">Professional foot care with a focus on hygiene and comfort.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="solarium-him"><div class="svc-media" style="background-image:url('/assets/img/services/solarium-him.jpg')"></div><span class="svc-num">04</span>
+      <button class="svc-card" type="button" data-service="solarium-him"><div class="svc-media" style="background-image:url('/assets/img/services/solarium-him.webp')"></div><span class="svc-num">04</span>
         <h3>Solarium</h3><p class="svc-teaser">Controlled tanning experience.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="wax-hair-removal"><div class="svc-media" style="background-image:url('/assets/img/services/wax-hair-removal-him.jpg')"></div><span class="svc-num">05</span>
+      <button class="svc-card" type="button" data-service="wax-hair-removal"><div class="svc-media" style="background-image:url('/assets/img/services/wax-hair-removal-him.webp')"></div><span class="svc-num">05</span>
         <h3>Wax Hair Removal</h3><p class="svc-teaser">Fast, effective waxing for smooth results.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
-      <button class="svc-card" type="button" data-service="laser-hair-removal-him"><div class="svc-media" style="background-image:url('/assets/img/services/laser-hair-removal-him.jpg')"></div><span class="svc-num">06</span>
+      <button class="svc-card" type="button" data-service="laser-hair-removal-him"><div class="svc-media" style="background-image:url('/assets/img/services/laser-hair-removal-him.webp')"></div><span class="svc-num">06</span>
         <h3>Laser Hair Removal</h3><p class="svc-teaser">Professional laser hair-removal treatments.</p><span class="svc-more">Learn More<svg width="11" height="11" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </button>
     </div>
@@ -259,19 +261,19 @@
   </div>
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-01.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-02.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-03.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-04.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-05.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-06.mp4" autoplay muted loop playsinline></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-01.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-02.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-03.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-04.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-05.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-06.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
       <!-- duplicate for seamless loop -->
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-01.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-02.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-03.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-04.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-05.mp4" autoplay muted loop playsinline></video></div>
-      <div class="marquee-item"><video src="/assets/video/gallery/gallery-reel-06.mp4" autoplay muted loop playsinline></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-01.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-02.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-03.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-04.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-05.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="marquee-item"><video data-src="/assets/video/gallery/gallery-reel-06.mp4" muted loop playsinline preload="none" aria-hidden="true"></video></div>
     </div>
   </div>
 </section>
@@ -440,21 +442,21 @@
 
   // Service detail popup
   var SERVICE_DATA = {
-    "makeup": { title:"Makeup", img:"/assets/img/services/makeup.jpg", desc:"From soft everyday looks to full bridal glam, Joseph tailors every makeup application to your features, skin tone and the occasion, using professional, long wearing products for a flawless finish that photographs beautifully and lasts all day." },
-    "hair-styling": { title:"Hair Styling", img:"/assets/img/services/hair-styling.jpg", desc:"Precision cuts, blow dries and elegant updos designed around your face shape and lifestyle. For weddings and engagements, Joseph creates hairstyles that hold beautifully through every photo and every dance." },
-    "permanent-makeup": { title:"Permanent Makeup", img:"/assets/img/services/permanent-makeup.jpg", desc:"Long lasting, natural looking enhancement for brows, lips and eyeliner. Every treatment is customized to your face shape and skin tone, so your features stay defined with less daily makeup." },
-    "nail-art": { title:"Nail Art", img:"/assets/img/services/nail-art.jpg", desc:"Manicure, Acrylic extensions and Gelish colour, finished with clean, precise detailing. Choose a classic, French or fully custom nail art design for any occasion." },
-    "skincare": { title:"Skincare", img:"/assets/img/services/skincare.jpg", desc:"Facials and skin treatments personalized to your skin type and concerns: deep cleansing, hydration and rejuvenation using professional grade products, in a clean and relaxing setting." },
-    "laser": { title:"Laser", img:"/assets/img/services/laser.jpg", desc:"Safe, modern laser hair removal technology for smooth, long term results. Sessions are performed with careful attention to skin type and comfort throughout the treatment." },
-    "medical-pedicure-her": { title:"Medical Pedicure", img:"/assets/img/services/medical-pedicure-her.jpg", desc:"Clinical, hygienic foot care that goes beyond a regular pedicure, treating calluses, nails and skin with medical grade tools in a fully sanitized setting for lasting comfort." },
-    "wax-hair-removal-her": { title:"Wax Hair Removal", img:"/assets/img/services/wax-hair-removal-her.jpg", desc:"Traditional waxing for effective, longer lasting hair removal. A fast, hygienic option for smooth skin without a laser commitment." },
-    "solarium-her": { title:"Solarium", img:"/assets/img/services/solarium-her.jpg", desc:"A soft, even, all year round glow using the latest Alison Vertical tanning machine: hygienic, spacious and comfortable, for a safe and relaxing tanning experience." },
-    "skin-care-him": { title:"Skin Care", img:"/assets/img/services/skin-care-him.jpg", desc:"Cleansing and rejuvenating facials adapted to men's skin: refreshing, low maintenance treatments that leave your skin clean, healthy and refreshed." },
-    "medical-manicure": { title:"Medical Manicure", img:"/assets/img/services/medical-manicure.jpg", desc:"A clinical, precise manicure focused on healthy, well groomed hands. Cuticle care and nail shaping are performed with medical grade hygiene, no polish required." },
-    "medical-pedicure-him": { title:"Medical Pedicure", img:"/assets/img/services/medical-pedicure-him.jpg", desc:"Clinical, hygienic foot care that goes beyond a regular pedicure, treating calluses, nails and skin with medical grade tools in a fully sanitized setting for lasting comfort." },
-    "solarium-him": { title:"Solarium", img:"/assets/img/services/solarium-him.jpg", desc:"A soft, even, all year round glow using the latest Alison Vertical tanning machine: hygienic, spacious and comfortable, for a safe and relaxing tanning experience." },
-    "wax-hair-removal": { title:"Wax Hair Removal", img:"/assets/img/services/wax-hair-removal-him.jpg", desc:"Traditional waxing for effective, longer lasting hair removal. A fast, hygienic option for smooth skin without a laser commitment." },
-    "laser-hair-removal-him": { title:"Laser Hair Removal", img:"/assets/img/services/laser-hair-removal-him.jpg", desc:"Safe, modern laser hair removal technology for smooth, long term results. Sessions are performed with careful attention to skin type and comfort throughout the treatment." }
+    "makeup": { title:"Makeup", img:"/assets/img/services/makeup.webp", desc:"From soft everyday looks to full bridal glam, Joseph tailors every makeup application to your features, skin tone and the occasion, using professional, long wearing products for a flawless finish that photographs beautifully and lasts all day." },
+    "hair-styling": { title:"Hair Styling", img:"/assets/img/services/hair-styling.webp", desc:"Precision cuts, blow dries and elegant updos designed around your face shape and lifestyle. For weddings and engagements, Joseph creates hairstyles that hold beautifully through every photo and every dance." },
+    "permanent-makeup": { title:"Permanent Makeup", img:"/assets/img/services/permanent-makeup.webp", desc:"Long lasting, natural looking enhancement for brows, lips and eyeliner. Every treatment is customized to your face shape and skin tone, so your features stay defined with less daily makeup." },
+    "nail-art": { title:"Nail Art", img:"/assets/img/services/nail-art.webp", desc:"Manicure, Acrylic extensions and Gelish colour, finished with clean, precise detailing. Choose a classic, French or fully custom nail art design for any occasion." },
+    "skincare": { title:"Skincare", img:"/assets/img/services/skincare.webp", desc:"Facials and skin treatments personalized to your skin type and concerns: deep cleansing, hydration and rejuvenation using professional grade products, in a clean and relaxing setting." },
+    "laser": { title:"Laser", img:"/assets/img/services/laser.webp", desc:"Safe, modern laser hair removal technology for smooth, long term results. Sessions are performed with careful attention to skin type and comfort throughout the treatment." },
+    "medical-pedicure-her": { title:"Medical Pedicure", img:"/assets/img/services/medical-pedicure-her.webp", desc:"Clinical, hygienic foot care that goes beyond a regular pedicure, treating calluses, nails and skin with medical grade tools in a fully sanitized setting for lasting comfort." },
+    "wax-hair-removal-her": { title:"Wax Hair Removal", img:"/assets/img/services/wax-hair-removal-her.webp", desc:"Traditional waxing for effective, longer lasting hair removal. A fast, hygienic option for smooth skin without a laser commitment." },
+    "solarium-her": { title:"Solarium", img:"/assets/img/services/solarium-her.webp", desc:"A soft, even, all year round glow using the latest Alison Vertical tanning machine: hygienic, spacious and comfortable, for a safe and relaxing tanning experience." },
+    "skin-care-him": { title:"Skin Care", img:"/assets/img/services/skin-care-him.webp", desc:"Cleansing and rejuvenating facials adapted to men's skin: refreshing, low maintenance treatments that leave your skin clean, healthy and refreshed." },
+    "medical-manicure": { title:"Medical Manicure", img:"/assets/img/services/medical-manicure.webp", desc:"A clinical, precise manicure focused on healthy, well groomed hands. Cuticle care and nail shaping are performed with medical grade hygiene, no polish required." },
+    "medical-pedicure-him": { title:"Medical Pedicure", img:"/assets/img/services/medical-pedicure-him.webp", desc:"Clinical, hygienic foot care that goes beyond a regular pedicure, treating calluses, nails and skin with medical grade tools in a fully sanitized setting for lasting comfort." },
+    "solarium-him": { title:"Solarium", img:"/assets/img/services/solarium-him.webp", desc:"A soft, even, all year round glow using the latest Alison Vertical tanning machine: hygienic, spacious and comfortable, for a safe and relaxing tanning experience." },
+    "wax-hair-removal": { title:"Wax Hair Removal", img:"/assets/img/services/wax-hair-removal-him.webp", desc:"Traditional waxing for effective, longer lasting hair removal. A fast, hygienic option for smooth skin without a laser commitment." },
+    "laser-hair-removal-him": { title:"Laser Hair Removal", img:"/assets/img/services/laser-hair-removal-him.webp", desc:"Safe, modern laser hair removal technology for smooth, long term results. Sessions are performed with careful attention to skin type and comfort throughout the treatment." }
   };
 
   (function(){

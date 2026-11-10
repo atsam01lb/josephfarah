@@ -7,12 +7,18 @@
   "use strict";
 
   /* ---------- Preloader ---------- */
-  window.addEventListener("load", function () {
-    var pre = document.getElementById("preloader");
-    if (pre) {
-      setTimeout(function () { pre.classList.add("done"); }, 350);
-    }
-  });
+  /* The preloader no longer waits for the window "load" event: that event is
+     held back by every image/video on the page, which kept the intro screen up
+     (and the real content hidden) for several seconds on slow connections. */
+  var pre = document.getElementById("preloader");
+  var plStart = Date.now();
+  function hidePreloader() { if (pre) pre.classList.add("done"); }
+  function plReady() {
+    setTimeout(hidePreloader, Math.max(0, 450 - (Date.now() - plStart)));
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", plReady);
+  else plReady();
+  setTimeout(hidePreloader, 3000); // safety net
 
   /* ---------- Header scroll state ---------- */
   var header = document.querySelector(".site-header");
@@ -79,6 +85,35 @@
         a.classList.add("active");
       }
     });
+  })();
+
+
+  /* ---------- Lazy-loaded videos ----------
+     <video data-src="..."> only starts downloading when it is about to scroll
+     into view, so autoplaying background reels do not compete with the first
+     paint for bandwidth. */
+  (function () {
+    var vids = document.querySelectorAll("video[data-src]");
+    if (!vids.length) return;
+    function loadVideo(v) {
+      var src = v.getAttribute("data-src");
+      if (!src) return;
+      v.removeAttribute("data-src");
+      v.src = src;
+      v.load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+    if ("IntersectionObserver" in window) {
+      var vio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { loadVideo(e.target); vio.unobserve(e.target); }
+        });
+      }, { rootMargin: "300px 700px" });
+      vids.forEach(function (v) { vio.observe(v); });
+    } else {
+      window.addEventListener("load", function () { vids.forEach(loadVideo); });
+    }
   })();
 
   /* ---------- Footer year ---------- */
